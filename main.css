@@ -3,15 +3,31 @@ body {
   padding: 0;
   font-family: 'Varela Round', sans-serif;
   max-width: 768px;
-  border: 1px solid black;
+  border: 1px solid #000;
   height: 1024px;
   margin: auto;
-  background: linear-gradient(#38B9F2, #7474BF);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%,rgba(57,138,187,0.8) 100%);
+  font-size: 1rem;
 }
 .welcome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  color: #fff;
+}
+.welcome__title {
   font-family: 'Carter One', cursive;
-  align-self: center;
+  font-size: 4rem;
+  margin: auto;
+  letter-spacing: 0.2rem;
+}
+.welcome__image {
+  margin: 50px auto;
+  height: 400px;
+  width: 400px;
+}
+.welcome__text {
+  margin: 40px 10px;
+  font-size: 1.5rem;
+  text-align: center;
 }
