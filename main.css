@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  max-width: 768px;
+  border: 1px solid #000;
+  height: 1024px;
+  margin: auto;
+  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%,rgba(57,138,187,0.8) 100%);
+  font-size: 1rem;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  color: #fff;
+  padding: 0px 100px;
+}
+.welcome__title {
+  font-family: 'Henny Penny', cursive;
+  font-size: 4rem;
+  margin: auto;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  line-height: 4.5rem;
+}
+.welcome__image {
+  margin: 25px auto;
+  height: 500px;
+  width: 500px;
+}
+.welcome__text {
+  margin: 40px 0;
+  padding: 0 30px;
+  font-size: 2.2rem;
+  text-align: center;
+}
