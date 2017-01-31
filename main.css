@@ -12,8 +12,9 @@ body {
 .welcome {
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 2rem;
   color: #fff;
+  padding: 0px 100px;
 }
 .welcome__title {
   font-family: 'Henny Penny', cursive;
@@ -27,13 +28,13 @@ body {
   margin-top: -45px;
 }
 .welcome__image {
-  margin: 50px auto;
-  height: 400px;
-  width: 400px;
+  margin: 25px auto;
+  height: 500px;
+  width: 500px;
 }
 .welcome__text {
   margin: 40px 0;
-  padding: 0 40px;
-  font-size: 1.5rem;
+  padding: 0 30px;
+  font-size: 2.2rem;
   text-align: center;
 }
