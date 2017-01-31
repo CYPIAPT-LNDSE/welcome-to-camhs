@@ -7,13 +7,16 @@ body {
   margin: auto;
   background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%,rgba(57,138,187,0.8) 100%);
   font-size: 1rem;
+  color: white;
 }
-.welcome {
+.welcome,
+.introduction,
+.feelings {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   color: #fff;
-  padding: 0px 100px;
+  padding: 35px 100px;
 }
 .welcome__title {
   font-family: 'Henny Penny', cursive;
@@ -28,9 +31,11 @@ body {
   height: 500px;
   width: 500px;
 }
-.welcome__text {
+.welcome__text,
+.introduction__text,
+.feelings__text {
   margin: 40px 0;
-  padding: 0 30px;
+  padding: 0 25px;
   font-size: 2.2rem;
   text-align: center;
 }
@@ -40,5 +45,37 @@ body {
 }
 .carousel .carousel-item {
   width: 400px;
-  top: -200px;
+  top: -300px;
+}
+.carousel .indicators {
+  bottom: 250px;
+}
+.introduction__text {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.text-input {
+  width: 490px;
+  height: 50px;
+  font-size: 3.9rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 6px dotted white;
+  color: #FCF74C;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.text-input:focus {
+  outline: none;
+}
+.sleeping-lion{
+  width: 300px;
+  margin: 0 auto 20px auto;
+}
+.emoji {
+  margin: 5px 25px 5px 25px;
+  width: 200px;
+}
+.feelings__title {
+  margin-bottom: 50px;
 }
