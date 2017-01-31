@@ -21,11 +21,8 @@ body {
   font-size: 4rem;
   margin: auto;
   letter-spacing: 0.2rem;
-}
-.welcome__title__organization {
   text-align: center;
-  display: block;
-  margin-top: -45px;
+  line-height: 4.5rem;
 }
 .welcome__image {
   margin: 25px auto;
