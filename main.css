@@ -34,3 +34,11 @@ body {
   font-size: 2.2rem;
   text-align: center;
 }
+.carousel {
+  height: 900px;
+  perspective: 300px;
+}
+.carousel .carousel-item {
+  width: 400px;
+  top: -200px;
+}
