@@ -16,6 +16,7 @@ body {
   color: #fff;
 }
 .welcome__title {
+  font-family: 'Henny Penny', cursive;
   font-size: 4rem;
   margin: auto;
   letter-spacing: 0.2rem;
