@@ -87,7 +87,7 @@ body {
 .feelings__title {
   margin-bottom: 50px;
 }
-.input-wrapper {
+.eating__slider {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -95,7 +95,7 @@ body {
   padding-bottom: 160px;
   overflow-x: hidden;
 }
-.rangeslider {
+.slider__range {
   display: block;
   -webkit-appearance: none;
   outline: none;
@@ -103,18 +103,17 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
-.rangeslider::-webkit-slider-thumb {
+.slider__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
   height: 10px;
   width: 54px;
   position: relative;
 }
-.rangeslider::-webkit-slider-thumb:after {
+.slider__range::-webkit-slider-thumb:after {
   content: '< >';
   word-spacing: 20px;
   text-align: center;
-  background: hsl(140, 50%, 70%);
   font: bold 17px/25px 'Montserrat Alternates', sans-serif;
   color: white;
   width: 54px;
@@ -125,25 +124,24 @@ body {
   color: transparent;
   transition: color 0.25s;
 }
-.rangeslider::-webkit-slider-thumb:before {
+.slider__range::-webkit-slider-thumb:before {
   content: '';
   height: 5px;
   width: 400px;
   position: absolute;
   top: 0;
   right: 0;
-  background: hsl(140, 50%, 70%);
   /*prevent click obstruction for the real slider track beneath*/
   pointer-events: none;
 }
-.reel {
+.slider__reel {
   width: 25%;
   height: 100px;
   overflow: hidden;
   position: absolute;
   top: 0; /*left pos will be controlled by JS*/
 }
-.static-output {
+.slider__banana {
   font: bold 3rem/1rem 'Montserrat Alternates', sans-serif;
   color: white;
   position: absolute;
