@@ -11,6 +11,7 @@ body {
 }
 .welcome,
 .introduction,
+.eating,
 .finish,
 .avatar,
 .feelings {
@@ -20,6 +21,7 @@ body {
   padding: 70px 100px;
 }
 .welcome__title,
+.eating__title,
 .avatar__title {
   font-family: 'Henny Penny', cursive;
   font-size: 4rem;
@@ -35,7 +37,7 @@ body {
 }
 .welcome__text,
 .introduction__text,
-.feelings__text,
+.eating__text,
 .finish__text {
   margin: 40px 0;
   padding: 0 25px;
@@ -85,6 +87,74 @@ body {
 .feelings__title {
   margin-bottom: 50px;
 }
+.eating__slider {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  overflow-x: hidden;
+}
+.slider__range {
+  display: block;
+  -webkit-appearance: none;
+  outline: none;
+  height: 5px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 10px;
+  width: 54px;
+  position: relative;
+}
+.slider__range::-webkit-slider-thumb:after {
+  content: '< >';
+  word-spacing: 20px;
+  text-align: center;
+  font: bold 17px/25px 'Montserrat Alternates', sans-serif;
+  color: white;
+  width: 54px;
+  height: 25px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  color: transparent;
+  transition: color 0.25s;
+}
+.slider__range::-webkit-slider-thumb:before {
+  content: '';
+  height: 5px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*prevent click obstruction for the real slider track beneath*/
+  pointer-events: none;
+}
+.slider__reel {
+  width: 25%;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0; /*left pos will be controlled by JS*/
+}
+.slider__banana {
+  font: bold 3rem/1rem 'Montserrat Alternates', sans-serif;
+  color: white;
+  position: absolute;
+  bottom: 110px;
+  height: 125px;
+  width: 25%;;
+  text-align: center;
+  /*disable clicks so that the slider thumb can be controlled*/
+  pointer-events: none;
+  transition: all 0.25s;
+  background-image: url('assets/banana.svg');
+  background-repeat: no-repeat;
+}
 .download-button {
   margin-top: 20px;
   border: none;
@@ -131,4 +201,78 @@ body {
 }
 .finished__header {
   color: black;
+}
+.eating__meals {
+  font: bold 1.5rem/1rem 'Montserrat Alternates', sans-serif;
+  position: relative;
+  top: -50px;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + span,
+[type="checkbox"]:checked + span {
+  position: relative;
+  padding-left: 60px;
+  cursor: pointer;
+  left: 100px;
+}
+[type="checkbox"] + span:before,
+[type="checkbox"]:checked + span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bbb;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+[type="checkbox"]:not(:checked) + span:before,
+[type="checkbox"]:checked + span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bbb;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + span:after,
+[type="checkbox"]:checked + span:after {
+  content: '✔';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  font-size: 40px;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + span:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + span:after {
+  opacity: 1;
+  transform: scale(1);
+}
+[type="checkbox"]:checked:focus + span:before,
+[type="checkbox"]:not(:checked):focus + span:before {
+  border: 1px dotted blue;
+}
+
+/* hover style just for information */
+span:hover:before {
+  border: 1px solid #4778d9!important;
 }
