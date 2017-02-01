@@ -14,14 +14,14 @@ body {
 .eating,
 .finish,
 .avatar,
+.personality,
 .feelings {
   display: flex;
   flex-direction: column;
   color: #fff;
   padding: 70px 100px;
 }
-.welcome__title,
-.avatar__title {
+.welcome__title {
   font-family: 'Henny Penny', cursive;
   font-size: 4rem;
   margin: auto;
@@ -37,17 +37,34 @@ body {
 .welcome__text,
 .introduction__text,
 .eating__text,
-.finish__text {
+.feelings__text,
+.finish__text,
+.personality__text,
+.avatar__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
   text-align: center;
 }
+.eating__text {
+  margin: 10px 0;
+}
 .avatar {
-  padding: 0 10px;
+  padding: 0;
+}
+.personality__title {
+  margin-top: 0px;
+}
+.eating__title {
+  margin-top: 20px;
+}
+.avatar__title {
+  margin-top: 65px;
+  margin-bottom: 0px;
+  padding: 0 20px;
 }
 .carousel {
-  height: 900px;
+  height: 865px;
   perspective: 300px;
 }
 .carousel .carousel-item {
@@ -88,7 +105,7 @@ body {
 }
 .eating__slider {
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   position: relative;
   padding-top: 160px;
   padding-bottom: 160px;
@@ -321,6 +338,6 @@ span:hover:before {
   width: 510px;
   margin: 0 0 0 auto;
 }
-.row{
+.row {
   margin-left: 40px;
 }
