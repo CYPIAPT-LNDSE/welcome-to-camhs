@@ -1,18 +1,13 @@
-//lets populate reel numbers
-var min = $(".slider__range").attr("min");
-var max = $(".slider__range").attr("max");
+(function($){
+	'use strict';
+	var min = $(".slider__range").attr("min");
+	var max = $(".slider__range").attr("max");
+	var horizontal;
 
-updateOutput($(".slider__range").val());
-
-var horizontal;
-function updateOutput(figure) {
-	//displaying the static output
-	$(".slider__banana").html(figure);
-
-	//positioning .static-output and .reel
-	//horizontal positioning first
-	horizontal = figure/max*($(".eating__slider").width()-$(".slider__reel").width()) + 'px';
-
-	//applying the positions
-	$(".slider__banana, .slider__reel").css({left: horizontal});
-}
+	window.updateOutput = function (figure) {
+		$(".slider__banana").html(figure);
+		horizontal = figure/max*($(".eating__slider").width()-$(".slider__reel").width()) + 'px';
+		$(".slider__banana, .slider__reel").css({left: horizontal});
+	}
+	updateOutput($(".slider__range").val());
+})(jQuery);
