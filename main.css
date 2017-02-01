@@ -142,27 +142,22 @@ body {
   overflow: hidden;
   position: absolute;
   top: 0; /*left pos will be controlled by JS*/
-  /*background-image: url('assets/banana.svg');
-  background-repeat: no-repeat;*/
 }
 #rn {
   transition: all 0.25s; /*vertical movement animation for the reel*/
 }
 /*static output styles*/
 #static-output {
-  font: bold 17px/25px 'Montserrat Alternates', sans-serif;
+  font: bold 3rem/1rem 'Montserrat Alternates', sans-serif;
   color: white;
   position: absolute;
-  bottom: 0;
-  height: 25px;
-  width: 54px;
   bottom: 110px;
   height: 125px;
   width: 25%;;
   text-align: center;
   /*disable clicks so that the slider thumb can be controlled*/
   pointer-events: none;
-  transition: color 0.25s;
+  transition: all 0.25s;
   background-image: url('assets/banana.svg');
   background-repeat: no-repeat;
 }
