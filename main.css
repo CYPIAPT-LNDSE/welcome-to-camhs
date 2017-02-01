@@ -64,7 +64,7 @@ body {
   padding: 0 20px;
 }
 .carousel {
-  height: 865px;
+  height: 805px;
   perspective: 300px;
 }
 .carousel .carousel-item {
@@ -72,7 +72,7 @@ body {
   top: -300px;
 }
 .carousel .indicators {
-  bottom: 250px;
+  bottom: 230px;
 }
 .introduction__text {
   margin-top: 15px;
@@ -101,6 +101,7 @@ body {
   width: 200px;
 }
 .feelings__title {
+  margin-top: 0px;
   margin-bottom: 50px;
 }
 .eating__slider {

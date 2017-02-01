@@ -44,10 +44,15 @@ if (endpoint === 'finished.html'){
     backward = 'eating.html'
 };
 
+// The if statement stops the carousel from triggering the page swipe
 Hammer(body).on("swipeleft", function(event) {
-  window.location.href = forward;
+  if(event.target.tagName !== 'IMG'){
+    window.location.href = forward;
+  }
 });
 
 Hammer(body).on("swiperight", function(event) {
-  window.location.href = backward;
+  if(event.target.tagName !== 'IMG'){
+    window.location.href = backward;
+  }
 });
