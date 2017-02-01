@@ -91,23 +91,23 @@ body {
   width: 500px;
   margin: 0 auto;
   position: relative;
-  /*padding: 54px on top for #reel, 10px on top/bottom for slider thumb*/
-  padding-top: 64px;
-  padding-bottom: 10px;
-  /*To hide the extra portion of the completed track on the left*/
+  padding-top: 160px;
+  padding-bottom: 160px;
   overflow-x: hidden;
 }
 #rangeslider {
   display: block;
   -webkit-appearance: none;
   outline: none;
-  height: 5px; width: 100%;
+  height: 5px;
+  width: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
 #rangeslider::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
-  height: 5px; width: 54px;
+  height: 10px;
+  width: 54px;
   position: relative;
 }
 #rangeslider::-webkit-slider-thumb:after {
@@ -137,23 +137,16 @@ body {
   pointer-events: none;
 }
 #reel {
-  width: 54px;
-  height: 54px;
+  width: 25%;
+  height: 100px;
   overflow: hidden;
   position: absolute;
   top: 0; /*left pos will be controlled by JS*/
-  opacity: 0;
-  transition: opacity 0.25s;
+  /*background-image: url('assets/banana.svg');
+  background-repeat: no-repeat;*/
 }
 #rn {
-  background: linear-gradient(hsl(0, 80%, 70%), hsl(120, 80%, 70%));
   transition: all 0.25s; /*vertical movement animation for the reel*/
-}
-#rn span {
-  font: 30px/54px 'Montserrat Alternates', sans-serif;
-  color: white;
-  display: block;
-  text-align: center;
 }
 /*static output styles*/
 #static-output {
@@ -163,11 +156,14 @@ body {
   bottom: 0;
   height: 25px;
   width: 54px;
+  bottom: 110px;
+  height: 125px;
+  width: 25%;;
   text-align: center;
   /*disable clicks so that the slider thumb can be controlled*/
   pointer-events: none;
   transition: color 0.25s;
+  background-image: url('assets/banana.svg');
+  background-repeat: no-repeat;
 }
-.active #reel {opacity: 1;}
-.active #static-output {color: transparent;}
 .active #rangeslider::-webkit-slider-thumb:after {color: white;}

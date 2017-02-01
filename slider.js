@@ -2,11 +2,11 @@
 var min = $("#rangeslider").attr("min");
 var max = $("#rangeslider").attr("max");
 
-var rn = "";
-for (var i = min; i <= max; i++) {
-  rn += "<span>"+i+"</span>";
-}
-$("#rn").html(rn);
+// var rn = "";
+// for (var i = min; i <= max; i++) {
+//   rn += "<span>"+i+"</span>";
+// }
+//$("#rn").html(rn);
 
 //triggering updateOutput manually
 updateOutput($("#rangeslider").val(), false);
@@ -32,7 +32,7 @@ function updateOutput(figure, activate) {
 	//applying the positions
 	$("#static-output, #reel").css({left: h});
 	//#rn will be moved using transform+transitions for better animation performance. The false translateZ triggers GPU acceleration for better performance.
-	$("#rn").css({transform: 'translateY('+v+') translateZ(0)'});
+	 $("#rn").css({transform: 'translateY('+v+') translateZ(0)'});
 }
 function deactivate() {
 	//remove .active from #input-wrapper
