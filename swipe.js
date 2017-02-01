@@ -34,12 +34,12 @@ if (endpoint === 'eating.html'){
 
 // Eating page to finish page
 if (endpoint === 'personality.html'){
-    forward = 'finish.html',
+    forward = 'finished.html',
     backward = 'eating.html'
 };
 
 // Eating page to finish page
-if (endpoint === 'finish.html'){
+if (endpoint === 'finished.html'){
     forward = '',
     backward = 'eating.html'
 };
