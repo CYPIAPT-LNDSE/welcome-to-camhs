@@ -11,8 +11,9 @@ body {
 }
 .welcome,
 .introduction,
-.feelings,
-.eating {
+.eating,
+.avatar,
+.feelings {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
@@ -20,7 +21,8 @@ body {
   padding: 35px 100px;
 }
 .welcome__title,
-.eating__title {
+.eating__title,
+.avatar__title {
   font-family: 'Henny Penny', cursive;
   font-size: 4rem;
   margin: auto;
@@ -41,6 +43,20 @@ body {
   padding: 0 25px;
   font-size: 2.2rem;
   text-align: center;
+}
+.avatar {
+  padding: 0 10px;
+}
+.carousel {
+  height: 900px;
+  perspective: 300px;
+}
+.carousel .carousel-item {
+  width: 400px;
+  top: -300px;
+}
+.carousel .indicators {
+  bottom: 250px;
 }
 .introduction__text {
   margin-top: 15px;
