@@ -87,49 +87,87 @@ body {
 .feelings__title {
   margin-bottom: 50px;
 }
-.slider {
-  padding-left: 50px;
-}
-.slider__bar {
+#input-wrapper {
+  width: 500px;
+  margin: 0 auto;
   position: relative;
-  top: 130px;
-  font-size: 3rem;
+  /*padding: 54px on top for #reel, 10px on top/bottom for slider thumb*/
+  padding-top: 64px;
+  padding-bottom: 10px;
+  /*To hide the extra portion of the completed track on the left*/
+  overflow-x: hidden;
 }
-.slider__bar--one {
+#rangeslider {
+  display: block;
+  -webkit-appearance: none;
+  outline: none;
+  height: 5px; width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+#rangeslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 5px; width: 54px;
+  position: relative;
+}
+#rangeslider::-webkit-slider-thumb:after {
+  content: '< >';
+  word-spacing: 20px;
+  text-align: center;
+  background: hsl(140, 50%, 70%);
+  font: bold 17px/25px 'Montserrat Alternates', sans-serif;
+  color: white;
+  width: 54px;
+  height: 25px;
   position: absolute;
-  left: 100px;
+  top: -10px;
+  left: 0;
+  color: transparent;
+  transition: color 0.25s;
 }
-.slider__bar--two {
-  position: absolute;
-  right: 300px;
-}
-.slider__bar--three {
-  position: absolute;
-  right: 200px;
-}
-.slider__bar--four {
-  position: absolute;
-  right: 100px;
-}
-.slider__bar--five {
-  position: absolute;
-  right: 0;
-}
-.line {
+#rangeslider::-webkit-slider-thumb:before {
+  content: '';
   height: 5px;
-  background-color: #000;
-  width: 100%;
-  display: inline-block;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: hsl(140, 50%, 70%);
+  /*prevent click obstruction for the real slider track beneath*/
+  pointer-events: none;
 }
-#drag-1 {
-  width: 25%;
-  height: 100%;
-  min-height: 6.5em;
-  margin: 10%;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+#reel {
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  position: absolute;
+  top: 0; /*left pos will be controlled by JS*/
+  opacity: 0;
+  transition: opacity 0.25s;
 }
-#drag-me::before {
-  content: "#" attr(id);
-  font-weight: bold;
+#rn {
+  background: linear-gradient(hsl(0, 80%, 70%), hsl(120, 80%, 70%));
+  transition: all 0.25s; /*vertical movement animation for the reel*/
 }
+#rn span {
+  font: 30px/54px 'Montserrat Alternates', sans-serif;
+  color: white;
+  display: block;
+  text-align: center;
+}
+/*static output styles*/
+#static-output {
+  font: bold 17px/25px 'Montserrat Alternates', sans-serif;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 54px;
+  text-align: center;
+  /*disable clicks so that the slider thumb can be controlled*/
+  pointer-events: none;
+  transition: color 0.25s;
+}
+.active #reel {opacity: 1;}
+.active #static-output {color: transparent;}
+.active #rangeslider::-webkit-slider-thumb:after {color: white;}

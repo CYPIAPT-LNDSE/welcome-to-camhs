@@ -15,23 +15,21 @@
     <p class="eating__text">
       Do you eat enough fruit and vegetables?
     </p>
-    <div class="slider">
-      <div class="slider__bar">
-        <span class="slider__bar--zero">0</span>
-        <span class="slider__bar--one">1</span>
-        <span class="slider__bar--two">2</span>
-        <span class="slider__bar--three">3</span>
-        <span class="slider__bar--four">4</span>
-        <span class="slider__bar--five">5</span>
-        <span class="line"></span>
+    <div id="input-wrapper">
+      <input id="rangeslider" type="range" min="0" max="5" value="0" step="1"
+      oninput="updateOutput(value, true)"
+      onchange="deactivate()"
+      onmouseup="deactivate()">
+      <div id="reel">
+        <!-- reel numbers - will be populated by JS -->
+        <div id="rn"></div>
       </div>
-      <div id="drag-1" class="draggable">
-        <img src="assets/banana.svg" alt="Banana" />
-      </div>
+      <!-- static output display on the slider thumb - controlled by JS -->
+      <div id="static-output"></div>
     </div>
   </div>
 
-  <script src="lib/interact.min.js"></script>
-  <script src="dragable.js"></script>
+  <script src="lib/jquery-3.1.1.min.js"></script>
+  <script src="slider.js"></script>
 </body>
 </html>
