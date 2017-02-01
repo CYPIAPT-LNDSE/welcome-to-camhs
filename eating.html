@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Henny+Penny|Montserrat+Alternates" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Henny+Penny|Montserrat+Alternates">
   <link rel="stylesheet" href="main.css">
 
   <title>Welcome to CAMHS</title>
@@ -15,12 +15,23 @@
     <p class="eating__text">
       Do you eat enough fruit and vegetables?
     </p>
-    <div id="drag-1" class="draggable">
-      <img src="assets/banana.svg" alt="Banana" />
+    <div class="slider">
+      <div class="slider__bar">
+        <span class="slider__bar--zero">0</span>
+        <span class="slider__bar--one">1</span>
+        <span class="slider__bar--two">2</span>
+        <span class="slider__bar--three">3</span>
+        <span class="slider__bar--four">4</span>
+        <span class="slider__bar--five">5</span>
+        <span class="line"></span>
+      </div>
+      <div id="drag-1" class="draggable">
+        <img src="assets/banana.svg" alt="Banana" />
+      </div>
     </div>
   </div>
 
-  <script src="interact.min.js"></script>
+  <script src="lib/interact.min.js"></script>
   <script src="dragable.js"></script>
 </body>
 </html>

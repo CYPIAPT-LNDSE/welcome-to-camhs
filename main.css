@@ -87,18 +87,48 @@ body {
 .feelings__title {
   margin-bottom: 50px;
 }
-
+.slider {
+  padding-left: 50px;
+}
+.slider__bar {
+  position: relative;
+  top: 130px;
+  font-size: 3rem;
+}
+.slider__bar--one {
+  position: absolute;
+  left: 100px;
+}
+.slider__bar--two {
+  position: absolute;
+  right: 300px;
+}
+.slider__bar--three {
+  position: absolute;
+  right: 200px;
+}
+.slider__bar--four {
+  position: absolute;
+  right: 100px;
+}
+.slider__bar--five {
+  position: absolute;
+  right: 0;
+}
+.line {
+  height: 5px;
+  background-color: #000;
+  width: 100%;
+  display: inline-block;
+}
 #drag-1 {
   width: 25%;
   height: 100%;
   min-height: 6.5em;
   margin: 10%;
-  padding: 4%;
-
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
 }
-
 #drag-me::before {
   content: "#" attr(id);
   font-weight: bold;
