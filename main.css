@@ -87,7 +87,7 @@ body {
 .feelings__title {
   margin-bottom: 50px;
 }
-#input-wrapper {
+.input-wrapper {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -95,7 +95,7 @@ body {
   padding-bottom: 160px;
   overflow-x: hidden;
 }
-#rangeslider {
+.rangeslider {
   display: block;
   -webkit-appearance: none;
   outline: none;
@@ -103,14 +103,14 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
-#rangeslider::-webkit-slider-thumb {
+.rangeslider::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
   height: 10px;
   width: 54px;
   position: relative;
 }
-#rangeslider::-webkit-slider-thumb:after {
+.rangeslider::-webkit-slider-thumb:after {
   content: '< >';
   word-spacing: 20px;
   text-align: center;
@@ -125,7 +125,7 @@ body {
   color: transparent;
   transition: color 0.25s;
 }
-#rangeslider::-webkit-slider-thumb:before {
+.rangeslider::-webkit-slider-thumb:before {
   content: '';
   height: 5px;
   width: 400px;
@@ -136,18 +136,14 @@ body {
   /*prevent click obstruction for the real slider track beneath*/
   pointer-events: none;
 }
-#reel {
+.reel {
   width: 25%;
   height: 100px;
   overflow: hidden;
   position: absolute;
   top: 0; /*left pos will be controlled by JS*/
 }
-#rn {
-  transition: all 0.25s; /*vertical movement animation for the reel*/
-}
-/*static output styles*/
-#static-output {
+.static-output {
   font: bold 3rem/1rem 'Montserrat Alternates', sans-serif;
   color: white;
   position: absolute;
@@ -161,8 +157,6 @@ body {
   background-image: url('assets/banana.svg');
   background-repeat: no-repeat;
 }
-.active #rangeslider::-webkit-slider-thumb:after {color: white;}
-
 .download-button {
   margin-top: 20px;
   border: none;

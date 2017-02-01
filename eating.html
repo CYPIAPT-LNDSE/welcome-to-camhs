@@ -15,17 +15,11 @@
     <p class="eating__text">
       Slide to choose how many fruit and vegetables you eat per day.
     </p>
-    <div id="input-wrapper">
-      <input id="rangeslider" type="range" min="0" max="5" value="0" step="1"
-      oninput="updateOutput(value, true)"
-      onchange="deactivate()"
-      onmouseup="deactivate()">
-      <div id="reel">
-        <!-- reel numbers - will be populated by JS -->
-        <div id="rn"></div>
-      </div>
-      <!-- static output display on the slider thumb - controlled by JS -->
-      <div id="static-output"></div>
+    <div class="input-wrapper">
+      <input class="rangeslider" type="range" min="0" max="5" value="0" step="1"
+      oninput="updateOutput(value)">
+      <div class="reel"></div>
+      <div class="static-output"></div>
     </div>
   </div>
 
