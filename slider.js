@@ -4,17 +4,15 @@ var max = $(".slider__range").attr("max");
 
 updateOutput($(".slider__range").val());
 
-var rfigure, h;
+var horizontal;
 function updateOutput(figure) {
-	//because of the step param the slider will return values in multiple of 0.05 so we have to round it up
-	rfigure = Math.round(figure);
 	//displaying the static output
-	$(".slider__banana").html(rfigure);
+	$(".slider__banana").html(figure);
 
 	//positioning .static-output and .reel
 	//horizontal positioning first
-	h = figure/max*($(".eating__slider").width()-$(".slider__reel").width()) + 'px';
+	horizontal = figure/max*($(".eating__slider").width()-$(".slider__reel").width()) + 'px';
 
 	//applying the positions
-	$(".slider__banana, .slider__reel").css({left: h});
+	$(".slider__banana, .slider__reel").css({left: horizontal});
 }
