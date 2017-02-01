@@ -19,8 +19,7 @@ body {
   color: #fff;
   padding: 70px 100px;
 }
-.welcome__title,
-.avatar__title {
+.welcome__title {
   font-family: 'Henny Penny', cursive;
   font-size: 4rem;
   margin: auto;
@@ -43,7 +42,11 @@ body {
   text-align: center;
 }
 .avatar {
-  padding: 0 10px;
+  padding: 120px 0;
+}
+.avatar__title {
+  margin: 0 40px;
+  text-align: center;
 }
 .carousel {
   height: 900px;
