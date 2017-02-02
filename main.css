@@ -109,10 +109,7 @@ p.eating__text {
 }
 .eating__slider {
   width: 600px;
-  /*margin: 0 auto 20px auto;*/
   position: relative;
-  /*padding-top: 313px;*/
-  /*padding-bottom: 160px;*/
   overflow-y: hidden;
   height: 540px;
 }
@@ -171,13 +168,12 @@ p.eating__text {
   height: 35%;
   overflow: hidden;
   position: absolute;
-  bottom: 0; /*left pos will be controlled by JS*/
+  bottom: 0; /*bottom pos will be controlled by JS*/
 }
 .slider__banana {
   font: bold 3rem/1rem 'Montserrat Alternates', sans-serif;
   color: white;
   position: absolute;
-  /*bottom: 110px;*/
   left: 166px;
   height: 125px;
   width: 25%;;
