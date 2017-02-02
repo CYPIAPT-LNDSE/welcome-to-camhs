@@ -122,6 +122,7 @@ p.eating__text {
   background: url('assets/banana-tree.svg');
   background-repeat: no-repeat;
   margin-left: 114px;
+  margin-top: 15px;
   height: 100%;
 }
 .slider__range {
