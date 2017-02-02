@@ -24,7 +24,7 @@ We aim to create an engaging web app for children which makes the experience of 
 
 This web application will be build tablet first, as this is the technology most commonly used by the therapists at CAMHS.
 
-## Next Steps?
+## Next Steps
 
 Building on from the design sprint these would be our next steps:
  - Respond to the user feedback from testing with our product owner. Tweak the illustration style and design to most appropriately target the full age range of our users.
@@ -35,5 +35,5 @@ Building on from the design sprint these would be our next steps:
  - Create a stronger narrative throughout the questionnaire, including the increased use of characters/avatars
  - Create backend to store the user data and link to download button
  
- ## Stretch goal
+## Stretch goal
  - It would be brilliant to create a website with a content management system so that other charities and organisations can create their own questionnaire. They would be able to choose from a range of pages and alter some of the text to make it appropriate for them.
