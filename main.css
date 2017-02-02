@@ -14,14 +14,14 @@ body {
 .eating,
 .finish,
 .avatar,
+.personality,
 .feelings {
   display: flex;
   flex-direction: column;
   color: #fff;
   padding: 70px 100px;
 }
-.welcome__title,
-.avatar__title {
+.welcome__title {
   font-family: 'Henny Penny', cursive;
   font-size: 4rem;
   margin: auto;
@@ -37,17 +37,34 @@ body {
 .welcome__text,
 .introduction__text,
 .eating__text,
-.finish__text {
+.feelings__text,
+.finish__text,
+.personality__text,
+.avatar__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
   text-align: center;
 }
+.eating__text {
+  margin: 10px 0;
+}
 .avatar {
-  padding: 0 10px;
+  padding: 0;
+}
+.personality__title {
+  margin-top: 0px;
+}
+.eating__title {
+  margin-top: 20px;
+}
+.avatar__title {
+  margin-top: 65px;
+  margin-bottom: 0px;
+  padding: 0 20px;
 }
 .carousel {
-  height: 900px;
+  height: 805px;
   perspective: 300px;
 }
 .carousel .carousel-item {
@@ -55,7 +72,7 @@ body {
   top: -300px;
 }
 .carousel .indicators {
-  bottom: 250px;
+  bottom: 230px;
 }
 .introduction__text {
   margin-top: 15px;
@@ -84,11 +101,12 @@ body {
   width: 200px;
 }
 .feelings__title {
+  margin-top: 0px;
   margin-bottom: 50px;
 }
 .eating__slider {
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   position: relative;
   /*padding-top: 313px;*/
   /*padding-bottom: 160px;*/
@@ -99,7 +117,7 @@ body {
   display: block;
   -webkit-appearance: none;
   outline: none;
-  height: 5px;
+  /*height: 5px;*/
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   -webkit-transform:rotate(90deg);
@@ -207,4 +225,54 @@ body {
 }
 .finished__header {
   color: black;
+}
+.personality__types {
+  color: black;
+  height: 360px;
+}
+.personality__shape {
+  background-color: #FCF74C;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px 10px 20px 0;
+}
+.characteristics {
+  cursor: pointer;
+  padding: 15px 15px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.5em;
+}
+.rotate-10 {
+  -ms-transform: rotate(10deg); /* IE 9 */
+  -webkit-transform: rotate(10deg); /* Safari */
+  transform: rotate(10deg);
+}
+.rotate-45 {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
+  transform: rotate(45deg);
+}
+.rotate-90 {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);
+}
+.rotate-315 {
+  -ms-transform: rotate(315deg); /* IE 9 */
+  -webkit-transform: rotate(315deg); /* Safari */
+  transform: rotate(315deg);
+}
+.rotate-330 {
+  -ms-transform: rotate(330deg); /* IE 9 */
+  -webkit-transform: rotate(330deg); /* Safari */
+  transform: rotate(330deg);
+}
+.emotions {
+  width: 510px;
+  margin: 0 0 0 auto;
+}
+.row {
+  margin-left: 40px;
 }
