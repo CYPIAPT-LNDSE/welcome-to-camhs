@@ -90,9 +90,10 @@ body {
   width: 500px;
   margin: 0 auto;
   position: relative;
-  padding-top: 160px;
-  padding-bottom: 160px;
-  overflow-x: hidden;
+  /*padding-top: 313px;*/
+  /*padding-bottom: 160px;*/
+  overflow-y: hidden;
+  height: 400px
 }
 .slider__range {
   display: block;
@@ -101,6 +102,11 @@ body {
   height: 5px;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
+  -webkit-transform:rotate(90deg);
+     -moz-transform:rotate(90deg);
+     -o-transform:rotate(90deg);
+     -ms-transform:rotate(90deg);
+     transform:rotate(90deg);
 }
 .slider__range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -135,16 +141,17 @@ body {
 }
 .slider__reel {
   width: 25%;
-  height: 100px;
+  height: 35%;
   overflow: hidden;
   position: absolute;
-  top: 0; /*left pos will be controlled by JS*/
+  bottom: 0; /*left pos will be controlled by JS*/
 }
 .slider__banana {
   font: bold 3rem/1rem 'Montserrat Alternates', sans-serif;
   color: white;
   position: absolute;
-  bottom: 110px;
+  /*bottom: 110px;*/
+  left: 130px;
   height: 125px;
   width: 25%;;
   text-align: center;
