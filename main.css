@@ -342,3 +342,9 @@ span:hover:before {
 .row {
   margin-left: 40px;
 }
+.balloons-background-image {
+  background-image: url(assets/balloons.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
