@@ -107,6 +107,11 @@ p.eating__text {
   margin-top: 0px;
   margin-bottom: 50px;
 }
+.feelings {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 0px;
+}
 .eating__slider {
   width: 600px;
   position: relative;
@@ -249,31 +254,6 @@ p.eating__text {
   margin: 10px;
   font-size: 1.5em;
 }
-.rotate-10 {
-  -ms-transform: rotate(10deg); /* IE 9 */
-  -webkit-transform: rotate(10deg); /* Safari */
-  transform: rotate(10deg);
-}
-.rotate-45 {
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Safari */
-  transform: rotate(45deg);
-}
-.rotate-90 {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */
-  transform: rotate(90deg);
-}
-.rotate-315 {
-  -ms-transform: rotate(315deg); /* IE 9 */
-  -webkit-transform: rotate(315deg); /* Safari */
-  transform: rotate(315deg);
-}
-.rotate-330 {
-  -ms-transform: rotate(330deg); /* IE 9 */
-  -webkit-transform: rotate(330deg); /* Safari */
-  transform: rotate(330deg);
-}
 .emotions {
   width: 510px;
   margin: 0 0 0 auto;
@@ -286,4 +266,7 @@ p.eating__text {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+}
+.eaten-banana {
+  width: 200px;
 }

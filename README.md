@@ -3,6 +3,8 @@ A fun and accessible questionnaire for children when first visiting CAMHS (Child
 
 This questionnaire aims to reduce the anxieties of children (5 - 12 years old) coming to CAMHS for the first time. It offers an alternative questionnaire to the paper based one which is currently used and is not appropriately designed for children. 
 
+CAMHS helps to support children and young people who need help with their emotional, behavioural and psychological/mental health difficulties. Children, young people and their families can be referred to CAMHS if the children are finding it hard to cope with family life, school or the wider world.
+
 CAMHS currently gives the questionnaire to children to complete when they are sitting in the waiting room. Our app intends to replace this often unenjoyable experience with one which provides a positive first interaction with CAMHS, while taking no more time or resources to complete than the paper-based method. 
 
 ## Why?
@@ -21,3 +23,17 @@ The therapist and the child will be able to download a PDF of the children's ans
 We aim to create an engaging web app for children which makes the experience of filling out the questionnaire enjoyable and more pictorial based which is appropriate for their developmental stage. 
 
 This web application will be build tablet first, as this is the technology most commonly used by the therapists at CAMHS.
+
+## Next Steps
+
+Building on from the design sprint these would be our next steps:
+ - Respond to the user feedback from testing with our product owner. Tweak the illustration style and design to most appropriately target the full age range of our users.
+ - Meet with our product owner to create a more comprehensive brief and timeline
+ - Add the additional pages that relate to our full user journey
+ - Create 3 characters/avatars
+ - Animate the illustrations and transitions 
+ - Create a stronger narrative throughout the questionnaire, including the increased use of characters/avatars
+ - Create backend to store the user data and link to download button
+ 
+## Stretch goal
+ - It would be brilliant to create a website with a content management system so that other charities and organisations can create their own questionnaire. They would be able to choose from a range of pages and alter some of the text to make it appropriate for them.
