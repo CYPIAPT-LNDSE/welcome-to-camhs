@@ -36,8 +36,8 @@ body {
 }
 .welcome__text,
 .introduction__text,
-.eating__text,
 .feelings__text,
+.eating__text,
 .finish__text,
 .personality__text,
 .avatar__text {
@@ -47,7 +47,10 @@ body {
   text-align: center;
 }
 .eating__text {
-  margin: 10px 0;
+  margin: -27px 0;
+}
+p.eating__text {
+    margin-top: 60px;
 }
 .avatar {
   padding: 0;
@@ -105,13 +108,21 @@ body {
   margin-bottom: 50px;
 }
 .eating__slider {
-  width: 500px;
-  margin: 0 auto 20px auto;
+  width: 600px;
+  /*margin: 0 auto 20px auto;*/
   position: relative;
   /*padding-top: 313px;*/
   /*padding-bottom: 160px;*/
   overflow-y: hidden;
-  height: 400px
+  height: 540px;
+}
+.slider__tree {
+  background: url('assets/6irogrLKT.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  right: 2px;
 }
 .slider__range {
   display: block;
@@ -119,7 +130,7 @@ body {
   outline: none;
   /*height: 5px;*/
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   -webkit-transform:rotate(90deg);
      -moz-transform:rotate(90deg);
      -o-transform:rotate(90deg);
