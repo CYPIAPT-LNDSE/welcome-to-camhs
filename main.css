@@ -104,6 +104,11 @@ body {
   margin-top: 0px;
   margin-bottom: 50px;
 }
+.feelings {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 0px;
+}
 .eating__slider {
   width: 500px;
   margin: 0 auto 20px auto;
@@ -292,16 +297,6 @@ body {
 span:hover:before {
   border: 1px solid #4778d9!important;
 }
-.personality__types {
-  color: black;
-  height: 360px;
-}
-.personality__shape {
-  background-color: #FCF74C;
-  display: inline-block;
-  border-radius: 50%;
-  margin: 10px 10px 20px 0;
-}
 .characteristics {
   cursor: pointer;
   padding: 15px 15px;
@@ -309,31 +304,6 @@ span:hover:before {
   display: inline-block;
   margin: 10px;
   font-size: 1.5em;
-}
-.rotate-10 {
-  -ms-transform: rotate(10deg); /* IE 9 */
-  -webkit-transform: rotate(10deg); /* Safari */
-  transform: rotate(10deg);
-}
-.rotate-45 {
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Safari */
-  transform: rotate(45deg);
-}
-.rotate-90 {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */
-  transform: rotate(90deg);
-}
-.rotate-315 {
-  -ms-transform: rotate(315deg); /* IE 9 */
-  -webkit-transform: rotate(315deg); /* Safari */
-  transform: rotate(315deg);
-}
-.rotate-330 {
-  -ms-transform: rotate(330deg); /* IE 9 */
-  -webkit-transform: rotate(330deg); /* Safari */
-  transform: rotate(330deg);
 }
 .emotions {
   width: 510px;
@@ -347,4 +317,7 @@ span:hover:before {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+}
+.eaten-banana {
+  width: 200px;
 }
