@@ -1,4 +1,4 @@
-# THIS REPO HAS BEEN CLONED TO RUN ON GITHUB PAGES AND MAY NOT BE UP TO DATE WITH THE [MASTER](https://github.com/CYPIAPT-LNDSE/welcome-to-camhs).
+## THIS REPO HAS BEEN FORKED TO RUN ON GITHUB PAGES AND MAY NOT BE UP TO DATE WITH THE [MASTER](https://github.com/CYPIAPT-LNDSE/welcome-to-camhs).
 
 # Welcome to CAMHS
 A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services). 
