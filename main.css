@@ -50,7 +50,7 @@ body {
   margin: -27px 0;
 }
 p.eating__text {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 .avatar {
   padding: 0;
@@ -117,12 +117,10 @@ p.eating__text {
   height: 540px;
 }
 .slider__tree {
-  background: url('assets/6irogrLKT.png');
+  background: url('assets/banana-tree.svg');
   background-repeat: no-repeat;
-  width: 100%;
+  margin-left: 114px;
   height: 100%;
-  position: relative;
-  right: 2px;
 }
 .slider__range {
   display: block;
@@ -130,12 +128,12 @@ p.eating__text {
   outline: none;
   /*height: 5px;*/
   width: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0);
   -webkit-transform:rotate(90deg);
-     -moz-transform:rotate(90deg);
-     -o-transform:rotate(90deg);
-     -ms-transform:rotate(90deg);
-     transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  transform:rotate(90deg);
 }
 .slider__range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -180,7 +178,7 @@ p.eating__text {
   color: white;
   position: absolute;
   /*bottom: 110px;*/
-  left: 130px;
+  left: 166px;
   height: 125px;
   width: 25%;;
   text-align: center;
