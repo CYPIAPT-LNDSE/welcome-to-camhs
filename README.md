@@ -41,7 +41,7 @@ Building on from the design sprint these would be our next steps:
  - It would be brilliant to create a website with a content management system so that other charities and organisations can create their own questionnaire. They would be able to choose from a range of pages and alter some of the text to make it appropriate for them.
 
 ## Current tech stack & technologies needed for MVP
-- Hosting on Heroku
+- Hosting on Heroku (currently hosted on GitHub Pages)
 - Node server with Hapi.js 
 - Backend testing with Tape
 - Frontend testing with Nightwatch.js
