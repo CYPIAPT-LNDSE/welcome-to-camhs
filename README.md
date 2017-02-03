@@ -1,4 +1,9 @@
 # Welcome to CAMHS
+
+[Jasmin Patel](https://github.com/Jasminpatel1) - Product Owner <br>
+[Ewelina Skibinska](https://github.com/skibinska) - Developer <br>
+[Peter Rhodes](https://github.com/rhodespeter) - Developer
+
 A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services). 
 
 Our prototype can be found [here](https://cypiapt-lndse.github.io/welcome-to-camhs/). This app has been designed for tablets, to change page swipe left and right.
