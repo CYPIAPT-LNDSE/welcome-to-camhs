@@ -5,9 +5,7 @@ Our prototype can be found [here](https://cypiapt-lndse.github.io/welcome-to-cam
 
 This questionnaire aims to reduce the anxieties of children (5 - 12 years old) coming to CAMHS for the first time. It offers an alternative questionnaire to the paper based one which is currently used and is not appropriately designed for children. 
 
-CAMHS helps to support children and young people who need help with their emotional, behavioural and psychological/mental health difficulties. Children, young people and their families can be referred to CAMHS if the children are finding it hard to cope with family life, school or the wider world.
-
-CAMHS currently gives the questionnaire to children to complete when they are sitting in the waiting room. Our app intends to replace this often unenjoyable experience with one which provides a positive first interaction with CAMHS, while taking no more time or resources to complete than the paper-based method. 
+CAMHS helps to support children and young people who need help with their emotional, behavioural and psychological/mental health difficulties. Children, young people and their families can be referred to CAMHS if the children are finding it hard to cope with family life, school or the wider world. CAMHS currently gives the questionnaire to children to complete when they are sitting in the waiting room. Our app intends to replace this often unenjoyable experience with one which provides a positive first interaction with CAMHS, while taking no more time or resources to complete than the paper-based method. 
 
 ## Team
 [Jasmin Patel](https://github.com/Jasminpatel1) - Product Owner <br>
@@ -55,3 +53,4 @@ Building on from the design sprint these would be our next steps:
 - data management and state storage with redux
 - hammer.js library for swiping
 - snap.svg for animating SVG images
+- We do not intend to have any accounts, the user data will not be stored after their questionnaire has been downloaded.
