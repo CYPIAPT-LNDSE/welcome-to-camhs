@@ -39,3 +39,6 @@ Building on from the design sprint these would be our next steps:
  
 ## Stretch goal
  - It would be brilliant to create a website with a content management system so that other charities and organisations can create their own questionnaire. They would be able to choose from a range of pages and alter some of the text to make it appropriate for them.
+
+## Current tech stack & technologies needed for MVP
+...
