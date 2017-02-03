@@ -1,9 +1,4 @@
 # Welcome to CAMHS
-
-[Jasmin Patel](https://github.com/Jasminpatel1) - Product Owner <br>
-[Ewelina Skibinska](https://github.com/skibinska) - Developer <br>
-[Peter Rhodes](https://github.com/rhodespeter) - Developer
-
 A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services). 
 
 Our prototype can be found [here](https://cypiapt-lndse.github.io/welcome-to-camhs/). This app has been designed for tablets, to change page swipe left and right.
@@ -13,6 +8,11 @@ This questionnaire aims to reduce the anxieties of children (5 - 12 years old) c
 CAMHS helps to support children and young people who need help with their emotional, behavioural and psychological/mental health difficulties. Children, young people and their families can be referred to CAMHS if the children are finding it hard to cope with family life, school or the wider world.
 
 CAMHS currently gives the questionnaire to children to complete when they are sitting in the waiting room. Our app intends to replace this often unenjoyable experience with one which provides a positive first interaction with CAMHS, while taking no more time or resources to complete than the paper-based method. 
+
+## Team
+[Jasmin Patel](https://github.com/Jasminpatel1) - Product Owner <br>
+[Ewelina Skibinska](https://github.com/skibinska) - Developer <br>
+[Peter Rhodes](https://github.com/rhodespeter) - Developer
 
 ## Why?
 
