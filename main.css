@@ -263,7 +263,7 @@ p.eating__text {
   margin-left: 40px;
 }
 .balloons-background-image {
-  background-image: url(assets/balloons.svg);
+  background-image: url(assets/balloons-animated.svg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
