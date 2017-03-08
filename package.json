@@ -4,7 +4,7 @@
   "description": "CAHMS App",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "./node_modules/tape/bin/tape tests/*.js | tap-spec",
     "start": "node ./src/start-server.js",
     "devStart": "nodemon ./src/start-server.js"
   },
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
+    "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
   }
 }
