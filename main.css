@@ -1,15 +1,4 @@
-body {
-  padding: 0;
-  font-family: 'Montserrat Alternates', sans-serif;
-  max-width: 768px;
-  border: 1px solid #000;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%,rgba(57,138,187,0.8) 100%);
-  font-size: 1.1rem;
-  color: white;
-}
-.welcome,
+
 .introduction,
 .eating,
 .finish,
@@ -21,20 +10,7 @@ body {
   color: #fff;
   padding: 70px 100px;
 }
-.welcome__title {
-  font-family: 'Henny Penny', cursive;
-  font-size: 4rem;
-  margin: auto;
-  letter-spacing: 0.2rem;
-  text-align: center;
-  line-height: 4.5rem;
-}
-.welcome__image {
-  margin: 25px auto;
-  height: 500px;
-  width: 500px;
-}
-.welcome__text,
+
 .introduction__text,
 .feelings__text,
 .eating__text,
