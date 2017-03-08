@@ -1,5 +1,4 @@
 
-.introduction,
 .eating,
 .finish,
 .avatar,
@@ -11,7 +10,6 @@
   padding: 70px 100px;
 }
 
-.introduction__text,
 .feelings__text,
 .eating__text,
 .finish__text,
@@ -53,28 +51,7 @@ p.eating__text {
 .carousel .indicators {
   bottom: 230px;
 }
-.introduction__text {
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-.text-input {
-  width: 490px;
-  height: 50px;
-  font-size: 3.9rem;
-  border: none;
-  background-color: transparent;
-  border-bottom: 6px dotted white;
-  color: #FCF74C;
-  text-align: center;
-  padding-bottom: 20px;
-}
-.text-input:focus {
-  outline: none;
-}
-.sleeping-lion{
-  width: 300px;
-  margin: 0 auto 20px auto;
-}
+
 .emoji {
   margin: 5px 25px 5px 25px;
   width: 200px;

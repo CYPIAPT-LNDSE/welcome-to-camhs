@@ -9,13 +9,13 @@ body {
   font-size: 1.1rem;
   color: white; }
 
-.welcome {
+.welcome, .introduction {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 70px 100px; }
 
-.welcome__text {
+.welcome__text, .introduction__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
@@ -32,13 +32,13 @@ body {
   font-size: 1.1rem;
   color: white; }
 
-.welcome {
+.welcome, .introduction {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 70px 100px; }
 
-.welcome__text {
+.welcome__text, .introduction__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
@@ -56,5 +56,50 @@ body {
   margin: 25px auto;
   height: 500px;
   width: 500px; }
+
+body {
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  max-width: 768px;
+  border: 1px solid black;
+  height: 1024px;
+  margin: auto;
+  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
+  font-size: 1.1rem;
+  color: white; }
+
+.welcome, .introduction {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 70px 100px; }
+
+.welcome__text, .introduction__text {
+  margin: 40px 0;
+  padding: 0 25px;
+  font-size: 2.2rem;
+  text-align: center; }
+
+.introduction__text {
+  margin-top: 15px;
+  margin-bottom: 10px; }
+
+.text-input {
+  width: 490px;
+  height: 50px;
+  font-size: 3.9rem;
+  border: none;
+  border-bottom: 6px dotted white;
+  background-color: transparent;
+  color: #FCF74C;
+  text-align: center;
+  padding-bottom: 20px; }
+
+.text-input:focus {
+  outline: none; }
+
+.sleeping-lion {
+  width: 300px;
+  margin: 0 auto 20px auto; }
 
 /*# sourceMappingURL=main.css.map */
