@@ -1,0 +1,55 @@
+.finish {
+  @extend %main-content;
+}
+
+.finish__text {
+ @extend %main-text;
+}
+
+.finish__lion {
+  width: 300px;
+  display: block;
+  margin: 40px auto;
+}
+
+.finish-background{
+  background-image: url(../assets/ticker-tape.svg);
+  background-size: 260px;
+  background-position: center;
+  -webkit-filter: brightness(0.95);
+  filter: brightness(0.95);
+}
+
+.finish {
+  height: 883px;
+}
+
+.finished__header {
+  color: $black;
+}
+
+.download-button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  color: $black;
+  width: 200px;
+  height: 80px;
+  font-family: $main-font;
+  font-size: 1.2em;
+  background-color: $yellow;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px $orange;
+
+  &:hover {
+    background-color: $yellow;
+    filter: brightness(97%);
+  }
+
+  &:active {
+    box-shadow: 0 2px $orange;
+    transform: translateY(2px);
+  }
+
+}

@@ -1,5 +1,4 @@
 
-.finish,
 .avatar,
 .personality,
 .feelings {
@@ -10,7 +9,6 @@
 }
 
 .feelings__text,
-.finish__text,
 .personality__text,
 .avatar__text {
   margin: 40px 0;
@@ -59,52 +57,12 @@
   padding-bottom: 0px;
 }
 
-.download-button {
-  margin-top: 20px;
-  border: none;
-  border-radius: 4px;
-  color: black;
-  width: 200px;
-  height: 80px;
-  font-family: Montserrat Alternates;
-  font-size: 1.2em;
-  background-color: #FCF74C;
-  cursor: pointer;
-  outline: none;
-  box-shadow: 0 4px #E87325;
-}
-.download-button:hover {
-  background-color: #FCF74C;
-  filter: brightness(97%)
-}
-.download-button:active {
-  box-shadow: 0 2px #E87325;
-  transform: translateY(2px);
-}
-.finish__lion {
-  width: 300px;
-  display: block;
-  margin: 40px auto;
-}
 .margin-top-0px {
   margin-top: 0;
 }
 .medium-text {
   margin-top: 55px;
   margin-bottom: 5px;
-}
-.finish-background{
-  background-image: url(assets/ticker-tape.svg);
-  background-size: 260px;
-  background-position: center;
-  -webkit-filter: brightness(0.95);
-  filter: brightness(0.95);
-}
-.finish {
-  height: 883px;
-}
-.finished__header {
-  color: black;
 }
 .personality__types {
   color: black;
