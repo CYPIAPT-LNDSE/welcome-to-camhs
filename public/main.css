@@ -1,3 +1,14 @@
+body {
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  max-width: 768px;
+  border: 1px solid black;
+  height: 1024px;
+  margin: auto;
+  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
+  font-size: 1.1rem;
+  color: white; }
+
 .welcome, .introduction, .eating, .finish, .feelings, .avatar, .personality {
   display: flex;
   flex-direction: column;
@@ -9,17 +20,6 @@
   padding: 0 25px;
   font-size: 2.2rem;
   text-align: center; }
-
-body {
-  padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  max-width: 768px;
-  border: 1px solid black;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
-  font-size: 1.1rem;
-  color: white; }
 
 .welcome__title {
   font-family: "Henny Penny", cursive;
