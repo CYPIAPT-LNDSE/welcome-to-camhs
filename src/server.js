@@ -7,12 +7,7 @@ const routes = require('./routes');
 const server = new Hapi.Server();
 
 server.connection({
-  port: process.env.PORT || 8080,
-  routes: {
-    files: {
-      relativeTo: Path.join(__dirname, '..', 'public')
-    }
-  }
+  port: process.env.PORT || 8080
 });
 
 server.register([Inert], err => {
