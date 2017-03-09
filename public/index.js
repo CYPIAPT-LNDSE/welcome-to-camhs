@@ -1,6 +1,8 @@
 $(document).ready(function(){
-  $('.carousel').carousel({
-    indicators: true,
-    shift: 100
-  });
+  if ($('.carousel')) {
+    $('.carousel').carousel({
+      indicators: true,
+      shift: 100
+    });
+  }
 });
