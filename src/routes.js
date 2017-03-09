@@ -10,7 +10,8 @@ module.exports = [
     method: 'GET',
     path: '/avatar',
     handler: (request, reply) => {
-      reply.view('choose-an-avatar');
+      var data = { avatar: true };
+      reply.view('choose-an-avatar', data);
     }
   },
   {

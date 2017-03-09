@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{#if avatar}}
   <link rel="stylesheet" href="lib/materialize/dist/css/materialize.min.css">
+  {{/if}}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Henny+Penny|Montserrat+Alternates">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="balloon.css">
@@ -13,9 +15,7 @@
 </head>
 <body>
 
-  <div class="container">
     {{{ content }}}
-  </div>
 
   <script src="lib/jquery-3.1.1.min.js"></script>
   <script src="lib/materialize/dist/js/materialize.js"></script>
