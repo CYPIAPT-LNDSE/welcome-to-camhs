@@ -4,7 +4,7 @@ module.exports = [
     path: '/{file*}',
     handler: {
       directory: {
-        path: '../public'
+        path: './'
       }
     }
   }
