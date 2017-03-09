@@ -11,6 +11,7 @@
   }
 
   updateOutput($(".slider__range").val());
+
 })(jQuery);
 
 // http://thecodeplayer.com/walkthrough/spicing-up-the-html5-range-slider-input
