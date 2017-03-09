@@ -4,9 +4,14 @@
 .eating {
   @extend %main-content;
 }
+
 .eating__text {
   @extend %main-text;
   margin: -27px 0;
+}
+
+.eating__title {
+  margin-top: 20px;
 }
 
 .eating__slider {
@@ -16,6 +21,7 @@
   height: 540px;
   margin-bottom: 60px;
 }
+
 .slider__tree {
   background: url('../assets/banana-tree.svg');
   background-repeat: no-repeat;
@@ -23,6 +29,7 @@
   margin-top: 15px;
   height: 100%;
 }
+
 .slider__range {
   display: block;
   -webkit-appearance: none;
@@ -36,6 +43,7 @@
   -ms-transform:rotate(90deg);
   transform:rotate(90deg);
 }
+
 .slider__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
@@ -43,6 +51,7 @@
   width: 54px;
   position: relative;
 }
+
 .slider__range::-webkit-slider-thumb:after {
   content: '< >';
   word-spacing: 20px;
@@ -57,6 +66,7 @@
   color: transparent;
   transition: color 0.25s;
 }
+
 .slider__range::-webkit-slider-thumb:before {
   content: '';
   height: 5px;
@@ -67,6 +77,7 @@
   /*prevent click obstruction for the real slider track beneath*/
   pointer-events: none;
 }
+
 .slider__reel {
   width: 25%;
   height: 35%;
@@ -74,6 +85,7 @@
   position: absolute;
   bottom: 0; /*bottom pos will be controlled by JS*/
 }
+
 .slider__banana {
   font: bold 3rem/1rem $main-font;
   color: $white;
