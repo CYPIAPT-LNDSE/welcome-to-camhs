@@ -8,7 +8,7 @@ test('Check the index route', t => {
   };
   server.inject(options, (response) => {
     t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
-    // server.stop();
+    server.stop();
     t.end();
   });
 });
