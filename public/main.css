@@ -21,29 +21,6 @@ body {
   font-size: 1.1rem;
   color: white; }
 
-.welcome, .introduction, .eating, .finish, .feelings, .avatar, .personality {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 70px 100px; }
-
-.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text, .personality__text {
-  margin: 40px 0;
-  padding: 0 25px;
-  font-size: 2.2rem;
-  text-align: center; }
-
-body {
-  padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  max-width: 768px;
-  border: 1px solid black;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
-  font-size: 1.1rem;
-  color: white; }
-
 .welcome__title {
   font-family: "Henny Penny", cursive;
   font-size: 4rem;
@@ -56,29 +33,6 @@ body {
   margin: 25px auto;
   height: 500px;
   width: 500px; }
-
-.welcome, .introduction, .eating, .finish, .feelings, .avatar, .personality {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 70px 100px; }
-
-.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text, .personality__text {
-  margin: 40px 0;
-  padding: 0 25px;
-  font-size: 2.2rem;
-  text-align: center; }
-
-body {
-  padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  max-width: 768px;
-  border: 1px solid black;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
-  font-size: 1.1rem;
-  color: white; }
 
 .introduction__text {
   margin-top: 15px;
@@ -101,29 +55,6 @@ body {
 .sleeping-lion {
   width: 300px;
   margin: 0 auto 20px auto; }
-
-.welcome, .introduction, .eating, .finish, .feelings, .avatar, .personality {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 70px 100px; }
-
-.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text, .personality__text {
-  margin: 40px 0;
-  padding: 0 25px;
-  font-size: 2.2rem;
-  text-align: center; }
-
-body {
-  padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  max-width: 768px;
-  border: 1px solid black;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
-  font-size: 1.1rem;
-  color: white; }
 
 .eating__text {
   margin: -27px 0; }
@@ -251,29 +182,6 @@ body {
     box-shadow: 0 2px #E87325;
     transform: translateY(2px); }
 
-.welcome, .introduction, .eating, .finish, .feelings, .avatar, .personality {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 70px 100px; }
-
-.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text, .personality__text {
-  margin: 40px 0;
-  padding: 0 25px;
-  font-size: 2.2rem;
-  text-align: center; }
-
-body {
-  padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  max-width: 768px;
-  border: 1px solid black;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
-  font-size: 1.1rem;
-  color: white; }
-
 .feelings__title {
   margin-top: 0px;
   margin-bottom: 50px; }
@@ -289,29 +197,6 @@ body {
 
 .eaten-banana {
   width: 200px; }
-
-.welcome, .introduction, .eating, .finish, .feelings, .avatar, .personality {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 70px 100px; }
-
-.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text, .personality__text {
-  margin: 40px 0;
-  padding: 0 25px;
-  font-size: 2.2rem;
-  text-align: center; }
-
-body {
-  padding: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  max-width: 768px;
-  border: 1px solid black;
-  height: 1024px;
-  margin: auto;
-  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
-  font-size: 1.1rem;
-  color: white; }
 
 .avatar {
   padding: 0; }
