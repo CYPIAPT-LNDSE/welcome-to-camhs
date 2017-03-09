@@ -1,6 +1,5 @@
 const Hapi = require('hapi');
 const Inert = require('inert');
-const Vision = require('vision');
 const Path = require('path');
 
 const routes = require('./routes');
