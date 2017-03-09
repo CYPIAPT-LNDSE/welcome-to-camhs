@@ -16,7 +16,6 @@
 }
 
 .welcome__image {
-  margin: 25px auto;
-  height: 500px;
-  width: 500px;
+  margin: $small-margin auto;
+  height: $medium-image + 100px;
 }

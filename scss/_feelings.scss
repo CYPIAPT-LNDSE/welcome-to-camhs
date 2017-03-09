@@ -22,10 +22,10 @@
 }
 
 .emoji {
-  margin: 5px 25px 5px 25px;
-  width: 200px;
+  margin: 5px $small-margin;
+  width: $small-image;
 }
 
 .eaten-banana {
-  width: 200px;
+  width: $small-image;
 }

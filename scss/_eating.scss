@@ -12,7 +12,7 @@
 }
 
 .eating__slider {
-  width: 600px;
+  width: $large-image;
   position: relative;
   overflow-y: hidden;
   height: 540px;
@@ -20,7 +20,7 @@
 }
 
 .slider__tree {
-  background: url('../assets/banana-tree.svg');
+  background: url('./assets/banana-tree.svg');
   background-repeat: no-repeat;
   margin-left: 114px;
   margin-top: 15px;
@@ -94,6 +94,6 @@
   /*disable clicks so that the slider thumb can be controlled*/
   pointer-events: none;
   transition: all 0.25s;
-  background-image: url('../assets/banana.svg');
+  background-image: url('./assets/banana.svg');
   background-repeat: no-repeat;
 }

@@ -7,14 +7,14 @@
 }
 
 .finish__lion {
-  width: 300px;
+  width: $medium-image;
   display: block;
   margin: 40px auto;
 }
 
 .finish-background{
-  background-image: url(../assets/ticker-tape.svg);
-  background-size: 260px;
+  background-image: url(./assets/ticker-tape.svg);
+  background-size: $small-image;
   background-position: center;
   -webkit-filter: brightness(0.95);
   filter: brightness(0.95);

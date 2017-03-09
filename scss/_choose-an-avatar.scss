@@ -14,7 +14,7 @@
 }
 
 .carousel {
-  height: 805px;
+  height: $large-image;
   perspective: 300px;
 
   .carousel-item {
