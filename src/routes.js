@@ -7,5 +7,12 @@ module.exports = [
         path: 'public'
       }
     }
+  },
+  {
+    method: 'GET',
+    path: '/',
+    handler: (request, reply) => {
+      reply.view('welcome');
+    }
   }
 ];
