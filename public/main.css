@@ -1,10 +1,10 @@
-.welcome, .introduction, .eating, .finish {
+.welcome, .introduction, .eating, .finish, .feelings, .avatar {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 70px 100px; }
 
-.welcome__text, .introduction__text, .eating__text, .finish__text {
+.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
@@ -21,13 +21,13 @@ body {
   font-size: 1.1rem;
   color: white; }
 
-.welcome, .introduction, .eating, .finish {
+.welcome, .introduction, .eating, .finish, .feelings, .avatar {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 70px 100px; }
 
-.welcome__text, .introduction__text, .eating__text, .finish__text {
+.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
@@ -57,13 +57,13 @@ body {
   height: 500px;
   width: 500px; }
 
-.welcome, .introduction, .eating, .finish {
+.welcome, .introduction, .eating, .finish, .feelings, .avatar {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 70px 100px; }
 
-.welcome__text, .introduction__text, .eating__text, .finish__text {
+.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
@@ -102,13 +102,13 @@ body {
   width: 300px;
   margin: 0 auto 20px auto; }
 
-.welcome, .introduction, .eating, .finish {
+.welcome, .introduction, .eating, .finish, .feelings, .avatar {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 70px 100px; }
 
-.welcome__text, .introduction__text, .eating__text, .finish__text {
+.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
@@ -245,5 +245,84 @@ body {
   .download-button:active {
     box-shadow: 0 2px #E87325;
     transform: translateY(2px); }
+
+.welcome, .introduction, .eating, .finish, .feelings, .avatar {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 70px 100px; }
+
+.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text {
+  margin: 40px 0;
+  padding: 0 25px;
+  font-size: 2.2rem;
+  text-align: center; }
+
+body {
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  max-width: 768px;
+  border: 1px solid black;
+  height: 1024px;
+  margin: auto;
+  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
+  font-size: 1.1rem;
+  color: white; }
+
+.feelings__title {
+  margin-top: 0px;
+  margin-bottom: 50px; }
+
+.feelings {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 0px; }
+
+.emoji {
+  margin: 5px 25px 5px 25px;
+  width: 200px; }
+
+.eaten-banana {
+  width: 200px; }
+
+.welcome, .introduction, .eating, .finish, .feelings, .avatar {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 70px 100px; }
+
+.welcome__text, .introduction__text, .eating__text, .finish__text, .feelings__text, .avatar__text {
+  margin: 40px 0;
+  padding: 0 25px;
+  font-size: 2.2rem;
+  text-align: center; }
+
+body {
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  max-width: 768px;
+  border: 1px solid black;
+  height: 1024px;
+  margin: auto;
+  background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
+  font-size: 1.1rem;
+  color: white; }
+
+.avatar {
+  padding: 0; }
+
+.avatar__title {
+  margin-top: 65px;
+  margin-bottom: 0px;
+  padding: 0 20px; }
+
+.carousel {
+  height: 805px;
+  perspective: 300px; }
+  .carousel .carousel-item {
+    width: 400px;
+    top: -300px; }
+  .carousel .indicators {
+    bottom: 230px; }
 
 /*# sourceMappingURL=main.css.map */

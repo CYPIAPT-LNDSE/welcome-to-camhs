@@ -1,0 +1,33 @@
+@import "layout";
+
+.feelings {
+  @extend %main-content;
+}
+
+.feelings__text {
+  @extend %main-text;
+}
+
+.feelings__title {
+  margin: {
+    top: 0px;
+    bottom: 50px;
+  }
+}
+
+.feelings {
+  padding: {
+    left: 40px;
+    right: 40px;
+    bottom: 0px;
+  }
+}
+
+.emoji {
+  margin: 5px 25px 5px 25px;
+  width: 200px;
+}
+
+.eaten-banana {
+  width: 200px;
+}

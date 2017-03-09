@@ -1,60 +1,23 @@
 
-.avatar,
-.personality,
-.feelings {
+.personality {
   display: flex;
   flex-direction: column;
   color: #fff;
   padding: 70px 100px;
 }
 
-.feelings__text,
-.personality__text,
-.avatar__text {
+.personality__text {
   margin: 40px 0;
   padding: 0 25px;
   font-size: 2.2rem;
   text-align: center;
 }
 
-.avatar {
-  padding: 0;
-}
 .personality__title {
   margin-top: 0px;
 }
 .eating__title {
   margin-top: 20px;
-}
-.avatar__title {
-  margin-top: 65px;
-  margin-bottom: 0px;
-  padding: 0 20px;
-}
-.carousel {
-  height: 805px;
-  perspective: 300px;
-}
-.carousel .carousel-item {
-  width: 400px;
-  top: -300px;
-}
-.carousel .indicators {
-  bottom: 230px;
-}
-
-.emoji {
-  margin: 5px 25px 5px 25px;
-  width: 200px;
-}
-.feelings__title {
-  margin-top: 0px;
-  margin-bottom: 50px;
-}
-.feelings {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 0px;
 }
 
 .margin-top-0px {
@@ -88,13 +51,4 @@
 }
 .row {
   margin-left: 40px;
-}
-/*.balloons-background-image {
-  background-image: url(assets/balloons-animated.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}*/
-.eaten-banana {
-  width: 200px;
 }
