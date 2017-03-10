@@ -1,0 +1,21 @@
+.welcome {
+  @extend %main-content;
+}
+
+.welcome__text {
+  @extend %main-text;
+}
+
+.welcome__title {
+  font-family: $cursive-font;
+  font-size: 4rem;
+  margin: 0 auto;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  line-height: 4.5rem;
+}
+
+.welcome__image {
+  margin: $small-margin auto;
+  height: $medium-image + 100px;
+}

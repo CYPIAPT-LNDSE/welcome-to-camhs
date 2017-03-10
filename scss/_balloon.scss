@@ -1,9 +1,9 @@
-.st0{fill:none;stroke:#F8EE56;stroke-width:0.5;stroke-miterlimit:10;}
-.st1{fill:#FFC900;}
+.st0{fill:none;stroke:$yellow;stroke-width:0.5;stroke-miterlimit:10;}
+.st1{fill:$dark-yellow;}
 .st2{font-family:'MontserratAlternates-Regular';}
 .st3{font-size:12px;}
 .st4{opacity:0.41;}
-.st5{opacity:0.1091;fill:#FFFFFF;}
+.st5{opacity:0.1091;fill:$white;}
 .st6{fill:none;}
 
 .pop {
@@ -11,7 +11,7 @@
 }
 
 #balloons {
-  width: 750px;
+  width: $large-image;
   position: absolute;
   left: 50%;
   margin-left: -385px;

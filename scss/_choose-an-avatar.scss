@@ -1,0 +1,29 @@
+.avatar {
+  @extend %main-content;
+  padding: 0;
+}
+
+.avatar__text {
+  @extend %main-text;
+}
+
+.avatar__title {
+  margin-top: 65px;
+  margin-bottom: 0px;
+  padding: 0 20px;
+}
+
+.carousel {
+  height: $large-image;
+  perspective: 300px;
+
+  .carousel-item {
+    width: 400px;
+    top: -300px;
+  }
+
+  .indicators {
+    bottom: 230px;
+  }
+
+}
