@@ -10,8 +10,8 @@ var addAnswersToSessionStorage = function(){
   var boring = document.getElementById("boring");
   var kind = document.getElementById("kind");
   var sad = document.getElementById("sad");
-  var sadEmoji = document.getElementsByClassName("emoji")[0];
-  var happyEmoji = document.getElementsByClassName("emoji")[1];
+  var happyEmoji = document.getElementsByClassName("emoji")[0];
+  var sadEmoji = document.getElementsByClassName("emoji")[1];
   var indifferentEmoji = document.getElementsByClassName("emoji")[2];
   var personality = [];
 
@@ -33,14 +33,14 @@ var addAnswersToSessionStorage = function(){
   function addKeyupEvent(key, element){
     if(!element){ return; };
     element.addEventListener("keyup", function(){
-      addToStorageValue( key, element.value )
+      addToStorageValue(key, element.value)
     });
   };
 
   function addClickEventSingle(key, element, value){
     if(!element){ return; };
     element.addEventListener("click", function(){
-      addToStorageValue( key, value )
+      addToStorageValue(key, value)
     });
   }
 
