@@ -6,7 +6,29 @@ test('Check the index route', t => {
     method: 'GET',
     url: '/'
   };
-  server.inject(options, (response) => {
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.end();
+  });
+});
+
+test('Check /main.css', t => {
+  const options = {
+    method: 'GET',
+    url: '/main.css'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.end();
+  });
+});
+
+test('Check /index.js', t => {
+  const options = {
+    method: 'GET',
+    url: '/index.js'
+  };
+  server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
     t.end();
   });
