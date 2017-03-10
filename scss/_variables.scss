@@ -1,0 +1,21 @@
+// colours
+$black: rgba(0, 0, 0, 1);
+$blue: rgba(56, 185, 242, 0.8);
+$dark-blue: rgba(57,138,187,0.8);
+$orange: rgba(232, 115, 37, 1);
+$dark-yellow: rgba(255, 201, 0, 1);
+$yellow: rgba(252, 247, 76, 1);
+$transparent: rgba(0, 0, 0, 0);
+$white: rgba(255, 255, 255, 1);
+
+$small-image: 200px;
+$medium-image: 300px;
+$large-image: 750px;
+
+$small-margin: 25px;
+
+// fonts
+$main-font: 'Montserrat Alternates', sans-serif;
+$cursive-font:  'Henny Penny', cursive;
+
+$background: radial-gradient(ellipse at center, $blue 0%, $dark-blue 100%);

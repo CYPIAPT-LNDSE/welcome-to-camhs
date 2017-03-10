@@ -1,0 +1,31 @@
+.feelings {
+  @extend %main-content;
+}
+
+.feelings__text {
+  @extend %main-text;
+}
+
+.feelings__title {
+  margin: {
+    top: 0px;
+    bottom: 50px;
+  }
+}
+
+.feelings {
+  padding: {
+    left: 40px;
+    right: 40px;
+    bottom: 0px;
+  }
+}
+
+.emoji {
+  margin: 5px $small-margin;
+  width: $small-image;
+}
+
+.eaten-banana {
+  width: $small-image;
+}

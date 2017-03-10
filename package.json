@@ -4,6 +4,7 @@
   "description": "CAHMS App",
   "main": "index.js",
   "scripts": {
+    "sass": "sass --watch scss/main.scss:public/main.css",
     "test": "./node_modules/tape/bin/tape tests/*.js | tap-spec",
     "start": "node ./src/start-server.js",
     "devStart": "nodemon ./src/start-server.js"
@@ -22,7 +23,8 @@
     "handlebars": "^4.0.6",
     "hapi": "^16.1.0",
     "inert": "^4.1.0",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+    "normalize-scss": "^6.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
