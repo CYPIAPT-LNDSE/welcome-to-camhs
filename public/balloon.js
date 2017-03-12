@@ -1,29 +1,20 @@
-if (document.querySelector('.personality')) {
-  document.getElementById('strange').addEventListener('click', function(){
-    document.getElementById('strange').classList.add('pop');
-  });
+(function () {
+  'use strict';
 
-  document.getElementById('happy').addEventListener('click', function(){
-    document.getElementById('happy').classList.add('pop');
-  });
+  if (document.querySelector('.personality')) {
 
-  document.getElementById('sad').addEventListener('click', function(){
-    document.getElementById('sad').classList.add('pop');
-  });
+    addPopClassOnClick('strange');
+    addPopClassOnClick('happy');
+    addPopClassOnClick('sad');
+    addPopClassOnClick('boring');
+    addPopClassOnClick('kind');
+    addPopClassOnClick('angry');
+    addPopClassOnClick('fun');
+  }
 
-  document.getElementById('boring').addEventListener('click', function(){
-    document.getElementById('boring').classList.add('pop');
-  });
-
-  document.getElementById('kind').addEventListener('click', function(){
-    document.getElementById('kind').classList.add('pop');
-  });
-
-  document.getElementById('angry').addEventListener('click', function(){
-    document.getElementById('angry').classList.add('pop');
-  });
-
-  document.getElementById('fun').addEventListener('click', function(){
-    document.getElementById('fun').classList.add('pop');;
-  });
-}
+  function addPopClassOnClick (selector) {
+    document.getElementById(selector).addEventListener('click', function () {
+      this.classList.add('pop');
+    });
+  }
+})();
