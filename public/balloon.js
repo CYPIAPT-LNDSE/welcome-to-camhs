@@ -1,20 +1,13 @@
 (function () {
   'use strict';
 
-  if (document.querySelector('.personality')) {
+  if (document.querySelector('.personality')){
+    var balloons = document.querySelectorAll('[class^="balloons--"]');
 
-    addPopClassOnClick('strange');
-    addPopClassOnClick('happy');
-    addPopClassOnClick('sad');
-    addPopClassOnClick('boring');
-    addPopClassOnClick('kind');
-    addPopClassOnClick('angry');
-    addPopClassOnClick('fun');
-  }
-
-  function addPopClassOnClick (selector) {
-    document.getElementById(selector).addEventListener('click', function () {
-      this.classList.add('pop');
+    balloons.forEach( function (balloon) {
+      balloon.addEventListener('click', function () {
+        this.classList.add('pop');
+      });
     });
   }
 })();
