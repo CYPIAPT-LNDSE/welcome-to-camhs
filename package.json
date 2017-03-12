@@ -8,7 +8,7 @@
     "test": "./node_modules/tape/bin/tape tests/*.js | tap-spec",
     "start": "node ./src/start-server.js",
     "devStart": "nodemon ./src/start-server.js",
-    "coverage": "istanbul cover ./tests/**/*.js",
+    "coverage": "istanbul cover ./tests/*.js"
   },
   "repository": {
     "type": "git",
