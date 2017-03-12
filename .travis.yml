@@ -1,3 +1,8 @@
 language: node_js
 node_js:
   - 6.1
+before_install:
+  - npm install -g codecov
+after_success:
+  - istanbul cover ./tests/*.test.js --report lcovonly -- -R spec
+  - codecov
