@@ -7,7 +7,7 @@ test('Check the index route', t => {
     url: '/'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
@@ -18,7 +18,7 @@ test('Check /main.css', t => {
     url: '/main.css'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
@@ -29,7 +29,7 @@ test('Check /index.js', t => {
     url: '/index.js'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
@@ -40,7 +40,7 @@ test('Check /introduction', t => {
     url: '/introduction'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
@@ -51,7 +51,7 @@ test('Check /avatar', t => {
     url: '/avatar'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
@@ -62,7 +62,7 @@ test('Check /eating', t => {
     url: '/eating'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
@@ -73,7 +73,7 @@ test('Check /personality', t => {
     url: '/personality'
   };
   server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code, test passed');
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
