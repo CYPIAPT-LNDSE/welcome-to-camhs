@@ -1,6 +1,8 @@
 # Welcome to CAMHS
 
 [![Build Status](https://travis-ci.org/CYPIAPT-LNDSE/welcome-to-camhs.svg?branch=master)](https://travis-ci.org/CYPIAPT-LNDSE/welcome-to-camhs)
+[![codecov](https://codecov.io/gh/CYPIAPT-LNDSE/welcome-to-camhs/branch/master/graph/badge.svg)](https://codecov.io/gh/CYPIAPT-LNDSE/welcome-to-camhs)
+
 
 A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services).
 
