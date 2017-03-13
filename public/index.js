@@ -10,64 +10,67 @@
   });
 
   function addAnswersToSessionStorage(){
-    var nameInput = document.getElementsByClassName("text-input")[0];
-    var ageInput = document.getElementsByClassName("text-input")[1];
-    var strange = document.getElementById("strange");
-    var happy = document.getElementById("happy");
-    var angry = document.getElementById("angry");
-    var fun = document.getElementById("fun");
-    var boring = document.getElementById("boring");
-    var kind = document.getElementById("kind");
-    var sad = document.getElementById("sad");
-    var happyEmoji = document.getElementsByClassName("emoji")[0];
-    var sadEmoji = document.getElementsByClassName("emoji")[1];
-    var indifferentEmoji = document.getElementsByClassName("emoji")[2];
     var personality = [];
 
-    addKeyupEvent('name', nameInput);
-    addKeyupEvent('age', ageInput);
+    [
+      "strange",
+      "happy",
+      "angry",
+      "fun",
+      "boring",
+      "kind",
+      "sad"
+    ].forEach(emotion => {
+      var node = document.getElementById(emotion);
+      addClickEventArray('personality', node, emotion, personality);
+    });
 
-    addClickEventArray('personality', strange, 'strange', personality);
-    addClickEventArray('personality', happy, 'happy', personality);
-    addClickEventArray('personality', angry, 'angry', personality);
-    addClickEventArray('personality', fun, 'fun', personality);
-    addClickEventArray('personality', boring, 'boring', personality);
-    addClickEventArray('personality', kind, 'kind', personality);
-    addClickEventArray('personality', sad, 'sad', personality);
+    [
+      "sad-emoji",
+      "happy-emoji",
+      "indifferent-emoji"
+    ].forEach(emoji => {
+      var node = document.getElementsByClassName(emoji)[0];
+      addClickEventSingle('feelings', node, emoji.match(/^[a-z]+/));
+    });
 
-    addClickEventSingle('feelings', sadEmoji, 'sad');
-    addClickEventSingle('feelings', happyEmoji, 'happy');
-    addClickEventSingle('feelings', indifferentEmoji, 'indifferent');
+    [
+      "name",
+      "age"
+    ].forEach(inputField => {
+      var node = document.getElementsByClassName(inputField)[0];
+      addKeyupEvent(inputField, node);
+    });
 
     function addKeyupEvent(key, element){
-      if(!element){ return; };
+      if(!element){ return; }
       element.addEventListener("keyup", function(){
-        addToStorageValue(key, element.value)
+        addSingleValueToStorage(key, element.value);
       });
     }
 
     function addClickEventSingle(key, element, value){
-      if(!element){ return; };
+      if(!element){ return; }
       element.addEventListener("click", function(){
-        addToStorageValue(key, value)
+        addSingleValueToStorage(key, value);
       });
     }
 
     function addClickEventArray(key, element, value, array){
-      if(!element){ return; };
+      if(!element){ return; }
       element.addEventListener("click", function(){
         addValueToArray(key, value, array);
       });
     }
 
-    function addToStorageValue(key, value){
-      sessionStorage.setItem(key, value);
-    }
-
     function addValueToArray(key, value, array){
       array.push(value);
       addArrayToStorage(key, array);
-    };
+    }
+
+    function addSingleValueToStorage(key, value){
+      sessionStorage.setItem(key, value);
+    }
 
     // JSON.stringify() is used here as session storage only supports strings
     function addArrayToStorage(key, array){
@@ -87,5 +90,4 @@
       });
     }
   }
-
 })();
