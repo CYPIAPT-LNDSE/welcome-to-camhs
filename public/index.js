@@ -2,7 +2,6 @@
   "use strict";
 
   addAnswersToSessionStorage();
-  addEventListenerToBalloons();
 
   $('.carousel').carousel({
     indicators: true,
@@ -22,6 +21,7 @@
       "sad"
     ].forEach(emotion => {
       var node = document.getElementById(emotion);
+      addPopClassToBallons(node);
       addClickEventArray('personality', node, emotion, personality);
     });
 
@@ -79,15 +79,9 @@
   }
 
   // Adds a class to baloons which makes them disappear when clicked.
-  function addEventListenerToBalloons(){
-    if (document.querySelector('.personality')){
-      var balloons = document.querySelectorAll('[class^="balloons--"]');
-
-      balloons.forEach( function (balloon) {
-        balloon.addEventListener('click', function () {
-          this.classList.add('pop');
-        });
-      });
-    }
+  function addPopClassToBallons(node){
+    node.addEventListener("click", function(){
+      node.classList.add('pop');
+    });
   }
 })();
