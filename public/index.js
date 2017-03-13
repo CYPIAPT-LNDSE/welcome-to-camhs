@@ -10,8 +10,8 @@
   });
 
   function addAnswersToSessionStorage(){
-    var nameInput = document.getElementsByClassName("name-input")[0];
-    var ageInput = document.getElementsByClassName("age-input")[0];
+    var nameInput = document.getElementsByClassName("text-input")[0];
+    var ageInput = document.getElementsByClassName("text-input")[1];
     var strange = document.getElementById("strange");
     var happy = document.getElementById("happy");
     var angry = document.getElementById("angry");
@@ -56,7 +56,7 @@
     function addClickEventArray(key, element, value, array){
       if(!element){ return; };
       element.addEventListener("click", function(){
-        addToStorageArray(key, value, array);
+        addValueToArray(key, value, array);
       });
     }
 
@@ -64,11 +64,15 @@
       sessionStorage.setItem(key, value);
     }
 
-    // JSON.stringify() is used here as session storage only supports strings
-    function addToStorageArray(key, value, array){
+    function addValueToArray(key, value, array){
       array.push(value);
-      sessionStorage.setItem(key, JSON.stringify(array));
+      addArrayToStorage(key, array);
     };
+
+    // JSON.stringify() is used here as session storage only supports strings
+    function addArrayToStorage(key, array){
+      sessionStorage.setItem(key, JSON.stringify(array));
+    }
   }
 
   // Adds a class to baloons which makes them disappear when clicked.
