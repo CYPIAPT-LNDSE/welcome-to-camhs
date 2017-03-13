@@ -6,7 +6,7 @@
 
 A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services).
 
-Our prototype can be found [here](https://cypiapt-lndse.github.io/welcome-to-camhs/). This app has been designed for tablets, to change page swipe left and right.
+Our prototype can be found [here](https://welcome-in.herokuapp.com/). This app has been designed for tablets, to change page swipe left and right.
 
 This questionnaire aims to reduce the anxieties of children (5 - 12 years old) coming to CAMHS for the first time. It offers an alternative questionnaire to the paper based one which is currently used and is not appropriately designed for children.
 
