@@ -44,6 +44,13 @@ module.exports = [
   },
   {
     method: 'GET',
+    path: '/sleep',
+    handler: (request, reply) => {
+      reply.view('sleep');
+    }
+  },
+  {
+    method: 'GET',
     path: '/finished',
     handler: (request, reply) => {
       reply.view('finished');
