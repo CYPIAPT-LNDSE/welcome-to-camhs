@@ -21,8 +21,10 @@
 .slider__tree {
   background: url('./assets/banana-tree.svg');
   background-repeat: no-repeat;
-  margin-left: 114px;
-  margin-top: 15px;
+  margin: {
+    left: 114px;
+    top: 15px;
+  }
   height: 100%;
 }
 

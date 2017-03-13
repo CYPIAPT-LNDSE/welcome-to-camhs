@@ -1,5 +1,9 @@
 .feelings {
   @extend %main-content;
+
+  & + .buttons {
+    margin: 0 110px;
+  }
 }
 
 .feelings__text {
