@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  addAnswersToSessionStorage();
+  addEventListenerToBalloons();
+
   $('.carousel').carousel({
     indicators: true,
     shift: 100
@@ -41,7 +44,7 @@
       element.addEventListener("keyup", function(){
         addToStorageValue(key, element.value)
       });
-    };
+    }
 
     function addClickEventSingle(key, element, value){
       if(!element){ return; };
@@ -55,39 +58,30 @@
       element.addEventListener("click", function(){
         addToStorageArray(key, value, array);
       });
-    };
+    }
 
     function addToStorageValue(key, value){
       sessionStorage.setItem(key, value);
-    };
+    }
 
     // JSON.stringify() is used here as session storage only supports strings
     function addToStorageArray(key, value, array){
       array.push(value);
       sessionStorage.setItem(key, JSON.stringify(array));
     };
-  };
+  }
 
   // Adds a class to baloons which makes them disappear when clicked.
-  if (document.querySelector('.personality')){
-    var balloons = document.querySelectorAll('[class^="balloons--"]');
+  function addEventListenerToBalloons(){
+    if (document.querySelector('.personality')){
+      var balloons = document.querySelectorAll('[class^="balloons--"]');
 
-    balloons.forEach( function (balloon) {
-      balloon.addEventListener('click', function () {
-        this.classList.add('pop');
+      balloons.forEach( function (balloon) {
+        balloon.addEventListener('click', function () {
+          this.classList.add('pop');
+        });
       });
-    });
+    }
   }
-
-  window.updateOutput = function (figure) {
-    var max = $(".slider__range").attr("max");
-    var vertical;
-
-    $(".slider__banana").html(figure);
-    vertical = figure / max * ($(".eating__slider").height() - $(".slider__reel").height()) + "px";
-    $(".slider__banana, .slider__reel").css({ bottom: vertical });
-  }
-
-  updateOutput($(".slider__range").val());
 
 })();

@@ -14,7 +14,6 @@
 .eating__slider {
   width: $large-image;
   position: relative;
-  overflow-y: hidden;
   height: 540px;
   margin-bottom: 60px;
 }
@@ -28,72 +27,36 @@
 }
 
 .slider__range {
-  display: block;
   -webkit-appearance: none;
-  outline: none;
-  height: 30px;
-  width: 100%;
+  width: 450px;
+  -webkit-transform:rotate(270deg);
+  -moz-transform:rotate(270deg);
+  -o-transform:rotate(270deg);
+  -ms-transform:rotate(270deg);
+  transform:rotate(270deg);
+  margin-left: -95px;
+  margin-top: 300px;
+}
+
+.slider__range::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 0.01px;
   background: $transparent;
-  -webkit-transform:rotate(90deg);
-  -moz-transform:rotate(90deg);
-  -o-transform:rotate(90deg);
-  -ms-transform:rotate(90deg);
-  transform:rotate(90deg);
 }
 
 .slider__range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  cursor: pointer;
-  height: 10px;
-  width: 54px;
-  position: relative;
-}
-
-.slider__range::-webkit-slider-thumb:after {
-  content: '< >';
-  word-spacing: 20px;
-  text-align: center;
-  font: bold 17px/25px $main-font;
-  color: $white;
-  width: 54px;
-  height: 25px;
-  position: absolute;
-  top: -10px;
-  left: 0;
-  color: $transparent;
-  transition: color 0.25s;
-}
-
-.slider__range::-webkit-slider-thumb:before {
-  content: '';
-  height: 5px;
-  width: 400px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  /*prevent click obstruction for the real slider track beneath*/
-  pointer-events: none;
-}
-
-.slider__reel {
-  width: 25%;
-  height: 35%;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0; /*bottom pos will be controlled by JS*/
-}
-
-.slider__banana {
-  font: bold 3rem/1rem $main-font;
-  color: $white;
-  position: absolute;
-  left: 166px;
-  height: 125px;
-  width: 25%;;
-  text-align: center;
-  /*disable clicks so that the slider thumb can be controlled*/
-  pointer-events: none;
-  transition: all 0.25s;
-  background-image: url('./assets/banana.svg');
+  height: 140px;
+  width: 140px;
+  background-image: url(./assets/banana.svg);
+  background-size: contain;
   background-repeat: no-repeat;
+}
+
+.slider__range:focus {
+    outline: none;
+}
+
+span.value {
+  font-size: 3rem;
 }
