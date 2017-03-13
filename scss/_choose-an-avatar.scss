@@ -1,6 +1,10 @@
 .avatar {
   @extend %main-content;
   padding: 0;
+
+  & + .buttons {
+    margin: 0 110px;
+  }
 }
 
 .avatar__text {
@@ -14,8 +18,8 @@
 }
 
 .carousel {
-  height: $large-image;
-  perspective: 300px;
+  height: $medium-image * 2;
+  perspective: 200px;
 
   .carousel-item {
     width: 400px;
@@ -23,7 +27,7 @@
   }
 
   .indicators {
-    bottom: 230px;
+    bottom: 100px;
   }
 
 }

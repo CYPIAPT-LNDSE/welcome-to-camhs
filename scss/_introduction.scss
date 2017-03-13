@@ -1,5 +1,6 @@
 .introduction {
   @extend %main-content;
+  padding: 40px 100px;
 }
 .introduction__text {
   @extend %main-text;
