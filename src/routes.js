@@ -14,7 +14,7 @@ module.exports = [
     path: '/avatar',
     handler: (request, reply) => {
       var data = {
-        avatar: true,
+        isAvatar: true,
         prev: '/',
         next: '/introduction'
        };
