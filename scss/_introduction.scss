@@ -2,6 +2,7 @@
   @extend %main-content;
   padding: 40px 100px;
 }
+
 .introduction__text {
   @extend %main-text;
   margin: {
@@ -9,6 +10,7 @@
     bottom: 10px;
   }
 }
+
 .text-input {
   width: 490px;
   height: 50px;
@@ -20,9 +22,11 @@
   text-align: center;
   padding-bottom: 20px;
 }
+
 .text-input:focus {
   outline: none;
 }
+
 .sleeping-lion{
   width: $medium-image;
   margin: 0 auto 20px auto;
