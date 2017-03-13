@@ -12,17 +12,6 @@ test('Check the index route', t => {
   });
 });
 
-test('Check /main.css', t => {
-  const options = {
-    method: 'GET',
-    url: '/main.css'
-  };
-  server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code');
-    t.end();
-  });
-});
-
 test('Check /index.js', t => {
   const options = {
     method: 'GET',
