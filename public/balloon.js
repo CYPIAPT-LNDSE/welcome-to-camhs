@@ -1,27 +1,13 @@
-document.getElementById('strange').addEventListener('click', function(){
-  document.getElementById('strange').classList.add('pop');
-});
+(function () {
+  'use strict';
 
-document.getElementById('happy').addEventListener('click', function(){
-  document.getElementById('happy').classList.add('pop');
-});
+  if (document.querySelector('.personality')){
+    var balloons = document.querySelectorAll('[class^="balloons--"]');
 
-document.getElementById('sad').addEventListener('click', function(){
-  document.getElementById('sad').classList.add('pop');
-});
-
-document.getElementById('boring').addEventListener('click', function(){
-  document.getElementById('boring').classList.add('pop');
-});
-
-document.getElementById('kind').addEventListener('click', function(){
-  document.getElementById('kind').classList.add('pop');
-});
-
-document.getElementById('angry').addEventListener('click', function(){
-  document.getElementById('angry').classList.add('pop');
-});
-
-document.getElementById('fun').addEventListener('click', function(){
-  document.getElementById('fun').classList.add('pop');;
-});
+    balloons.forEach( function (balloon) {
+      balloon.addEventListener('click', function () {
+        this.classList.add('pop');
+      });
+    });
+  }
+})();
