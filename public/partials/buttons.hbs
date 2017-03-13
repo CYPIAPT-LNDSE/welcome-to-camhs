@@ -1,4 +1,10 @@
 <div class="buttons">
-  <a class="button  button--prev" href="{{ prev }}">Prev</a>
-  <a class="button  button--next" href="{{ next }}">Next</a>
+  {{#if isWelcome }}
+    <a class="button  button--next" href="{{ next }}">Next</a>
+  {{else if isEnd }}
+      <a class="button  button--prev" href="{{ prev }}">Prev</a>
+  {{else}}
+      <a class="button  button--prev" href="{{ prev }}">Prev</a>
+      <a class="button  button--next" href="{{ next }}">Next</a>
+  {{/if}}
 </div>

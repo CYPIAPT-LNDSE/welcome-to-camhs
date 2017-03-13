@@ -4,6 +4,7 @@ module.exports = [
     path: '/',
     handler: (request, reply) => {
       var data = {
+        isWelcome: true,
         next: '/avatar'
       };
       reply.view('welcome', data);
@@ -70,6 +71,7 @@ module.exports = [
     path: '/finished',
     handler: (request, reply) => {
       var data =  {
+        isEnd: true,
         prev: '/personality',
       };
       reply.view('finished', data);
