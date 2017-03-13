@@ -7,7 +7,8 @@
     "sass": "sass --watch scss/main.scss:public/main.css",
     "test": "./node_modules/tape/bin/tape tests/*.js | tap-spec",
     "start": "node ./src/start-server.js",
-    "devStart": "nodemon ./src/start-server.js"
+    "devStart": "nodemon ./src/start-server.js",
+    "coverage": "istanbul cover ./tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "normalize-scss": "^6.0.0"
   },
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
