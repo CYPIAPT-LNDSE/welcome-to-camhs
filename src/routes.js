@@ -88,10 +88,10 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/lib/{file*}',
+    path: '/node_modules/{file*}',
     handler: {
       directory: {
-        path: 'lib'
+        path: 'node_modules'
       }
     }
   }
