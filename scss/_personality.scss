@@ -1,5 +1,9 @@
 .personality {
   @extend %main-content;
+
+  & + .buttons {
+    margin: 440px 100px;
+  }
 }
 
 .personality__text {

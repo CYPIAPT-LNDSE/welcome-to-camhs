@@ -1,5 +1,6 @@
 .finish {
   @extend %main-content;
+  height: 883px;
 }
 
 .finish__text {
@@ -12,16 +13,16 @@
   margin: 40px auto;
 }
 
-.finish-background{
+.finish-background {
   background-image: url(./assets/ticker-tape.svg);
   background-size: $small-image;
   background-position: center;
   -webkit-filter: brightness(0.95);
   filter: brightness(0.95);
-}
 
-.finish {
-  height: 883px;
+  & + .buttons {
+    bottom: 45px;
+  }
 }
 
 .finished__header {
@@ -33,14 +34,16 @@
 }
 
 .download-button {
+  font: {
+    family: $main-font;
+    size: 1.2em;
+  }
   margin-top: 20px;
   border: none;
   border-radius: 4px;
   color: $black;
   width: 200px;
   height: 80px;
-  font-family: $main-font;
-  font-size: 1.2em;
   background-color: $yellow;
   cursor: pointer;
   outline: none;
@@ -55,5 +58,4 @@
     box-shadow: 0 2px $orange;
     transform: translateY(2px);
   }
-
 }
