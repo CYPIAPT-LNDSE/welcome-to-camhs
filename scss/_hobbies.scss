@@ -1,5 +1,6 @@
 .hobbies {
   @extend %main-content;
+  padding: 70px 80px;
 }
 
 .hobbies__text {
@@ -12,7 +13,7 @@
 
 .hobbies__table {
   display: table;
-  margin: auto;
+  margin: 0 auto 30px;
 }
 
 .table__row {
@@ -23,6 +24,10 @@
   display: table-cell;
   border: 1px solid $white;
   padding: 50px;
+  font: {
+    size: 1.5rem;
+    weight: bold;
+  }
   cursor: pointer;
   text-align: center;
   transition: 1s border;
