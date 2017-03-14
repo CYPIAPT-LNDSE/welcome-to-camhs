@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   "use strict";
 
   addAnswersToSessionStorage();
@@ -106,4 +106,4 @@
       });
     }
   }
-})();
+})(jQuery);
