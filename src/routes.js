@@ -61,9 +61,20 @@ module.exports = [
     handler: (request, reply) => {
       var data =  {
         prev: '/feelings',
-        next: '/finished'
+        next: '/hobbies'
       };
       reply.view('personality', data);
+    }
+  },
+  {
+    method: 'GET',
+    path: '/hobbies',
+    handler: (request, reply) => {
+      var data =  {
+        prev: '/personality',
+        next: '/finished'
+      };
+      reply.view('hobbies', data);
     }
   },
   {
@@ -72,7 +83,7 @@ module.exports = [
     handler: (request, reply) => {
       var data =  {
         isEnd: true,
-        prev: '/personality',
+        prev: '/hobbies',
       };
       reply.view('finished', data);
     }
