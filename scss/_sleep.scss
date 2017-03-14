@@ -17,21 +17,12 @@
 .sleep__sleeping-lion {
   background-image: url("../assets/lion-sleeping-sprite.svg");
   background-repeat: no-repeat;
-  background-position: 80px;
-  background-position: -254px;
+  background-position: 0px;
   background-size: 2000px;
   height: 320px;
-  width: 340px;
-  margin-left: 45px;
+  width: 332px;
+  margin-left: 120px;
 }
-
-// positions of lions:
-// lion 0 : background-position: 80px;
-// lion 1 : background-position: -255px;
-// lion 2 :
-// lion 3 :
-// lion 4 :
-// lion 5 :
 
 .sleep__range {
   -webkit-appearance: none;

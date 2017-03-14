@@ -85,34 +85,29 @@
       node.classList.add('pop');
     });
   }
+  // positions of lions:
+  // lion 0 : background-position: 0px;
+  // lion 1 : background-position: -332px;
+  // lion 2 : background-position: -664px;
+  // lion 3 : background-position: -996px;
+  // lion 4 : background-position: -1328px;
+  // lion 5 : background-position: -1650px;
 
-  // var sleepSlider = document.getElementsByClassName("sleep__range")[0];
-  // sleepSlider.onchange = function(){ lion(); }
-  // sleepSlider.oninput = function(){ lion(); }
-  //
-  // function lion(){
-  //   if (sleepSlider.value === '0'){
-  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping0.svg')
-  //   }
-  //   if (sleepSlider.value === '1'){
-  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping1.svg')
-  //   }
-  //   if (sleepSlider.value === '2'){
-  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping2.svg')
-  //   }
-  //   if (sleepSlider.value === '3'){
-  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping3.svg')
-  //   }
-  //   if (sleepSlider.value === '4'){
-  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping4.svg')
-  //   }
-  //   if (sleepSlider.value === '5'){
-  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping5.svg')
-  //   }
-  // }
+  // math: background-position: 254px + 80px
 
-  function changeImageSrcOfLion(src){
+  var sleepSlider = document.getElementsByClassName("sleep__range")[0];
+  sleepSlider.oninput = function(){ lion(); }
+
+  function lion(){
+    var value = sleepSlider.value;
+    changeBackgroundPosition(value)
+  }
+
+  function changeBackgroundPosition(value){
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
-    element.src = src;
+    var numNum = (parseInt(value) * 0.5).toString();
+    console.log(numNum);
+    element.style.backgroundPosition = numNum
+    console.log(element.style);
   }
 })();
