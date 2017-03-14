@@ -17,29 +17,35 @@
 .sleep__sleeping-lion {
   background-image: url("../assets/lion-sleeping-sprite.svg");
   background-repeat: no-repeat;
-  background-position: 0px;
+  background-position: -0px;
   background-size: 2000px;
   height: 320px;
-  width: 332px;
+  width: 330px;
   margin-left: 120px;
 }
 
 .sleep__range {
   -webkit-appearance: none;
   width: 500px;
-  margin: 50px 0 130px 0;
+  margin: 100px 0 100px 0;
 
   &::-webkit-slider-runnable-track {
     width: 300px;
-    height: 0.001px;
+    height: 2px;
     background: $transparent;
+  }
+
+  &:focus {
+    outline: 0;
   }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 140px;
-    width: 140px;
-    background-image: url(./assets/sleep-zs.svg);
+    height: 150px;
+    width: 150px;
+    position:relative;
+    margin-top: -47.4px;
+    background-image: url(../assets/range-buttons.svg);
     background-size: contain;
     background-repeat: no-repeat;
   }

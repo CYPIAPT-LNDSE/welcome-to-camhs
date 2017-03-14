@@ -3,6 +3,10 @@
 
   addAnswersToSessionStorage();
 
+  document.getElementsByClassName("sleep__range")[0].oninput = function(){
+    sleepingLion();
+  }
+
   $('.carousel').carousel({
     indicators: true,
     shift: 100
@@ -85,29 +89,14 @@
       node.classList.add('pop');
     });
   }
-  // positions of lions:
-  // lion 0 : background-position: 0px;
-  // lion 1 : background-position: -332px;
-  // lion 2 : background-position: -664px;
-  // lion 3 : background-position: -996px;
-  // lion 4 : background-position: -1328px;
-  // lion 5 : background-position: -1650px;
 
-  // math: background-position: 254px + 80px
-
-  var sleepSlider = document.getElementsByClassName("sleep__range")[0];
-  sleepSlider.oninput = function(){ lion(); }
-
-  function lion(){
-    var value = sleepSlider.value;
-    changeBackgroundPosition(value)
+  function sleepingLion(){
+    var value = document.getElementsByClassName("sleep__range")[0].value;
+    var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
+    changeBackgroundPosition(element, value, -332)
   }
 
-  function changeBackgroundPosition(value){
-    var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
-    var numNum = (parseInt(value) * 0.5).toString();
-    console.log(numNum);
-    element.style.backgroundPosition = numNum
-    console.log(element.style);
+  function changeBackgroundPosition(element, value, illustrationSize){
+    element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 })();
