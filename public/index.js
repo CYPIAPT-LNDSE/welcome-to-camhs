@@ -80,8 +80,39 @@
 
   // Adds a class to baloons which makes them disappear when clicked.
   function addPopClassToBallons(node){
+    if (!node){ return };
     node.addEventListener("click", function(){
       node.classList.add('pop');
     });
+  }
+
+  // var sleepSlider = document.getElementsByClassName("sleep__range")[0];
+  // sleepSlider.onchange = function(){ lion(); }
+  // sleepSlider.oninput = function(){ lion(); }
+  //
+  // function lion(){
+  //   if (sleepSlider.value === '0'){
+  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping0.svg')
+  //   }
+  //   if (sleepSlider.value === '1'){
+  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping1.svg')
+  //   }
+  //   if (sleepSlider.value === '2'){
+  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping2.svg')
+  //   }
+  //   if (sleepSlider.value === '3'){
+  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping3.svg')
+  //   }
+  //   if (sleepSlider.value === '4'){
+  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping4.svg')
+  //   }
+  //   if (sleepSlider.value === '5'){
+  //     changeImageSrcOfLion('assets/sleeping-lions/lion-sleeping5.svg')
+  //   }
+  // }
+
+  function changeImageSrcOfLion(src){
+    var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
+    element.src = src;
   }
 })();

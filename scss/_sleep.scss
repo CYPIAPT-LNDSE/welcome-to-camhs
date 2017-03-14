@@ -1,0 +1,59 @@
+.sleep {
+  @extend %main-content;
+
+  & + .buttons {
+    margin: 440px 100px;
+  }
+}
+
+.sleep__text {
+  @extend %main-text;
+}
+
+.sleep__title {
+  margin-top: 0px;
+}
+
+.sleep__sleeping-lion {
+  background-image: url("../assets/lion-sleeping-sprite.svg");
+  background-repeat: no-repeat;
+  background-position: 80px;
+  background-position: -254px;
+  background-size: 2000px;
+  height: 320px;
+  width: 340px;
+  margin-left: 45px;
+}
+
+// positions of lions:
+// lion 0 : background-position: 80px;
+// lion 1 : background-position: -255px;
+// lion 2 :
+// lion 3 :
+// lion 4 :
+// lion 5 :
+
+.sleep__range {
+  -webkit-appearance: none;
+  width: 500px;
+  margin: 50px 0 130px 0;
+
+  &::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 0.001px;
+    background: $transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 140px;
+    width: 140px;
+    background-image: url(./assets/sleep-zs.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.value {
+  display: none;
+}
