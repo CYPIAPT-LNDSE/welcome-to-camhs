@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   "use strict";
 
   addAnswersToSessionStorage();
@@ -80,8 +80,10 @@
 
   // Adds a class to baloons which makes them disappear when clicked.
   function addPopClassToBallons(node){
-    node.addEventListener("click", function(){
-      node.classList.add('pop');
-    });
+    if (node) {
+      node.addEventListener("click", function(){
+        node.classList.add('pop');
+      });
+    }
   }
-})();
+})(jQuery);

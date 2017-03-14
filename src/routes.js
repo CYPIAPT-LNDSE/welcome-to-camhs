@@ -88,10 +88,19 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/lib/{file*}',
+    path: '/public/jquery.min.js',
+    handler: {
+      file: {
+        path: 'node_modules/jquery/dist/jquery.min.js'
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/public/materialize/{file*}',
     handler: {
       directory: {
-        path: 'lib'
+        path: 'node_modules/materialize-css/dist'
       }
     }
   }
