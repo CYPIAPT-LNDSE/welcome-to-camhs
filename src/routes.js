@@ -97,19 +97,10 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/public/materialize.min.css',
+    path: '/public/materialize/{file*}',
     handler: {
-      file: {
-        path: 'node_modules/materialize-css/dist/css/materialize.min.css'
-      }
-    }
-  },
-  {
-    method: 'GET',
-    path: '/public/materialize.min.js',
-    handler: {
-      file: {
-        path: 'node_modules/materialize-css/dist/js/materialize.min.js'
+      directory: {
+        path: 'node_modules/materialize-css/dist'
       }
     }
   }
