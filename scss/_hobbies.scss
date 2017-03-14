@@ -1,6 +1,6 @@
 .hobbies {
   @extend %main-content;
-  padding: 70px 80px;
+  padding: 65px;
 }
 
 .hobbies__text {
@@ -23,7 +23,7 @@
 .table__cell {
   display: table-cell;
   border: 1px solid $white;
-  padding: 50px;
+  padding: 50px 40px;
   font: {
     size: 1.5rem;
     weight: bold;
@@ -36,4 +36,8 @@
     color: $yellow;
     border: 1px solid $yellow;
   }
+}
+
+.js-chosen {
+  background-color: $orange;
 }
