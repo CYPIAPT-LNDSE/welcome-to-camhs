@@ -3,13 +3,18 @@
 
   addAnswersToSessionStorage();
 
-  document.getElementsByClassName("sleep__range")[0].oninput = function(){
-    sleepingLion();
-  }
-
   $('.carousel').carousel({
     indicators: true,
     shift: 100
+  });
+
+  [
+    "sleep__range"
+  ].forEach(range => {
+    if (document.getElementsByClassName(range)[0]){
+      var node = document.getElementsByClassName(range)[0];
+      addOnInputToElement( node, sleepingLion );
+    }
   });
 
   function addAnswersToSessionStorage(){
@@ -88,6 +93,10 @@
     node.addEventListener("click", function(){
       node.classList.add('pop');
     });
+  }
+
+  function addOnInputToElement(element, func){
+    element.oninput = function(){ func() }
   }
 
   function sleepingLion(){
