@@ -1,0 +1,34 @@
+.hobbies {
+  @extend %main-content;
+}
+
+.hobbies__text {
+  @extend %main-text;
+}
+
+.hobbies__title {
+  margin: 0;
+}
+
+.hobbies__table {
+  display: table;
+  margin: auto;
+}
+
+.table__row {
+  display: table-row;
+}
+
+.table__cell {
+  display: table-cell;
+  border: 1px solid $white;
+  padding: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: 1s border;
+
+  &:hover {
+    color: $yellow;
+    border: 1px solid $yellow;
+  }
+}
