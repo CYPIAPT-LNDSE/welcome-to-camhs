@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   "use strict";
 
   addAnswersToSessionStorage();
@@ -108,4 +108,10 @@
   function changeBackgroundPosition(element, value, illustrationSize){
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
-})();
+  
+  if (node) {
+    node.addEventListener("click", function(){
+      node.classList.add('pop');
+    });
+  }
+})(jQuery);

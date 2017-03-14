@@ -23,6 +23,39 @@ test('Check /index.js', t => {
   });
 });
 
+test('Check /public/jquery.min.js', t => {
+  const options = {
+    method: 'GET',
+    url: '/public/jquery.min.js'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
+test('Check /public/materialize/css/materialize.min.css', t => {
+  const options = {
+    method: 'GET',
+    url: '/public/materialize/css/materialize.min.css'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
+test('Check /public/materialize/js/materialize.min.jss', t => {
+  const options = {
+    method: 'GET',
+    url: '/public/materialize/js/materialize.min.js'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
 test('Check /introduction', t => {
   const options = {
     method: 'GET',

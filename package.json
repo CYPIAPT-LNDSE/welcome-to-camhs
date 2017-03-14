@@ -24,8 +24,10 @@
     "handlebars": "^4.0.6",
     "hapi": "^16.1.0",
     "inert": "^4.1.0",
-    "vision": "^4.1.1",
-    "normalize-scss": "^6.0.0"
+    "jquery": "^3.1.1",
+    "materialize-css": "^0.98.0",
+    "normalize-scss": "^6.0.0",
+    "vision": "^4.1.1"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
