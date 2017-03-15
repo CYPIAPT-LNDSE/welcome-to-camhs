@@ -1,6 +1,5 @@
 .introduction {
   @extend %main-content;
-  padding-bottom: 0;
 
   .buttons {
     margin-top: 60px;
@@ -38,6 +37,6 @@
 }
 
 .sleeping-lion{
-  width: $medium-image;
+  width: $small-image;
   margin: 0 auto 20px auto;
 }
