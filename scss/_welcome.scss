@@ -1,5 +1,14 @@
 .welcome {
   @extend %main-content;
+
+  .button {
+    width: 100%;
+
+    @media screen and (min-width: 768px)
+     {
+       width: 40%;
+     }
+  }
 }
 
 .welcome__text {
@@ -9,15 +18,25 @@
 .welcome__title {
   font: {
     family: $cursive-font;
-    size: 4rem;
+    size: 3rem;
   }
   margin: 0 auto;
   letter-spacing: 0.2rem;
   text-align: center;
   line-height: 4.5rem;
-}
+
+  @media screen and (min-width: 768px)
+   {
+     font-size: 4rem;
+   }
+ }
 
 .welcome__image {
   margin: $small-margin auto;
-  height: $medium-image + 100px;
+  height: $medium-image;
+
+  @media screen and (min-width: 768px)
+   {
+     height: $medium-image + 100px;
+   }
 }
