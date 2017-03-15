@@ -1,6 +1,22 @@
+.finish-background {
+  background-image: url(./assets/ticker-tape.svg);
+  background-size: $small-image;
+  background-position: center;
+  -webkit-filter: brightness(0.95);
+  filter: brightness(0.95);
+}
+
 .finish {
   @extend %main-content;
-  height: 883px;
+
+  .button {
+    width: 100%;
+
+    @media screen and (min-width: 768px)
+     {
+       width: 40%;
+     }
+  }
 }
 
 .finish__text {
@@ -8,29 +24,24 @@
 }
 
 .finish__lion {
-  width: $medium-image;
+  width: $small-image;
   display: block;
   margin: 40px auto;
-}
 
-.finish-background {
-  background-image: url(./assets/ticker-tape.svg);
-  background-size: $small-image;
-  background-position: center;
-  -webkit-filter: brightness(0.95);
-  filter: brightness(0.95);
-
-  & + .buttons {
-    bottom: 45px;
-  }
+  @media screen and (min-width: 768px)
+   {
+     width: $medium-image;
+   }
 }
 
 .finished__header {
   color: $black;
-  margin: {
-    top: 55px;
-    bottom: 5px;
-  }
+  margin-bottom: 5px;
+
+  @media screen and (min-width: 768px)
+   {
+     margin-top: 55px;
+   }
 }
 
 .download-button {
