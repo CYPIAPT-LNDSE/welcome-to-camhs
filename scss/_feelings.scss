@@ -1,9 +1,5 @@
 .feelings {
   @extend %main-content;
-
-  & + .buttons {
-    margin: 0 110px;
-  }
 }
 
 .feelings__text {
@@ -17,19 +13,22 @@
   }
 }
 
-.feelings {
-  padding: {
-    left: 40px;
-    right: 40px;
-    bottom: 0px;
-  }
-}
-
 .emoji {
   margin: 5px $small-margin;
-  width: $small-image;
+  width: $small-image / 2;
+
+  @media screen and (min-width: 768px)
+   {
+     width: $small-image;
+   }
 }
 
 .eaten-banana {
-  width: $small-image;
+  width: $small-image / 2;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 768px)
+   {
+     width: $small-image;
+   }
 }
