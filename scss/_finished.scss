@@ -1,7 +1,9 @@
 .finish-background {
-  background-image: url(./assets/ticker-tape.svg);
-  background-size: $small-image;
-  background-position: center;
+  background: {
+    image: url(./assets/ticker-tape.svg);
+    size: $small-image;
+    position: center;
+  }
   -webkit-filter: brightness(0.95);
   filter: brightness(0.95);
 }
