@@ -61,9 +61,20 @@ module.exports = [
     handler: (request, reply) => {
       var data =  {
         prev: '/feelings',
-        next: '/sleep'
+        next: '/hobbies'
       };
       reply.view('personality', data);
+    }
+  },
+  {
+    method: 'GET',
+    path: '/hobbies',
+    handler: (request, reply) => {
+      var data =  {
+        prev: '/personality',
+        next: '/sleep'
+      };
+      reply.view('hobbies', data);
     }
   },
   {
@@ -71,10 +82,10 @@ module.exports = [
     path: '/sleep',
     handler: (request, reply) => {
       var data =  {
-        prev: '/personality',
+        prev: '/hobbies',
         next: '/finished'
       };
-      reply.view('sleep', data);
+      reply.view('hobbies', data);
     }
   },
   {

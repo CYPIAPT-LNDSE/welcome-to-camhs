@@ -19,6 +19,7 @@
 
   function addAnswersToSessionStorage(){
     var personality = [];
+    var hobbies = [];
 
     [
       "strange",
@@ -30,7 +31,7 @@
       "sad"
     ].forEach(emotion => {
       var node = document.getElementById(emotion);
-      addPopClassToBallons(node);
+      addClassToNode(node, 'pop');
       addClickEventArray('personality', node, emotion, personality);
     });
 
@@ -49,6 +50,25 @@
     ].forEach(inputField => {
       var node = document.getElementsByClassName(inputField)[0];
       addKeyupEvent(inputField, node);
+    });
+
+    [
+      "football",
+      "tennis",
+      "gymnastics",
+      "dance",
+      "drawing",
+      "photography",
+      "cooking",
+      "gardening",
+      "puzzles",
+      "camping",
+      "fishing",
+      "walking"
+    ].forEach(hobby => {
+      var node = document.getElementsByClassName(hobby)[0];
+      addClassToNode(node, 'js-chosen');
+      addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
     function addKeyupEvent(key, element){
@@ -107,11 +127,5 @@
 
   function changeBackgroundPosition(element, value, illustrationSize){
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
-  }
-
-  if (node) {
-    node.addEventListener("click", function(){
-      node.classList.add('pop');
-    });
   }
 })(jQuery);
