@@ -89,7 +89,7 @@
 
   // Adds a class to baloons which makes them disappear when clicked.
   function addPopClassToBallons(node){
-    if (!node){ return };
+    if (!node){ return; }
     node.addEventListener("click", function(){
       node.classList.add('pop');
     });
@@ -108,7 +108,7 @@
   function changeBackgroundPosition(element, value, illustrationSize){
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
-  
+
   if (node) {
     node.addEventListener("click", function(){
       node.classList.add('pop');
