@@ -1,0 +1,82 @@
+.friends {
+  @extend %main-content;
+  padding: 40px 100px;
+}
+
+.friends__text {
+  @extend %main-text;
+  margin: 0;
+  padding: 0;
+}
+
+.friends__title {
+  margin-top: 25px;
+}
+
+.friends__subtitle {
+  font-size: 1.9rem;
+  margin: 20px 0;
+}
+
+.friends__text-input {
+  font-family: $main-font;
+  width: 570px;
+  height: 50px;
+  font-size: 2rem;
+  border: none;
+  border-bottom: 4.5px dotted $white;
+  background-color: $transparent;
+  color: $yellow;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.friends__slider {
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+.friends__text-input:focus {
+  outline: none;
+}
+
+.friends__range {
+  -webkit-appearance: none;
+  width: 500px;
+  margin: 100px 0 100px 30px;
+
+  &::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: $transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 120px;
+    width: 120px;
+    position:relative;
+    margin-top: -38px;
+    background-image: url(../assets/range-buttons.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.friends__emoji-sprite{
+  background-image: url("../assets/emoji-sprite.svg");
+  background-repeat: no-repeat;
+  background-position: -360px;
+  background-size: 900px;
+  height: 175px;
+  width: 175px;
+  margin-left: 195px;
+}
+
+span {
+  display: none;
+}

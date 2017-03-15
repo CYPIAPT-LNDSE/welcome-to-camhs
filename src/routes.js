@@ -94,7 +94,7 @@ module.exports = [
     handler: (request, reply) => {
       var data =  {
         isEnd: true,
-        prev: '/hobbies',
+        prev: '/friends',
       };
       reply.view('finished', data);
     }
