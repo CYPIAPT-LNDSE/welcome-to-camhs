@@ -10,6 +10,7 @@
 
   function addAnswersToSessionStorage(){
     var personality = [];
+    var hobbies = [];
 
     [
       "strange",
@@ -21,7 +22,7 @@
       "sad"
     ].forEach(emotion => {
       var node = document.getElementById(emotion);
-      addPopClassToBallons(node);
+      addClassToNode(node, 'pop');
       addClickEventArray('personality', node, emotion, personality);
     });
 
@@ -40,6 +41,25 @@
     ].forEach(inputField => {
       var node = document.getElementsByClassName(inputField)[0];
       addKeyupEvent(inputField, node);
+    });
+
+    [
+      "football",
+      "tennis",
+      "gymnastics",
+      "dance",
+      "drawing",
+      "photography",
+      "cooking",
+      "gardening",
+      "puzzles",
+      "camping",
+      "fishing",
+      "walking"
+    ].forEach(hobby => {
+      var node = document.getElementsByClassName(hobby)[0];
+      addClassToNode(node, 'js-chosen');
+      addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
     function addKeyupEvent(key, element){
@@ -78,11 +98,11 @@
     }
   }
 
-  // Adds a class to baloons which makes them disappear when clicked.
-  function addPopClassToBallons(node){
+  // Adds a class to chosen element
+  function addClassToNode(node, className){
     if (node) {
       node.addEventListener("click", function(){
-        node.classList.add('pop');
+        node.classList.add(className);
       });
     }
   }

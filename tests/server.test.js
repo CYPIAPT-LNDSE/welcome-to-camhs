@@ -111,6 +111,17 @@ test('Check /feelings', t => {
   });
 });
 
+test('Check /hobbies', t => {
+  const options = {
+    method: 'GET',
+    url: '/hobbies'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
 test('Check /finished', t => {
   const options = {
     method: 'GET',
