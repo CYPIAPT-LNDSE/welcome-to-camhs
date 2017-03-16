@@ -45,7 +45,7 @@ test('Check /public/materialize/css/materialize.min.css', t => {
   });
 });
 
-test('Check /public/materialize/js/materialize.min.jss', t => {
+test('Check /public/materialize/js/materialize.min.js', t => {
   const options = {
     method: 'GET',
     url: '/public/materialize/js/materialize.min.js'
@@ -126,6 +126,17 @@ test('Check /hobbies', t => {
   const options = {
     method: 'GET',
     url: '/hobbies'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
+test('Check /school', t => {
+  const options = {
+    method: 'GET',
+    url: '/school'
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
