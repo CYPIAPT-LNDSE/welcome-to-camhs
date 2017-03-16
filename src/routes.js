@@ -85,7 +85,7 @@ module.exports = [
         prev: '/hobbies',
         next: '/finished'
       };
-      reply.view('hobbies', data);
+      reply.view('sleep', data);
     }
   },
   {
