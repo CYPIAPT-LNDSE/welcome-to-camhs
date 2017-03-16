@@ -112,10 +112,10 @@
   }
 
   // Adds a class to baloons which makes them disappear when clicked.
-  function addPopClassToBallons(node){
+  function addClassToNode(node, className){
     if (!node){ return; }
     node.addEventListener("click", function(){
-      node.classList.add('pop');
+      node.classList.add(className);
     });
   }
 
