@@ -1,9 +1,5 @@
 .personality {
   @extend %main-content;
-
-  & + .buttons {
-    margin: 440px 100px;
-  }
 }
 
 .personality__text {
@@ -14,23 +10,14 @@
   margin-top: 0px;
 }
 
-.personality__types {
-  color: $black;
+.balloons {
+  position: relative;
+  top: -190px;
   height: 360px;
-}
 
-.personality__shape {
-  background-color: $yellow;
-  display: inline-block;
-  border-radius: 50%;
-  margin: 10px 10px 20px 0;
-}
-
-.characteristics {
-  cursor: pointer;
-  padding: 15px;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-  font-size: 1.5em;
+  @media screen and (min-width: 768px) {
+    top: -150px;
+    height: 830px;
+    margin-top: -235px;
+   }
 }
