@@ -65,20 +65,25 @@
     width: 65px;
     position:relative;
     margin-top: -31px;
-    background-image: url(../assets/slider-button.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: {
+      image: url(../assets/slider-button.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
+
   }
 }
 
-.friends__emoji-sprite{
-  background-image: url("../assets/emoji-sprite.svg");
-  background-repeat: no-repeat;
-  background-position: -360px;
-  background-size: 900px;
+.friends__emoji-sprite {
+  background: {
+    image: url("../assets/emoji-sprite.svg");
+    repeat: no-repeat;
+    position: -360px;
+    size: 900px;
+  }
   height: 175px;
   width: 175px;
-  margin-left: 195px;
+  margin: auto;
 }
 
 span {

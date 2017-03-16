@@ -40,20 +40,20 @@
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     position:relative;
-    margin-top: -15px;
+    margin-top: -20px;
     background: {
-      image: url(../assets/range-buttons.svg);
+      image: url(../assets/slider-button.svg);
       size: contain;
       repeat: no-repeat;
     }
 
     @media screen and (min-width: 768px) {
-       width: 150px;
-       height: 150px;
-       margin-top: -47.4px;
+       width: 65px;
+       height: 65px;
+       margin-top: -31px;
      }
   }
 }
