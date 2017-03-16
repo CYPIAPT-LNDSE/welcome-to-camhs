@@ -1,41 +1,50 @@
 body {
   padding: 0;
   font-family: $main-font;
-  max-width: 768px;
-  border: 1px solid $black;
-  height: 1024px;
   margin: auto;
   background: $background;
   font-size: 1.1rem;
   color: $white;
+  width: 100%;
+
+  @media screen and (min-width: 768px)
+   {
+     max-width: 768px;
+   }
 }
 
 %main-content {
   display: flex;
   flex-direction: column;
   color: $white;
-  padding: 70px 100px;
 }
 
 %main-text {
   margin: 40px 0;
-  padding: 0 25px;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   text-align: center;
+
+  @media screen and (min-width: 768px)
+   {
+     padding: 0 25px;
+     font-size: 2.2rem;
+   }
 }
 
 .buttons {
   position: relative;
   z-index: 1;
-  margin: -40px 110px;
+  width: 100%;
 }
 
 .button {
   text-decoration: none;
-  padding: 15px 50px;
+  padding: 15px 0px;
   color: $white;
   font-size: 1.5rem;
   background-color: $dark-blue;
+  text-align: center;
+  width: 40%;
 }
 
 .button--prev {

@@ -1,6 +1,9 @@
 .introduction {
   @extend %main-content;
-  padding: 40px 100px;
+
+  .buttons {
+    margin-top: 60px;
+  }
 }
 
 .introduction__text {
@@ -12,15 +15,21 @@
 }
 
 .text-input {
-  width: 490px;
+  width: 80%;
   height: 50px;
-  font-size: 3.9rem;
+  font-size: 2.5rem;
   border: none;
   border-bottom: 6px dotted $white;
   background-color: $transparent;
   color: $yellow;
   text-align: center;
   padding-bottom: 20px;
+
+  @media screen and (min-width: 768px)
+   {
+     width: 490px;
+     font-size: 3.9rem;
+   }
 }
 
 .text-input:focus {
@@ -28,6 +37,11 @@
 }
 
 .sleeping-lion{
-  width: $medium-image;
+  width: $small-image;
   margin: 0 auto 20px auto;
+
+  @media screen and (min-width: 768px)
+   {
+    width: $medium-image;
+   }
 }

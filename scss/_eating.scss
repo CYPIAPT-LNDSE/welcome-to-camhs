@@ -4,26 +4,32 @@
 
 .eating__text {
   @extend %main-text;
-  margin: -27px 0;
+  margin: 20px;
 }
 
 .eating__title {
-  margin-top: 20px;
+
+  @media screen and (min-width: 768px)
+   {
+     margin-top: 20px;
+   }
 }
 
 .eating__slider {
-  width: $large-image;
   position: relative;
   height: 540px;
-  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px)
+   {
+     margin-bottom: 60px
+   }
 }
 
 .slider__tree {
   background: url('./assets/banana-tree.svg');
-  background-repeat: no-repeat;
-  margin: {
-    left: 114px;
-    top: 15px;
+  background: {
+    repeat: no-repeat;
+    position: center;
   }
   height: 100%;
 }
@@ -39,8 +45,13 @@
   margin-left: -95px;
   margin-top: 300px;
 
+  @media screen and (min-width: 768px)
+   {
+     margin-left: 95px;
+   }
+
   &::-webkit-slider-runnable-track {
-    width: 300px;
+    width: $medium-image;
     height: 0.01px;
     background: $transparent;
   }
@@ -61,4 +72,5 @@
 
 span.value {
   font-size: 3rem;
+  margin-left: 60px;
 }

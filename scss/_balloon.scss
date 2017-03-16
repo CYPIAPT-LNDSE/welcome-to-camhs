@@ -10,14 +10,6 @@
   display: none;
 }
 
-#balloons {
-  width: $large-image;
-  position: absolute;
-  left: 50%;
-  margin-left: -385px;
-  top: 18px;
-}
-
 #strange {
   -webkit-animation:balloon1 6s ease-in-out infinite;
   -moz-animation:balloon1 6s ease-in-out infinite;

@@ -64,7 +64,11 @@
       "puzzles",
       "camping",
       "fishing",
-      "walking"
+      "walking",
+      "gymnastics-mobile",
+      "photography-mobile",
+      "walking-mobile",
+      "puzzles-mobile"
     ].forEach(hobby => {
       var node = document.getElementsByClassName(hobby)[0];
       addClassToNode(node, 'js-chosen');
