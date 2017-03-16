@@ -9,7 +9,8 @@
   });
 
   [
-    "sleep__range"
+    "sleep__range",
+    "school__range"
   ].forEach(range => {
     if (document.getElementsByClassName(range)[0]){
       var node = document.getElementsByClassName(range)[0];
