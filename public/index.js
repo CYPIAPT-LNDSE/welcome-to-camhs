@@ -8,6 +8,15 @@
     shift: 100
   });
 
+  [
+    "sleep__range"
+  ].forEach(range => {
+    if (document.getElementsByClassName(range)[0]){
+      var node = document.getElementsByClassName(range)[0];
+      addOnInputToElement( node, sleepingLion );
+    }
+  });
+
   function addAnswersToSessionStorage(){
     var personality = [];
     var hobbies = [];
@@ -98,12 +107,25 @@
     }
   }
 
-  // Adds a class to chosen element
-  function addClassToNode(node, className){
-    if (node) {
-      node.addEventListener("click", function(){
-        node.classList.add(className);
-      });
-    }
+  // Adds a class to baloons which makes them disappear when clicked.
+  function addPopClassToBallons(node){
+    if (!node){ return; }
+    node.addEventListener("click", function(){
+      node.classList.add('pop');
+    });
+  }
+
+  function addOnInputToElement(element, func){
+    element.oninput = function(){ func() }
+  }
+
+  function sleepingLion(){
+    var value = document.getElementsByClassName("sleep__range")[0].value;
+    var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
+    changeBackgroundPosition(element, value, -332)
+  }
+
+  function changeBackgroundPosition(element, value, illustrationSize){
+    element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 })(jQuery);
