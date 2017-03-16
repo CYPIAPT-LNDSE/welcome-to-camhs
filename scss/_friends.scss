@@ -11,29 +11,33 @@
 
 .friends__title {
   margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 .friends__subtitle {
   font-size: 1.9rem;
-  margin: 20px 0;
+  margin: 40px 0 0 0;
 }
 
 .friends__text-input {
   font-family: $main-font;
-  width: 570px;
+  width: 520px;
   height: 50px;
   font-size: 2rem;
   border: none;
-  border-bottom: 4.5px dotted $white;
+  border-bottom: 4px dotted $white;
   background-color: $transparent;
   color: $yellow;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
+}
+
+.friends__text-input-2 {
+  margin-bottom: 60px;
 }
 
 .friends__slider {
-  height: 150px;
-  margin-bottom: 30px;
+  height: 120px;
 }
 
 .friends__text-input:focus {
@@ -42,12 +46,12 @@
 
 .friends__range {
   -webkit-appearance: none;
-  width: 500px;
-  margin: 100px 0 100px 30px;
+  width: 520px;
+  margin: 85px 0 60px 23px;
 
   &::-webkit-slider-runnable-track {
     width: 300px;
-    height: 2px;
+    height: 4px;
     background: $transparent;
   }
 
@@ -57,11 +61,11 @@
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 120px;
-    width: 120px;
+    height: 65px;
+    width: 65px;
     position:relative;
-    margin-top: -38px;
-    background-image: url(../assets/range-buttons.svg);
+    margin-top: -31px;
+    background-image: url(../assets/slider-button.svg);
     background-size: contain;
     background-repeat: no-repeat;
   }
