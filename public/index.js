@@ -8,15 +8,14 @@
     shift: 100
   });
 
-  [
-    "sleep__range",
-    "school__range"
-  ].forEach(range => {
-    if (document.getElementsByClassName(range)[0]){
-      var node = document.getElementsByClassName(range)[0];
-      addOnInputToElement( node, sleepingLion );
-    }
-  });
+  // [
+  //   "sleep__range"
+  // ].forEach(range => {
+  //   if (document.getElementsByClassName(range)[0]){
+  //     var node = document.getElementsByClassName(range)[0];
+  //     addOnInputToElement( node, sleepingLion );
+  //   }
+  // });
 
   function addAnswersToSessionStorage(){
     var personality = [];
@@ -140,8 +139,11 @@
   ].forEach(range => {
     if (document.getElementsByClassName(range)[0]){
       var node = document.getElementsByClassName(range)[0];
-      // addOnInputToElement( node, sleepingLion );
-      addOnInputToElement( node, emojiSprite );
+      if (range === "sleep__range") {
+        addOnInputToElement( node, sleepingLion );
+      } else {
+        addOnInputToElement( node, emojiSprite );
+      }
     }
   });
 
