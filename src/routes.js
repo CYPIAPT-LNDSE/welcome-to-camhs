@@ -104,7 +104,7 @@ module.exports = [
     path: '/school',
     handler: (request, reply) => {
       var data =  {
-        prev: '/fiends',
+        prev: '/friends',
         next: '/finished'
       };
       reply.view('school', data);
