@@ -1,0 +1,79 @@
+.school {
+  @extend %main-content;
+}
+
+.school__text {
+  @extend %main-text;
+
+  & ~ & {
+    margin-bottom: 100px;
+  }
+}
+
+.school__title {
+  margin-top: 0px;
+}
+
+.school__subtitle {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.school__slider {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.school__range {
+  -webkit-appearance: none;
+  width: 90%;
+
+  &::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: $transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 50px;
+    width: 50px;
+    position:relative;
+    margin-top: -15px;
+    background: {
+      image: url(../assets/range-buttons.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+       width: 150px;
+       height: 150px;
+       margin-top: -47.4px;
+     }
+  }
+}
+
+.school__input {
+  width: 90%;
+  height: 50px;
+  font-size: 2.5rem;
+  border: none;
+  border-bottom: 6px dotted $white;
+  background-color: $transparent;
+  color: $yellow;
+  text-align: center;
+  padding: 20px 0;
+
+  @media screen and (min-width: 768px) {
+     font-size: 3.9rem;
+   }
+
+   &:focus {
+     outline: none;
+   }
+}
