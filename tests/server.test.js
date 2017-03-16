@@ -133,6 +133,17 @@ test('Check /hobbies', t => {
   });
 });
 
+test('Check /friends', t => {
+  const options = {
+    method: 'GET',
+    url: '/friends'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
 test('Check /finished', t => {
   const options = {
     method: 'GET',

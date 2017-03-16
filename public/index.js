@@ -132,4 +132,29 @@
   function changeBackgroundPosition(element, value, illustrationSize){
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
+
+  [
+    "sleep__range",
+    "friends__range"
+  ].forEach(range => {
+    if (document.getElementsByClassName(range)[0]){
+      var node = document.getElementsByClassName(range)[0];
+      // addOnInputToElement( node, sleepingLion );
+      addOnInputToElement( node, emojiSprite );
+    }
+  });
+
+  function addOnInputToElement(element, func){
+    element.oninput = function(){ func() }
+  }
+
+  function emojiSprite(){
+    var value = document.getElementsByClassName("friends__range")[0].value;
+    var element = document.getElementsByClassName("friends__emoji-sprite")[0];
+    changeBackgroundPosition(element, value, -180)
+  }
+
+  function changeBackgroundPosition(element, value, illustrationSize){
+    element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
+  }
 })(jQuery);
