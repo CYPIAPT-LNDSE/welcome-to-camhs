@@ -8,7 +8,6 @@
 }
 
 .eating__title {
-
   @media screen and (min-width: 768px)
    {
      margin-top: 20px;
@@ -42,8 +41,10 @@
   -o-transform:rotate(270deg);
   -ms-transform:rotate(270deg);
   transform:rotate(270deg);
-  margin-left: -95px;
-  margin-top: 300px;
+  margin: {
+    left: -95px;
+    top: 300px;
+  }
 
   @media screen and (min-width: 768px)
    {
@@ -60,9 +61,11 @@
     -webkit-appearance: none;
     height: 140px;
     width: 140px;
-    background-image: url(./assets/banana.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: {
+      image: url(./assets/banana.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
   }
 
   &:focus {
