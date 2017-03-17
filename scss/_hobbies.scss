@@ -24,7 +24,7 @@
   cursor: pointer;
   text-align: center;
   background-color: $transparent;
-  transition: all 1s;
+  @include transition ();
 
   &:last-child {
     display: none;
