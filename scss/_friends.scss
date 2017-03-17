@@ -18,17 +18,21 @@
   margin: 40px 0 0 0;
 }
 
+// .friends__text-input {
+//   font-family: $main-font;
+//   width: 90%;
+//   height: 50px;
+//   font-size: 2rem;
+//   border: none;
+//   border-bottom: 4px dotted $white;
+//   background-color: $transparent;
+//   color: $yellow;
+//   text-align: center;
+//   margin-bottom: 5px;
+// }
+
 .friends__text-input {
-  font-family: $main-font;
-  width: 90%;
-  height: 50px;
-  font-size: 2rem;
-  border: none;
-  border-bottom: 4px dotted $white;
-  background-color: $transparent;
-  color: $yellow;
-  text-align: center;
-  margin-bottom: 5px;
+  @extend %text-input;
 }
 
 .friends__text-input-2 {
