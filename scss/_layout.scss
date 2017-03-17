@@ -51,6 +51,41 @@ body {
    }
 }
 
+%range-input {
+  -webkit-appearance: none;
+  width: 90%;
+  margin: 100px 0;
+
+  &::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: $transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    position:relative;
+    margin-top: -20px;
+    background: {
+      image: url(../assets/slider-button.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+       width: 65px;
+       height: 65px;
+       margin-top: -31px;
+     }
+  }
+}
+
 .buttons {
   position: relative;
   z-index: 1;
