@@ -1,6 +1,5 @@
 .friends {
   @extend %main-content;
-  padding: 40px 100px;
 }
 
 .friends__text {
@@ -21,7 +20,7 @@
 
 .friends__text-input {
   font-family: $main-font;
-  width: 520px;
+  width: 90%;
   height: 50px;
   font-size: 2rem;
   border: none;
@@ -38,6 +37,7 @@
 
 .friends__slider {
   height: 120px;
+  text-align: center;
 }
 
 .friends__text-input:focus {
@@ -46,8 +46,8 @@
 
 .friends__range {
   -webkit-appearance: none;
-  width: 520px;
-  margin: 85px 0 60px 23px;
+  width: 90%;
+  margin: 100px 0;
 
   &::-webkit-slider-runnable-track {
     width: 300px;
@@ -61,24 +61,34 @@
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 65px;
-    width: 65px;
+    height: 40px;
+    width: 40px;
     position:relative;
-    margin-top: -31px;
-    background-image: url(../assets/slider-button.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin-top: -20px;
+    background: {
+      image: url(../assets/slider-button.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+       width: 65px;
+       height: 65px;
+       margin-top: -31px;
+     }
   }
 }
 
-.friends__emoji-sprite{
-  background-image: url("../assets/emoji-sprite.svg");
-  background-repeat: no-repeat;
-  background-position: -360px;
-  background-size: 900px;
+.friends__emoji-sprite {
+  background: {
+    image: url("../assets/emoji-sprite.svg");
+    repeat: no-repeat;
+    position: -360px;
+    size: 900px;
+  }
   height: 175px;
   width: 175px;
-  margin-left: 195px;
+  margin: auto;
 }
 
 span {
