@@ -11,46 +11,31 @@
 }
 
 #strange {
-  -webkit-animation:balloon1 6s ease-in-out infinite;
-  -moz-animation:balloon1 6s ease-in-out infinite;
-  -o-animation:balloon1 6s ease-in-out infinite;
-  animation:balloon1 6s ease-in-out infinite;
+  @include animation (balloon1, 6s);
 }
+
 #happy {
-  -webkit-animation:balloon2 6s ease-in-out infinite;
-  -moz-animation:balloon2 6s ease-in-out infinite;
-  -o-animation:balloon2 6s ease-in-out infinite;
-  animation:balloon2 6s ease-in-out infinite;
+  @include animation (balloon2, 6s);
 }
+
 #sad {
-  -webkit-animation:balloon3 6s ease-in-out infinite;
-  -moz-animation:balloon3 6s ease-in-out infinite;
-  -o-animation:balloon3 6s ease-in-out infinite;
-  animation:balloon3 6s ease-in-out infinite;
+  @include animation (balloon3, 6s);
 }
+
 #boring {
-  -webkit-animation:balloon7 7s ease-in-out infinite;
-  -moz-animation:balloon7 7s ease-in-out infinite;
-  -o-animation:balloon7 7s ease-in-out infinite;
-  animation:balloon7 7s ease-in-out infinite;
+  @include animation (balloon7, 7s);
 }
+
 #kind {
-  -webkit-animation:balloon6 8s ease-in-out infinite;
-  -moz-animation:balloon6 8s ease-in-out infinite;
-  -o-animation:balloon6 8s ease-in-out infinite;
-  animation:balloon6 8s ease-in-out infinite;
+  @include animation (balloon6, 8s);
 }
+
 #fun {
-  -webkit-animation:balloon6 6s ease-in-out infinite;
-  -moz-animation:balloon6 6s ease-in-out infinite;
-  -o-animation:balloon6 6s ease-in-out infinite;
-  animation:balloon6 6s ease-in-out infinite;
+  @include animation (balloon6, 6s);
 }
+
 #angry {
-  -webkit-animation:balloon4 6s ease-in-out infinite;
-  -moz-animation:balloon4 6s ease-in-out infinite;
-  -o-animation:balloon4 6s ease-in-out infinite;
-  animation:balloon4 6s ease-in-out infinite;
+  @include animation (balloon4, 6s);
 }
 
 /*BALLOON 1*/
