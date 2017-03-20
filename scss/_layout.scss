@@ -31,6 +31,61 @@ body {
    }
 }
 
+%text-input {
+  width: 90%;
+  height: 50px;
+  font-size: 2.5rem;
+  border: none;
+  border-bottom: 6px dotted $white;
+  background-color: $transparent;
+  color: $yellow;
+  text-align: center;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+     font-size: 3.9rem;
+   }
+
+   &:focus {
+     outline: none;
+   }
+}
+
+%range-input {
+  -webkit-appearance: none;
+  width: 90%;
+  margin: 100px 0;
+
+  &::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: $transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    position:relative;
+    margin-top: -20px;
+    background: {
+      image: url(../assets/slider-button.svg);
+      size: contain;
+      repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+       width: 65px;
+       height: 65px;
+       margin-top: -31px;
+     }
+  }
+}
+
 .buttons {
   position: relative;
   z-index: 1;
