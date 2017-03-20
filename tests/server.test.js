@@ -8,6 +8,7 @@ test('Check the index route', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h1 class="welcome__title">') > -1, 'The h1 header was found in the welcome.hbs response');
     t.end();
   });
 });
@@ -63,6 +64,7 @@ test('Check /introduction', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<div class="introduction">') > -1, 'The <div class="introduction"> was found in the introduction.hbs response');
     t.end();
   });
 });
@@ -74,6 +76,7 @@ test('Check /avatar', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h2 class="avatar__title">') > -1, 'The h2 title was found in the choose-an-avatar.hbs response');
     t.end();
   });
 });
@@ -85,6 +88,7 @@ test('Check /eating', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h2 class="eating__title">') > -1, 'The h2 title was found in the eating.hbs response');
     t.end();
   });
 });
@@ -96,6 +100,7 @@ test('Check /personality', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h2 class="personality__title">') > -1, 'The h2 title was found in the personality.hbs response');
     t.end();
   });
 });
@@ -107,6 +112,7 @@ test('Check /sleep', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h2 class="sleep__title">') > -1, 'The h2 title was found in the sleep.hbs response');
     t.end();
   });
 });
@@ -118,6 +124,7 @@ test('Check /feelings', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h2 class="feelings__title">') > -1, 'The h2 title was found in the feelings.hbs response');
     t.end();
   });
 });
@@ -129,6 +136,7 @@ test('Check /hobbies', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.indexOf('<h2 class="hobbies__title">') > -1, 'The h2 title was found in the hobbies.hbs response');
     t.end();
   });
 });
@@ -140,6 +148,7 @@ test('Check /friends', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.notEqual(response.payload.indexOf('<h2 class="friends__title">'), -1, 'The h2 title was found in the friends.hbs response');
     t.end();
   });
 });
@@ -151,6 +160,7 @@ test('Check /school', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.notEqual(response.payload.indexOf('<h2 class="school__title">'), -1, 'The h2 title was found in the school.hbs response');
     t.end();
   });
 });
@@ -162,6 +172,7 @@ test('Check /finished', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.notEqual(response.payload.indexOf('<h1 class="finished__header">'), -1, 'The h1 header was found in the finished.hbs response');
     t.end();
   });
 });
