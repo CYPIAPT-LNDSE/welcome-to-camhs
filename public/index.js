@@ -71,8 +71,8 @@
       "friends__range",
       "school__range"
     ].forEach(range => {
-      if (document.getElementsByClassName(range)[0]){
-        var node = document.getElementsByClassName(range)[0];
+      var node = document.getElementsByClassName(range)[0];
+      if (node) {
         if (range === "sleep__range") {
           addOnInputToElement( node, sleepingLion );
         } else {
