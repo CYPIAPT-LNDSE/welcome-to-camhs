@@ -149,7 +149,4 @@
     changeBackgroundPosition(element, value, -180)
   }
 
-  function changeBackgroundPosition(element, value, illustrationSize){
-    element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
-  }
 })(jQuery);
