@@ -46,17 +46,36 @@
    }
 }
 
+.finish__email-form {
+  font-size: 1.3em;
+  color: $black;
+
+  & p {
+    margin-bottom: 10px;
+  }
+
+}
+
+.finish__email-input {
+  width: 500px;
+  height: 30px;
+  font-size: 0.45em;
+  font-family: $main-font;
+  margin: 15px 0;
+  text-align: center;
+}
+
 .download-button {
   font: {
     family: $main-font;
-    size: 1.2em;
+    size: 0.83em;
   }
   margin-top: 20px;
   border: none;
   border-radius: 4px;
   color: $black;
-  width: 200px;
-  height: 80px;
+  width: 160px;
+  height: 65px;
   background-color: $yellow;
   cursor: pointer;
   outline: none;
