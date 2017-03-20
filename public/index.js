@@ -3,14 +3,6 @@
 
   addAnswersToSessionStorage();
 
-  var mailOptions = {
-      from: '"Fred Foo 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
-      to: 'rhodespeter@hotmail.co.uk', // list of receivers
-      subject: 'Hello ✔', // Subject line
-      text: 'Hello world ?', // plain text body
-      html: '<b>Hello world SKIBINSKA!!!!!?</b>' // html body
-  };
-
   $('.carousel').carousel({
     indicators: true,
     shift: 100
@@ -175,10 +167,29 @@
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 
+  function emailValidator(emailAddress){
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(emailAddress) ? true : false;
+  }
+
   function sendMail(){
+    var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
+
+    if (!emailValidator(emailRecipient.value)){
+      emailRecipient.value = 'Please enter a valid email address.'
+      return;
+    }
+
+    var mailOptions = {
+      from: '"Fred Foo 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
+      to: emailRecipient.value, // list of receivers
+      subject: 'Questionnaire', // Subject line
+      text: 'Hello world', // plain text body
+      html: '<b>Questionnaire answers will be here :)</b>' // html body
+    }
+
     axios.post('/finished', mailOptions)
       .then(function (response) {
-        console.log(response);
       })
       .catch(function (error) {
         console.log(error);
