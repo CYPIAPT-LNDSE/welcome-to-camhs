@@ -3,9 +3,26 @@
 
   addAnswersToSessionStorage();
 
+  var mailOptions = {
+      from: '"Fred Foo 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
+      to: 'rhodespeter@hotmail.co.uk', // list of receivers
+      subject: 'Hello ✔', // Subject line
+      text: 'Hello world ?', // plain text body
+      html: '<b>Hello world SKIBINSKA!!!!!?</b>' // html body
+  };
+
   $('.carousel').carousel({
     indicators: true,
     shift: 100
+  });
+
+  [
+   "send-email-button"
+ ].forEach(button => {
+    var node = document.getElementsByClassName(button)[0];
+    if (node){
+      node.addEventListener('click', function(){ sendMail() });
+    }
   });
 
   [
@@ -157,4 +174,15 @@
   function changeBackgroundPosition(element, value, illustrationSize){
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
+
+  function sendMail(){
+    axios.post('/finished', mailOptions)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
 })(jQuery);

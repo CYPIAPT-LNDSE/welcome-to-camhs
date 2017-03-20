@@ -3,6 +3,7 @@ const Inert = require('inert');
 const Vision = require('vision');
 const Path = require('path');
 
+const send = require('./send-email')
 const routes = require('./routes');
 
 const server = new Hapi.Server();

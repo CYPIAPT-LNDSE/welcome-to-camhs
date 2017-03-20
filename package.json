@@ -26,6 +26,7 @@
     "inert": "^4.1.0",
     "jquery": "^3.1.1",
     "materialize-css": "^0.98.0",
+    "nodemailer": "^3.1.7",
     "normalize-scss": "^6.0.0",
     "vision": "^4.1.1"
   },

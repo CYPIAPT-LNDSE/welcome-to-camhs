@@ -54,6 +54,10 @@
     margin-bottom: 10px;
   }
 
+  :focus {
+    outline: none;
+  }
+
 }
 
 .finish__email-input {
@@ -65,7 +69,7 @@
   text-align: center;
 }
 
-.download-button {
+.send-email-button {
   font: {
     family: $main-font;
     size: 0.83em;
