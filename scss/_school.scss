@@ -1,0 +1,33 @@
+.school {
+  @extend %main-content;
+}
+
+.school__text {
+  @extend %main-text;
+
+  & ~ & {
+    margin-bottom: 100px;
+  }
+}
+
+.school__title {
+  margin-top: 0px;
+}
+
+.school__subtitle {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.school__slider {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.school__range {
+  @extend %range-input;
+}
+
+.school__input {
+  @extend %text-input;
+}
