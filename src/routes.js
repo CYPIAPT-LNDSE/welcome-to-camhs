@@ -1,3 +1,5 @@
+sendMail = require('./send-email')
+
 module.exports = [
   {
     method: 'GET',
@@ -108,6 +110,13 @@ module.exports = [
         prev: '/friends',
       };
       reply.view('finished', data);
+    }
+  },
+  {
+    method: 'POST',
+    path: '/finished',
+    handler: (request, reply) => {
+      reply( sendMail(request.payload) );
     }
   },
   {

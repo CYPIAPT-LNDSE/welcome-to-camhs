@@ -9,6 +9,15 @@
   });
 
   [
+   "send-email-button"
+ ].forEach(button => {
+    var node = document.getElementsByClassName(button)[0];
+    if (node){
+      node.addEventListener('click', function(){ sendMail() });
+    }
+  });
+
+  [
     "sleep__range"
   ].forEach(range => {
     if (document.getElementsByClassName(range)[0]){
@@ -139,7 +148,6 @@
   ].forEach(range => {
     if (document.getElementsByClassName(range)[0]){
       var node = document.getElementsByClassName(range)[0];
-      // addOnInputToElement( node, sleepingLion );
       addOnInputToElement( node, emojiSprite );
     }
   });
@@ -157,4 +165,38 @@
   function changeBackgroundPosition(element, value, illustrationSize){
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
+
+  function emailValidator(emailAddress){
+    var regex = RegExp(
+      '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".' +
+      '+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-z' +
+      'A-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
+    )
+    return regex.test(emailAddress) ? true : false;
+  }
+
+  function sendMail(){
+    var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
+
+    if (!emailValidator(emailRecipient.value)){
+      emailRecipient.value = 'Please enter a valid email address.'
+      return;
+    }
+
+    var mailOptions = {
+      from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
+      to: emailRecipient.value, // list of receivers
+      subject: 'CAHMS Questionnaire', // Subject line
+      text: 'Questionnaire', // plain text body
+      html: '<b>Questionnaire answers will be here :)</b>' // html body
+    }
+
+    axios.post('/finished', mailOptions)
+      .then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
 })(jQuery);
