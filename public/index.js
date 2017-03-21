@@ -148,7 +148,6 @@
   ].forEach(range => {
     if (document.getElementsByClassName(range)[0]){
       var node = document.getElementsByClassName(range)[0];
-      // addOnInputToElement( node, sleepingLion );
       addOnInputToElement( node, emojiSprite );
     }
   });
@@ -168,7 +167,11 @@
   }
 
   function emailValidator(emailAddress){
-    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var regex = RegExp(
+      '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".' +
+      '+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-z' +
+      'A-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
+    )
     return regex.test(emailAddress) ? true : false;
   }
 
@@ -181,10 +184,10 @@
     }
 
     var mailOptions = {
-      from: '"Fred Foo 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
+      from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
       to: emailRecipient.value, // list of receivers
-      subject: 'Questionnaire', // Subject line
-      text: 'Hello world', // plain text body
+      subject: 'CAHMS Questionnaire', // Subject line
+      text: 'Questionnaire', // plain text body
       html: '<b>Questionnaire answers will be here :)</b>' // html body
     }
 
