@@ -144,10 +144,29 @@ test('Check /friends', t => {
   });
 });
 
-test('Check /finished', t => {
+test('Check GET to /finished', t => {
   const options = {
     method: 'GET',
     url: '/finished'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
+test('Check POST to /finished', t => {
+  const options = {
+    method: 'POST',
+    url: '/finished',
+    payload: {
+      from: '"CAHMS" <welcome.to.cahms@hotmail.co.uk>',
+      to: 'XX@X',
+      subject: 'CAHMS eurgh Questionnaire',
+      text: 'Questionnaire',
+      html: '<b>Questionnaire answers will be here :)</b>',
+      test : true
+    }
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
