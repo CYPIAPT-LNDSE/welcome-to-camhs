@@ -161,7 +161,7 @@ test('Check POST to /finished', t => {
     url: '/finished',
     payload: {
       from: '"CAHMS" <welcome.to.cahms@hotmail.co.uk>',
-      to: 'XX@X',
+      to: 'example@example.com',
       subject: 'CAHMS eurgh Questionnaire',
       text: 'Questionnaire',
       html: '<b>Questionnaire answers will be here :)</b>',
