@@ -96,9 +96,20 @@ module.exports = [
     handler: (request, reply) => {
       var data =  {
         prev: '/sleep',
-        next: '/finished'
+        next: '/school'
       };
       reply.view('friends', data);
+    }
+  },
+  {
+    method: 'GET',
+    path: '/school',
+    handler: (request, reply) => {
+      var data =  {
+        prev: '/friends',
+        next: '/finished'
+      };
+      reply.view('school', data);
     }
   },
   {
@@ -107,7 +118,7 @@ module.exports = [
     handler: (request, reply) => {
       var data =  {
         isEnd: true,
-        prev: '/friends',
+        prev: '/school'
       };
       reply.view('finished', data);
     }
