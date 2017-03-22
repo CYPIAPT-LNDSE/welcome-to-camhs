@@ -17,15 +17,6 @@
     }
   });
 
-  [
-    "sleep__range"
-  ].forEach(range => {
-    if (document.getElementsByClassName(range)[0]){
-      var node = document.getElementsByClassName(range)[0];
-      addOnInputToElement( node, sleepingLion );
-    }
-  });
-
   function addAnswersToSessionStorage(){
     var personality = [];
     var hobbies = [];
@@ -84,21 +75,6 @@
       addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
-    [
-      "sleep__range",
-      "friends__range",
-      "school__range"
-    ].forEach(range => {
-      var node = document.getElementsByClassName(range)[0];
-      if (node) {
-        if (range === "sleep__range") {
-          addOnInputToElement( node, sleepingLion );
-        } else {
-          addOnInputToElement( node, emojiSprite );
-        }
-      }
-    });
-
     function addKeyupEvent(key, element){
       if(!element){ return; }
       element.addEventListener("keyup", function(){
@@ -147,6 +123,21 @@
     element.oninput = function(){ func() }
   }
 
+  [
+    "sleep__range",
+    "friends__range",
+    "school__range"
+  ].forEach(range => {
+    var node = document.getElementsByClassName(range)[0];
+    if (node) {
+      if (range === "sleep__range") {
+        addOnInputToElement( node, sleepingLion );
+      } else {
+        addOnInputToElement( node, emojiSprite );
+      }
+    }
+  });
+
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
@@ -157,28 +148,10 @@
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 
-  [
-    "sleep__range",
-    "friends__range"
-  ].forEach(range => {
-    if (document.getElementsByClassName(range)[0]){
-      var node = document.getElementsByClassName(range)[0];
-      addOnInputToElement( node, emojiSprite );
-    }
-  });
-
-  function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
-  }
-
   function emojiSprite(){
     var value = document.getElementsByClassName("range")[0].value;
     var element = document.getElementsByClassName("friends__emoji-sprite")[0];
     changeBackgroundPosition(element, value, -180)
-  }
-
-  function changeBackgroundPosition(element, value, illustrationSize){
-    element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 
   function emailValidator(emailAddress){
