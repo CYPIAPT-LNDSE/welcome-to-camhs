@@ -126,9 +126,8 @@ module.exports = [
   {
     method: 'POST',
     path: '/finished',
-    handler: (request, reply) => {
-      console.log('email sent?');
-      reply( sendMail(request.payload) );
+    handler: (request) => {
+      sendMail(request.payload)
     }
   },
   {

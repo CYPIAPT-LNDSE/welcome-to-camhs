@@ -171,15 +171,9 @@
       return;
     }
 
-    var mailOptions = {
-      from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
-      to: emailRecipient.value, // list of receivers
-      subject: 'CAHMS Questionnaire', // Subject line
-      text: 'Questionnaire', // plain text body
-      html: '<b>Questionnaire answers will be here :)</b>' // html body
-    }
+    var to = { 'to' : emailRecipient.value };
 
-    axios.post('/finished', mailOptions)
+    axios.post('/finished', to)
       .then(function (response) {
       })
       .catch(function (error) {
