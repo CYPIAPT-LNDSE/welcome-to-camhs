@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "nodemailer-mock": "^1.2.1",
     "nodemon": "^1.11.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"

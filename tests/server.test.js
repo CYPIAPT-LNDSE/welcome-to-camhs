@@ -197,8 +197,7 @@ test('Check POST to /finished', t => {
       to: 'example@example.com',
       subject: 'CAHMS eurgh Questionnaire',
       text: 'Questionnaire',
-      html: '<b>Questionnaire answers will be here :)</b>',
-      test : true
+      html: '<b>Questionnaire answers will be here :)</b>'
     }
   };
   server.inject(options, response => {

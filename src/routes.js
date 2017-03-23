@@ -127,7 +127,7 @@ module.exports = [
     method: 'POST',
     path: '/finished',
     handler: (request, reply) => {
-      reply(request.payload.test ? '' : request.payload);
+      reply( sendMail(request.payload); );
     }
   },
   {

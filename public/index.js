@@ -160,7 +160,7 @@
       '+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-z' +
       'A-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
     )
-    return regex.test(emailAddress) ? true : false;
+    return regex.test(emailAddress);
   }
 
   function sendMail(){
