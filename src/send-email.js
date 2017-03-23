@@ -1,13 +1,14 @@
 'use strict';
 
 const nodemailer = require('nodemailer');
+require('env2')(`${__dirname}/../.env`);
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'welcome.to.cahms@gmail.com',
-    pass: 'Cahms100'
+    user: process.env.EMAIL,
+    pass: process.env.PASS
   }
 });
 
