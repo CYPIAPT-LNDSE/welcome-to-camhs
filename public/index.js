@@ -172,12 +172,6 @@
     var emailAddress = emailRecipient.value;
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
-    http.onreadystatechange = function() {
-      if(http.readyState !== 4 || http.status !== 200) {
-        console.log( http.responseText );
-        return;
-      }
-    }
     http.send(emailAddress);
   }
 })(jQuery);

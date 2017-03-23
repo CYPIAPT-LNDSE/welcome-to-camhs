@@ -1,6 +1,9 @@
 const test = require('tape');
 const server = require('../src/server');
 
+require('env2')(`${__dirname}/../.env`);
+process.env.NODE_ENV = 'testing';
+
 test('Check the index route', t => {
   const options = {
     method: 'GET',

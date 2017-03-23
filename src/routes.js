@@ -1,4 +1,5 @@
 sendMail = require('./send-email')
+require('env2')(`${__dirname}/../.env`);
 
 module.exports = [
   {
@@ -127,8 +128,9 @@ module.exports = [
     method: 'POST',
     path: '/finished',
     handler: (request, reply) => {
-      sendMail(request.payload)
       reply({status: 'ok'});
+      if (process.env.NODE_ENV === 'testing'){ return; }
+      sendMail(request.payload);
     }
   },
   {
