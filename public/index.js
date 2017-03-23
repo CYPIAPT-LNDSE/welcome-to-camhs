@@ -165,19 +165,19 @@
 
   function sendMail(){
     var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
-
     if (!emailValidator(emailRecipient.value)){
       emailRecipient.value = 'Please enter a valid email address.'
       return;
     }
-
-    var to = { 'to' : emailRecipient.value };
-
-    axios.post('/finished', to)
-      .then(function (response) {
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    var emailAddress = emailRecipient.value;
+    var http = new XMLHttpRequest();
+    http.open("POST", '/finished', true);
+    http.onreadystatechange = function() {
+      if(http.readyState !== 4 || http.status !== 200) {
+        console.log( http.responseText );
+        return;
+      }
+    }
+    http.send(emailAddress);
   }
 })(jQuery);

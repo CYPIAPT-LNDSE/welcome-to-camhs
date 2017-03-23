@@ -13,19 +13,17 @@ let transporter = nodemailer.createTransport({
 });
 
 // send mail with defined transport object
-function sendMail(to){
+function sendMail(emailAddress){
 
-  let mailOptions = [
-    {from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>'}, // sender address
-    {subject: 'CAHMS Questionnaire'}, // Subject line
-    {text: 'Questionnaire'}, // plain text body
-    {html: '<b>Questionnaire answers will be here :)</b>'} // html body
-  ]
+  let mailOptions = {
+    from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
+    subject: 'CAHMS Questionnaire', // Subject line
+    text: 'Questionnaire', // plain text body
+    html: '<b>Questionnaire answers will be here :)</b>', // html body
+    to: emailAddress
+  };
 
-  mailOptions.push(to);
-  var options = Object.assign.apply(Object, mailOptions);
-
-  transporter.sendMail(options, (error, info) => {
+  transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
     }
