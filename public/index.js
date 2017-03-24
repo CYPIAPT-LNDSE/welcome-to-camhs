@@ -20,7 +20,7 @@
       "boring",
       "kind",
       "sad"
-    ].forEach(emotion => {
+    ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       addClassToNode(node, 'pop');
       addClickEventArray('personality', node, emotion, personality);
@@ -30,7 +30,7 @@
       "sad-emoji",
       "happy-emoji",
       "indifferent-emoji"
-    ].forEach(emoji => {
+    ].forEach(function(emoji){
       var node = document.getElementsByClassName(emoji)[0];
       addClickEventSingle('feelings', node, emoji.match(/^[a-z]+/));
     });
@@ -38,7 +38,7 @@
     [
       "name",
       "age"
-    ].forEach(inputField => {
+    ].forEach(function(inputField){
       var node = document.getElementsByClassName(inputField)[0];
       addKeyupEvent(inputField, node);
     });
@@ -60,7 +60,7 @@
       "photography-mobile",
       "walking-mobile",
       "puzzles-mobile"
-    ].forEach(hobby => {
+    ].forEach(function(hobby){
       var node = document.getElementsByClassName(hobby)[0];
       addClassToNode(node, 'js-chosen');
       addClickEventArray('hobbies', node, hobby, hobbies);
@@ -70,7 +70,7 @@
       "sleep__range",
       "friends__range",
       "school__range"
-    ].forEach(range => {
+    ].forEach(function(range){
       var node = document.getElementsByClassName(range)[0];
       if (node) {
         if (range === "sleep__range") {
