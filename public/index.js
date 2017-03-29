@@ -82,7 +82,8 @@
     });
 
     [
-      "slider__range"
+      "slider__range",
+      "sleep__range"
     ].forEach(function(value){
       var node = document.getElementsByClassName(value)[0];
       addOnInputToElement(node, function(key, value){
@@ -117,7 +118,6 @@
     }
 
     function addSingleValueToStorage(key, value){
-      console.log(key, value);
       sessionStorage.setItem(key, value);
     }
 
@@ -146,6 +146,7 @@
   }
 
   function addOnInputToElement(element, func){
+    if (!element){ return; }
     element.oninput = function(){ func(element.name, this.value) }
   }
 
