@@ -1,3 +1,6 @@
+sendMail = require('./send-email')
+require('env2')(`${__dirname}/../.env`);
+
 module.exports = [
   {
     method: 'GET',
@@ -119,6 +122,22 @@ module.exports = [
         prev: '/school'
       };
       reply.view('finished', data);
+    }
+  },
+  {
+    method: 'POST',
+    path: '/finished',
+    handler: (request, reply) => {
+      reply({status: 'ok'});
+      if (process.env.NODE_ENV === 'testing'){ return; }
+      sendMail(request.payload, function(err, info){
+        if (err){
+          console.log(err);
+        }
+        else {
+          console.log(info);
+        }
+      });
     }
   },
   {

@@ -2,7 +2,7 @@
   "use strict";
 
   addAnswersToSessionStorage();
-  changeAvatarOnPage();
+  updateAvatarOnPage('introduction', 'sleeping-lion');
 
   $('.carousel').carousel({
     indicators: true,
@@ -32,13 +32,22 @@
     node.appendChild(checkmark);
   }
 
-  function changeAvatarOnPage () {
-    var introduction = document.getElementsByClassName('introduction')[0];
-    if (!introduction) return;
-    var introductionAvatar = introduction.getElementsByClassName('sleeping-lion')[0];
+  function updateAvatarOnPage (selector, avatarSelector) {
+    var page = document.getElementsByClassName(selector)[0];
+    if (!page) return;
+    var avatarOnPage = page.getElementsByClassName(avatarSelector)[0];
     var avatar = sessionStorage.getItem('avatar');
-    introductionAvatar.src = 'assets/' + avatar + '.svg';
+    avatarOnPage.src = 'assets/' + avatar + '.svg';
   }
+
+ [
+  "send-email-button"
+ ].forEach(function(button){
+    var node = document.getElementsByClassName(button)[0];
+    if (node){
+      node.addEventListener('click', function(){ sendMail() });
+    }
+  });
 
   function addAnswersToSessionStorage(){
     var personality = [];
@@ -180,14 +189,30 @@
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 
-  function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
-  }
-
   function emojiSprite(){
     var value = document.getElementsByClassName("range")[0].value;
     var element = document.getElementsByClassName("friends__emoji-sprite")[0];
     changeBackgroundPosition(element, value, -180)
   }
 
+  function emailValidator(emailAddress){
+    var regex = RegExp(
+      '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".' +
+      '+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-z' +
+      'A-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
+    )
+    return regex.test(emailAddress);
+  }
+
+  function sendMail(){
+    var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
+    if (!emailValidator(emailRecipient.value)){
+      emailRecipient.value = 'Please enter a valid email address.'
+      return;
+    }
+    var emailAddress = emailRecipient.value;
+    var http = new XMLHttpRequest();
+    http.open("POST", '/finished', true);
+    http.send(emailAddress);
+  }
 })(jQuery);

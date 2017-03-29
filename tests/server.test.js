@@ -1,6 +1,9 @@
 const test = require('tape');
 const server = require('../src/server');
 
+require('env2')(`${__dirname}/../.env`);
+process.env.NODE_ENV = 'testing';
+
 test('Check the index route', t => {
   const options = {
     method: 'GET',
@@ -175,7 +178,7 @@ test('Check /school', t => {
   });
 });
 
-test('Check /finished', t => {
+test('Check GET to /finished', t => {
   const options = {
     method: 'GET',
     url: '/finished'
@@ -184,6 +187,24 @@ test('Check /finished', t => {
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.ok(response.payload.includes('<h1 class="finished__header">'), 'The h1 header was found in the finished.hbs response');
+    t.end();
+  });
+});
+
+test('Check POST to /finished', t => {
+  const options = {
+    method: 'POST',
+    url: '/finished',
+    payload: {
+      from: '"CAHMS" <welcome.to.cahms@hotmail.co.uk>',
+      to: 'example@example.com',
+      subject: 'CAHMS eurgh Questionnaire',
+      text: 'Questionnaire',
+      html: '<b>Questionnaire answers will be here :)</b>'
+    }
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
     t.end();
   });
 });
