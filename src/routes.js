@@ -135,7 +135,7 @@ module.exports = [
           console.log(err);
         }
         else {
-          console.log('Message %s sent: %s', info.messageId, info.response)
+          console.log(info);
         }
       });
     }

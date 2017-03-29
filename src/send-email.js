@@ -26,7 +26,7 @@ function sendMail(emailAddress, cb){
     if (error) {
       return cb(error)
     }
-    return cb(null, 'Message %s sent: %s', info.messageId, info.response)
+    return cb(null, `Message ${info.messageId} sent: ${info.response}`)
   });
 }
 
