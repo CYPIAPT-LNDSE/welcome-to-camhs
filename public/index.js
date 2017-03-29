@@ -8,6 +8,33 @@
     shift: 100
   });
 
+  [
+    'lion',
+    'bear',
+    'monkey'
+  ].forEach(function (avatar) {
+    var node = document.getElementsByClassName(avatar)[0];
+    node.classList.remove('active');
+    if (!node) return;
+    node.addEventListener('click', function () {
+      addClassToNode(node, 'active');
+      var checkmark = document.createElement('IMG');
+      checkmark.classList.add('checkmark');
+      checkmark.src = 'assets/checkmark.svg';
+      node.appendChild(checkmark);
+    });
+
+    if (node && node.classList.contains('active')) {
+
+      console.log(node);
+
+      // var introduction = document.getElementsByClassName('introduction')[0];
+      // if (!introduction) return;
+      // var introductionAvatar = introduction.getElementsByClassName('sleeping-lion')[0];
+      // introductionAvatar.src = 'assets/' + avatar + '.svg';
+    }
+  });
+
   function addAnswersToSessionStorage(){
     var personality = [];
     var hobbies = [];
