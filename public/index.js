@@ -81,6 +81,18 @@
       }
     });
 
+    [
+      "school__range",
+      "friends__range",
+      "slider__range",
+      "sleep__range"
+    ].forEach(function(value){
+      var node = document.getElementsByClassName(value)[0];
+      addOnInputToElement(node, function(key, value){
+        addSingleValueToStorage(key, value)
+      });
+    });
+
     function addKeyupEvent(key, element){
       if(!element){ return; }
       element.addEventListener("keyup", function(){
@@ -125,10 +137,6 @@
     });
   }
 
-  function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
-  }
-
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
@@ -140,7 +148,8 @@
   }
 
   function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
+    if (!element){ return; }
+    element.oninput = function(){ func(element.name, this.value) }
   }
 
   function emojiSprite(){
