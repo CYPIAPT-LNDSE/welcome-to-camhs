@@ -82,6 +82,7 @@
     });
 
     [
+      "friends__range",
       "slider__range",
       "sleep__range"
     ].forEach(function(value){
