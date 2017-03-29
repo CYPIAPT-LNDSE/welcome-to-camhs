@@ -1,0 +1,18 @@
+.checkmark {
+  $size: 100px;
+  width: $size;
+  height: $size;
+
+  .path {
+    stroke-linecap: round;
+    stroke-dasharray: 27;
+    stroke-dashoffset: -23;
+    @include animation (dash, 500ms, ease, 0s, forwards);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
