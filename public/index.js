@@ -81,6 +81,15 @@
       }
     });
 
+    [
+      "slider__range"
+    ].forEach(function(value){
+      var node = document.getElementsByClassName(value)[0];
+      addOnInputToElement(node, function(key, value){
+        addSingleValueToStorage(key, value)
+      });
+    });
+
     function addKeyupEvent(key, element){
       if(!element){ return; }
       element.addEventListener("keyup", function(){
@@ -108,6 +117,7 @@
     }
 
     function addSingleValueToStorage(key, value){
+      console.log(key, value);
       sessionStorage.setItem(key, value);
     }
 
@@ -125,10 +135,6 @@
     });
   }
 
-  function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
-  }
-
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
@@ -140,7 +146,7 @@
   }
 
   function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
+    element.oninput = function(){ func(element.name, this.value) }
   }
 
   function emojiSprite(){
