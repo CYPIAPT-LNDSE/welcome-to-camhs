@@ -15,11 +15,13 @@
     'monkey'
   ].forEach(function (avatar) {
     var node = document.getElementsByClassName(avatar)[0];
-    if (!node) return;
-    node.classList.remove('active');
+    if (!node ) return;
     node.addEventListener('click', function () {
-      addClassToNode(node, 'active');
-      addCheckmark(node);
+      if ( !document.getElementsByClassName('checkmark')[0] ) {
+        addCheckmark(node);
+      } else {
+        node.removeChild(document.getElementsByClassName('checkmark')[0]);
+      }
     });
   });
 
@@ -48,7 +50,7 @@
       'monkey'
     ].forEach(function (avatar) {
       var node = document.getElementsByClassName(avatar)[0];
-      addClickEventSingle('avatar', node, avatar);
+      addClickEventSingle('avatar', node, avatar)
     });
 
     [
