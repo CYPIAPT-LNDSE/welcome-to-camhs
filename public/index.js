@@ -3,6 +3,7 @@
 
   addAnswersToSessionStorage();
   updateAvatarOnPage('introduction', 'sleeping-lion');
+  updateAvatarOnPage('finish', 'finish__lion');
 
   $('.carousel').carousel({
     indicators: true,
@@ -35,9 +36,9 @@
   function updateAvatarOnPage (selector, avatarSelector) {
     var page = document.getElementsByClassName(selector)[0];
     if (!page) return;
-    var avatarOnPage = page.getElementsByClassName(avatarSelector)[0];
+    var avatarImg = page.getElementsByClassName(avatarSelector)[0];
     var avatar = sessionStorage.getItem('avatar');
-    avatarOnPage.src = 'assets/' + avatar + '.svg';
+    avatarImg.src = 'assets/' + avatar + '.svg';
   }
 
  [
