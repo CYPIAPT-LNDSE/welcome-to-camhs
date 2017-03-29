@@ -12,22 +12,21 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-// send mail with defined transport object
-function sendMail(emailAddress){
+function sendMail(emailAddress, cb){
 
   let mailOptions = {
-    from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>', // sender address
-    subject: 'CAHMS Questionnaire', // Subject line
-    text: 'Questionnaire', // plain text body
-    html: '<b>Questionnaire answers will be here :)</b>', // html body
+    from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>',
+    subject: 'CAHMS Questionnaire',
+    text: 'Questionnaire',
+    html: '<b>Questionnaire answers will be here :)</b>',
     to: emailAddress
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return console.log(error);
+      return cb(error)
     }
-    console.log('Message %s sent: %s', info.messageId, info.response);
+    return cb(null, 'Message %s sent: %s', info.messageId, info.response)
   });
 }
 
