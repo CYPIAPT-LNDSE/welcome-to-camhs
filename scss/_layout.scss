@@ -72,10 +72,12 @@ body {
     width: 40px;
     position:relative;
     margin-top: -20px;
+    border: none;
     background: {
       image: url(../assets/slider-button.svg);
       size: contain;
       repeat: no-repeat;
+      color: $transparent;
     }
 
     @media screen and (min-width: 768px) {
