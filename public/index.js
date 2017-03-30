@@ -89,9 +89,7 @@
         }
       }
     });
-    
-  });
-    
+
     function addKeyupEvent(key, element){
       if(!element){ return; }
       element.addEventListener("keyup", function(){
