@@ -4,10 +4,6 @@
 
 .school__text {
   @extend %main-text;
-
-  // & ~ & {
-  //   margin-bottom: 100px;
-  // }
 }
 
 .school__title {
@@ -21,6 +17,10 @@
 
 .school__slider {
   text-align: center;
+
+  .thumb {
+    display: none;
+  }
 }
 
 .school__label {
