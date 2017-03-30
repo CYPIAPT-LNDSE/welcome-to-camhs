@@ -20,8 +20,23 @@
 }
 
 .school__slider {
-  margin: 50px 0;
   text-align: center;
+}
+
+.school__label {
+  position: relative;
+  top: 65px;
+  border: 1px solid $white;
+  padding: 6px;
+  font-size: 1.5rem;
+}
+
+.label--bad {
+  left: 60px;
+}
+
+.label--good {
+  right: 70px;
 }
 
 .school__range {
