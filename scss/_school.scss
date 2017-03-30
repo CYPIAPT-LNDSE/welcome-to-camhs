@@ -18,31 +18,43 @@
 
 .school__slider {
   text-align: center;
+  margin-top: 40px;
 
   .thumb {
     display: none;
   }
 }
 
-.school__label {
+.school__range {
+  @extend %range-input;
+}
+
+.slider__label {
   position: relative;
-  top: 70px;
-  border: 1px solid $white;
+  top: -70px;
   padding: 6px;
   font-size: 1.5rem;
 }
 
 .school__textarea {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.textarea__container {
   position: relative;
   display: inline-block;
+  margin-left: 10px;
 }
 
-.label {
+.textarea__label {
   position: absolute;
   font-size: 1.5rem;
+  left: 0;
+  right: 0;
 }
 
-.textarea {
+.textarea__text {
   @extend %text-input;
   width: 300px;
   height: 150px;
@@ -51,18 +63,10 @@
   font-size: 2rem;
 }
 
-.label--bad {
+.slider__label--bad {
   left: 70px;
 }
 
-.label--good {
+.slider__label--good {
   right: 80px;
-}
-
-.school__range {
-  @extend %range-input;
-}
-
-.school__input {
-  @extend %text-input;
 }
