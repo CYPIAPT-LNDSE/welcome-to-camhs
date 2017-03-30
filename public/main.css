@@ -466,24 +466,24 @@ span.value {
 /* BAllOON 3*/
 @-webkit-keyframes balloon3 {
   0%,100% {
-    -webkit-transform: translate(0, -10px) rotate(0); }
+    -webkit-transform: translate(0, 5px) rotate(-1deg); }
   50% {
-    -webkit-transform: translate(-20px, 30px) rotate(-8deg); } }
+    -webkit-transform: translate(-20px, 5px) rotate(-5deg); } }
 @-moz-keyframes balloon3 {
   0%,100% {
-    -moz-transform: translate(0, -10px) rotate(0); }
+    -moz-transform: translate(0, 5px) rotate(-1deg); }
   50% {
-    -moz-transform: translate(-20px, 30px) rotate(-8deg); } }
+    -moz-transform: translate(-20px, 5px) rotate(-5deg); } }
 @-o-keyframes balloon3 {
   0%,100% {
-    -o-transform: translate(0, -10px) rotate(0); }
+    -o-transform: translate(0, 5px) rotate(-1deg); }
   50% {
-    -o-transform: translate(-20px, 30px) rotate(-8deg); } }
+    -o-transform: translate(-20px, 5px) rotate(-5deg); } }
 @keyframes balloon3 {
   0%,100% {
-    transform: translate(0, -10px) rotate(0); }
+    transform: translate(0, 5px) rotate(-1deg); }
   50% {
-    transform: translate(-20px, 30px) rotate(-8deg); } }
+    transform: translate(-20px, 5px) rotate(-5deg); } }
 /* BAllOON 4*/
 @-webkit-keyframes balloon4 {
   0%,100% {
