@@ -14,8 +14,8 @@ body {
 }
 
 %main-content {
-  display: flex;
-  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
   color: $white;
 }
 
