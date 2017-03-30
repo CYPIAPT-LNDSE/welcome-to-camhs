@@ -9,8 +9,8 @@
   });
 
   [
-   "send-email-button"
- ].forEach(function(button){
+    "send-email-button"
+  ].forEach(function(button){
     var node = document.getElementsByClassName(button)[0];
     if (node){
       node.addEventListener('click', function(){ sendMail() });
@@ -89,9 +89,7 @@
         }
       }
     });
-    
-  });
-    
+
     function addKeyupEvent(key, element){
       if(!element){ return; }
       element.addEventListener("keyup", function(){
