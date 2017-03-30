@@ -4,6 +4,7 @@
 
 .school__text {
   @extend %main-text;
+  margin-bottom: 0;
 }
 
 .school__title {
@@ -25,7 +26,7 @@
 
 .school__label {
   position: relative;
-  top: 65px;
+  top: 70px;
   border: 1px solid $white;
   padding: 6px;
   font-size: 1.5rem;
@@ -44,18 +45,18 @@
 .textarea {
   @extend %text-input;
   width: 300px;
-  height: 200px;
-  border: 6px dotted $white;
+  height: 150px;
+  border: 3px dotted $white;
   margin-top: 40px;
   font-size: 2rem;
 }
 
 .label--bad {
-  left: 60px;
+  left: 70px;
 }
 
 .label--good {
-  right: 70px;
+  right: 80px;
 }
 
 .school__range {
