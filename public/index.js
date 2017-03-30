@@ -179,7 +179,7 @@
   }
 
   function addOnInputToElement(element, func){
-    element.oninput = function(){ func() }
+    element.oninput = function(){ func() };
   }
 
   function sleepingLion(){
