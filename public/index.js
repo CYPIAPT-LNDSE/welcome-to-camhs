@@ -67,28 +67,18 @@
     });
 
     [
-      "sleep__range",
-      "friends__range",
-      "school__range"
-    ].forEach(function(range){
-      var node = document.getElementsByClassName(range)[0];
-      if (node) {
-        if (range === "sleep__range") {
-          addOnInputToElement( node, sleepingLion );
-        } else {
-          addOnInputToElement( node, emojiSprite );
-        }
-      }
-    });
-
-    [
       "school__range",
       "friends__range",
       "slider__range",
       "sleep__range"
-    ].forEach(function(value){
-      var node = document.getElementsByClassName(value)[0];
+    ].forEach(function(range){
+      var node = document.getElementsByClassName(range)[0];
       addOnInputToElement(node, function(key, value){
+        if (range === "sleep__range") {
+          sleepingLion();
+        } else {
+          emojiSprite();
+        }
         addSingleValueToStorage(key, value)
       });
     });
@@ -153,7 +143,7 @@
   }
 
   function emojiSprite(){
-    var value = document.getElementsByClassName("range")[0].value;
+    var value = document.getElementsByClassName("range")[0].value -1;
     var element = document.getElementsByClassName("friends__emoji-sprite")[0];
     changeBackgroundPosition(element, value, -180)
   }
