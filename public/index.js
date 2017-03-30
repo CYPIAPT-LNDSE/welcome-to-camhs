@@ -89,9 +89,7 @@
         }
       }
     });
-    
-  });
-    
+
     function addKeyupEvent(key, element){
       if(!element){ return; }
       element.addEventListener("keyup", function(){
@@ -165,6 +163,14 @@
     return regex.test(emailAddress);
   }
 
+  function getDataFromStorage(){
+    var data = {};
+    for (var key in sessionStorage){
+      data[key] = sessionStorage[key]
+    }
+    console.log(data);
+  }
+
   function sendMail(){
     var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
     if (!emailValidator(emailRecipient.value)){
@@ -175,5 +181,6 @@
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
     http.send(emailAddress);
+    getDataFromStorage()
   }
 })(jQuery);
