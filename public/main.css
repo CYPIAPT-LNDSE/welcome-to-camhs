@@ -14,8 +14,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 .welcome, .introduction, .eating, .hobbies, .finish, .feelings, .avatar, .personality, .friends, .sleep, .school {
-  display: flex;
-  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
   color: white; }
 
 .welcome__text, .introduction__text, .eating__text, .hobbies__text, .finish__text, .feelings__text, .avatar__text, .personality__text, .friends__text, .sleep__text, .school__text {
@@ -100,8 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Henny Penny", cursive;
   font-size: 3rem;
   margin: 0 auto;
-  letter-spacing: 0.2rem;
-  text-align: center;
+  letter-spacing: 0.35rem;
   line-height: 4.5rem; }
   @media screen and (min-width: 768px) {
     .welcome__title {
