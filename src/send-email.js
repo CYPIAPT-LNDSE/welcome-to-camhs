@@ -12,13 +12,13 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-function sendMail(emailAddress, cb){
+function sendMail(emailAddress, emailBody, cb){
 
   let mailOptions = {
     from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>',
     subject: 'CAHMS Questionnaire',
     text: 'Questionnaire',
-    html: '<b>Questionnaire answers will be here :)</b>',
+    html: emailBody,
     to: emailAddress
   };
 

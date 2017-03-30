@@ -163,14 +163,6 @@
     return regex.test(emailAddress);
   }
 
-  function getDataFromStorage(){
-    var data = {};
-    for (var key in sessionStorage){
-      data[key] = sessionStorage[key]
-    }
-    console.log(data);
-  }
-
   function sendMail(){
     var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
     if (!emailValidator(emailRecipient.value)){
@@ -180,7 +172,8 @@
     var emailAddress = emailRecipient.value;
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
-    http.send(emailAddress);
-    getDataFromStorage()
+    console.log(sessionStorage);
+    var payload = JSON.stringify([emailAddress, sessionStorage]);
+    http.send(payload);
   }
 })(jQuery);

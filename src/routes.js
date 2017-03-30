@@ -130,7 +130,10 @@ module.exports = [
     handler: (request, reply) => {
       reply({status: 'ok'});
       if (process.env.NODE_ENV === 'testing'){ return; }
-      sendMail(request.payload, function(err, info){
+      var payload = JSON.parse(request.payload);
+      console.log(payload);
+      var emailBody = JSON.stringify(payload[1]);
+      sendMail(payload[0], emailBody, function(err, info){
         if (err){
           console.log(err);
         }
