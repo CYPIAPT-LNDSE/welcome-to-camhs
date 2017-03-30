@@ -18,7 +18,7 @@
     var node = document.getElementsByClassName(avatar)[0];
     if (!node ) return;
     node.addEventListener('click', function () {
-      var checkmark = document.getElementsByClassName('checkmark')[0];
+      var checkmark = node.getElementsByClassName('checkmark')[0];
       if ( !checkmark ) {
         addCheckmark(node);
         location.href = '/introduction';
@@ -120,18 +120,20 @@
     });
 
     [
-      "sleep__range",
+      "school__range",
       "friends__range",
-      "school__range"
+      "slider__range",
+      "sleep__range"
     ].forEach(function(range){
       var node = document.getElementsByClassName(range)[0];
-      if (node) {
+      addOnInputToElement(node, function(key, value){
         if (range === "sleep__range") {
-          addOnInputToElement( node, sleepingLion );
+          sleepingLion();
         } else {
-          addOnInputToElement( node, emojiSprite );
+          emojiSprite();
         }
-      }
+        addSingleValueToStorage(key, value)
+      });
     });
 
     function addKeyupEvent(key, element){
@@ -178,10 +180,6 @@
     });
   }
 
-  function addOnInputToElement(element, func){
-    element.oninput = function(){ func() };
-  }
-
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
@@ -192,8 +190,13 @@
     element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
   }
 
+  function addOnInputToElement(element, func){
+    if (!element){ return; }
+    element.oninput = function(){ func(element.name, this.value) }
+  }
+
   function emojiSprite(){
-    var value = document.getElementsByClassName("range")[0].value;
+    var value = document.getElementsByClassName("range")[0].value -1;
     var element = document.getElementsByClassName("friends__emoji-sprite")[0];
     changeBackgroundPosition(element, value, -180)
   }
