@@ -71,6 +71,7 @@
 }
 
 .send-email-button {
+  -webkit-appearance: none;
   font: {
     family: $main-font;
     size: 0.83em;
