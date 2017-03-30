@@ -5,9 +5,9 @@
 .school__text {
   @extend %main-text;
 
-  & ~ & {
-    margin-bottom: 100px;
-  }
+  // & ~ & {
+  //   margin-bottom: 100px;
+  // }
 }
 
 .school__title {
@@ -29,6 +29,25 @@
   border: 1px solid $white;
   padding: 6px;
   font-size: 1.5rem;
+}
+
+.school__textarea {
+  position: relative;
+  display: inline-block;
+}
+
+.label {
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.textarea {
+  @extend %text-input;
+  width: 300px;
+  height: 200px;
+  border: 6px dotted $white;
+  margin-top: 40px;
+  font-size: 2rem;
 }
 
 .label--bad {
