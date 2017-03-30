@@ -186,7 +186,7 @@ test('Check GET to /finished', t => {
 
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
-    t.ok(response.payload.includes('<h1 class="finished__header">'), 'The h1 header was found in the finished.hbs response');
+    t.ok(response.payload.includes('<h1 class="finish__header">'), 'The h1 header was found in the finished.hbs response');
     t.end();
   });
 });
