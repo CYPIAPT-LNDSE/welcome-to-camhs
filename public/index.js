@@ -111,7 +111,6 @@
       "walking"
     ].forEach(function(hobby){
       var node = document.getElementById(hobby);
-      addClassToNode(node, 'js-chosen');
       addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
