@@ -99,7 +99,7 @@
     [
       "football",
       "tennis",
-      "gymnastics",
+      "music",
       "dance",
       "drawing",
       "photography",
@@ -108,13 +108,9 @@
       "puzzles",
       "camping",
       "fishing",
-      "walking",
-      "gymnastics-mobile",
-      "photography-mobile",
-      "walking-mobile",
-      "puzzles-mobile"
+      "walking"
     ].forEach(function(hobby){
-      var node = document.getElementsByClassName(hobby)[0];
+      var node = document.getElementById(hobby);
       addClassToNode(node, 'js-chosen');
       addClickEventArray('hobbies', node, hobby, hobbies);
     });
