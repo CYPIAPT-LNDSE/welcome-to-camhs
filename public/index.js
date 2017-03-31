@@ -55,7 +55,6 @@
   function addAnswersToSessionStorage(){
     var personality = [];
     var hobbies = [];
-    var likesAndDislikes = [];
 
     [
       'lion',
