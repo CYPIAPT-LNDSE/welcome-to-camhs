@@ -20,6 +20,7 @@
   function addAnswersToSessionStorage(){
     var personality = [];
     var hobbies = [];
+    var likesAndDislikes = [];
 
     [
       "strange",
@@ -98,6 +99,16 @@
       addOnInputToElement(node, function(key, value) {
         addSingleValueToStorage(key, value);
       });
+    });
+
+    [
+      "frineds__like",
+      "frineds__dislike",
+      "school__like",
+      "school__dislike"
+    ].forEach(function(textarea){
+      var node = document.getElementsByClassName(textarea)[0];
+      addKeyupEvent(textarea, node);
     });
 
     function addKeyupEvent(key, element){
