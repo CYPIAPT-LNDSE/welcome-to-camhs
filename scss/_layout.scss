@@ -109,3 +109,47 @@ body {
 .button--next {
   float: right;
 }
+
+.slider__label {
+  position: relative;
+  top: -70px;
+  padding: 6px;
+  font-size: 1.5rem;
+}
+
+.slider__label--bad {
+  left: 70px;
+}
+
+.slider__label--good {
+  right: 80px;
+}
+
+.textarea__container {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.textarea__label {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 0;
+  right: 0;
+}
+
+.textarea__text {
+  width: 300px;
+  height: 150px;
+  background-color: $transparent;
+  color: $yellow;
+  text-align: center;
+  padding-bottom: 20px;
+  border: 3px dotted $white;
+  margin-top: 40px;
+  font-size: 2rem;
+
+  &:focus {
+    outline: none;
+  }
+}
