@@ -57,10 +57,12 @@
     -webkit-appearance: none;
     height: 140px;
     width: 140px;
+    border: none;
     background: {
       image: url(./assets/banana.svg);
       size: contain;
       repeat: no-repeat;
+      color: $transparent;
     }
   }
 

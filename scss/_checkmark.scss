@@ -1,0 +1,11 @@
+.checkmark {
+  $size: 100px;
+  width: $size;
+  height: $size;
+
+  .path {
+    stroke-linecap: round;
+    stroke-dasharray: 27;
+    stroke-dashoffset: -23;
+  }
+}

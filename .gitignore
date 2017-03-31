@@ -1,6 +1,7 @@
 .sass-cache
 
 public/main.css.map
+
 public/main.css
 
 node_modules
@@ -8,7 +9,6 @@ node_modules
 npm-debug.log
 
 .DS_Store
-.env
 
 .env
 

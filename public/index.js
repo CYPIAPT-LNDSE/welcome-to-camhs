@@ -2,11 +2,46 @@
   "use strict";
 
   addAnswersToSessionStorage();
+  updateAvatar('introduction', 'sleeping-lion');
+  updateAvatar('finish', 'finish__lion');
 
   $('.carousel').carousel({
     indicators: true,
     shift: 100
   });
+
+  [
+    'lion',
+    'bear',
+    'monkey'
+  ].forEach(function (avatar) {
+    var node = document.getElementsByClassName(avatar)[0];
+    if (!node ) return;
+    node.addEventListener('click', function () {
+      var checkmark = node.getElementsByClassName('checkmark')[0];
+      if ( !checkmark ) {
+        addCheckmark(node);
+        location.href = '/introduction';
+      } else {
+        node.removeChild(checkmark);
+      }
+    });
+  });
+
+  function addCheckmark (node) {
+    var checkmark = document.createElement('IMG');
+    checkmark.classList.add('checkmark');
+    checkmark.src = 'assets/checkmark.svg';
+    node.appendChild(checkmark);
+  }
+
+  function updateAvatar (selector, avatarSelector) {
+    var page = document.getElementsByClassName(selector)[0];
+    if (!page) return;
+    var avatarImg = page.getElementsByClassName(avatarSelector)[0];
+    var avatar = sessionStorage.getItem('avatar');
+    avatarImg.src = 'assets/' + avatar + '.svg';
+  }
 
   [
     "send-email-button"
@@ -21,6 +56,15 @@
     var personality = [];
     var hobbies = [];
     var likesAndDislikes = [];
+
+    [
+      'lion',
+      'bear',
+      'monkey'
+    ].forEach(function (avatar) {
+      var node = document.getElementsByClassName(avatar)[0];
+      addClickEventSingle('avatar', node, avatar);
+    });
 
     [
       "strange",
