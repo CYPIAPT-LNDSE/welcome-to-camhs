@@ -3,6 +3,8 @@
 const nodemailer = require('nodemailer');
 require('env2')(`${__dirname}/../.env`);
 
+const emailBodyBuilder = require('./email-body.js');
+
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -12,11 +14,13 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-function sendMail(emailAddress, emailBody, cb){
+function sendMail(emailAddress, emailContent, cb){
+
+  const emailBody = emailBodyBuilder.buildEmail(emailContent);
 
   let mailOptions = {
-    from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>',
-    subject: 'CAHMS Questionnaire',
+    from: '"CAMHS 😀" <welcome.to.cahms@hotmail.co.uk>',
+    subject: 'Getting to know you Questionnaire',
     text: 'Questionnaire',
     html: emailBody,
     to: emailAddress
