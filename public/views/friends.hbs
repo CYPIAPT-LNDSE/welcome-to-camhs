@@ -6,13 +6,19 @@
   <div class="friends__slider">
     <label class="slider__label slider__label--bad">Bad</label>
     <input name="Friends" class="friends__range range" type="range" min="1"
-      max="5" value="3" step="1">
-      <label class="slider__label slider__label--good">Good</label>
+    max="5" value="3" step="1">
+    <label class="slider__label slider__label--good">Good</label>
   </div>
-  <div class="friends__text">
-    <p class="friends__subtitle">What do you like and dislike <br> about your friendships?</p>
-      <input class="friends__text-input" type="text" autofocus="">
-      <input class="friends__text-input" type="text" autofocus="">
+  <div class="friends__textarea">
+    <div class="textarea__container">
+      <label class="textarea__label">I like:</label>
+      <textarea class="textarea__text" type="text" autofocus=""></textarea>
+    </div>
+    <div class="textarea__container">
+      <label class="textarea__label">I dislike:</label>
+      <textarea class="textarea__text" type="text" autofocus=""></textarea>
+    </div>
   </div>
+
   {{> buttons }}
 </div>

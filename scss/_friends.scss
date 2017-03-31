@@ -18,17 +18,14 @@
   margin: 40px 0 0 0;
 }
 
-.friends__text-input {
-  @extend %text-input;
-
-  & ~ & {
-    margin-bottom: 60px;
-  }
-}
-
 .friends__slider {
   height: 120px;
   text-align: center;
+  margin-top: 40px;
+
+  .thumb {
+    display: none;
+  }
 }
 
 .friends__range {
@@ -49,4 +46,9 @@
   span {
     display: none;
   }
+}
+
+.friends__textarea {
+  text-align: center;
+  margin: 40px 0;
 }
