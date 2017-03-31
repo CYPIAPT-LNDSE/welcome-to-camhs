@@ -175,7 +175,6 @@
     var emailAddress = emailRecipient.value;
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
-    console.log(sessionStorage);
     var payload = JSON.stringify([emailAddress, sessionStorage]);
     http.send(payload);
   }
