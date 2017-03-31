@@ -13,6 +13,10 @@ body {
    }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 %main-content {
   display: -webkit-flex;
   -webkit-flex-direction: column;
@@ -72,10 +76,12 @@ body {
     width: 40px;
     position:relative;
     margin-top: -20px;
+    border: none;
     background: {
       image: url(../assets/slider-button.svg);
       size: contain;
       repeat: no-repeat;
+      color: $transparent;
     }
 
     @media screen and (min-width: 768px) {
