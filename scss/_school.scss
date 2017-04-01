@@ -4,10 +4,7 @@
 
 .school__text {
   @extend %main-text;
-
-  & ~ & {
-    margin-bottom: 100px;
-  }
+  margin-bottom: 0;
 }
 
 .school__title {
@@ -20,14 +17,19 @@
 }
 
 .school__slider {
-  margin: 50px 0;
   text-align: center;
+  margin-top: 40px;
+
+  .thumb {
+    display: none;
+  }
 }
 
 .school__range {
   @extend %range-input;
 }
 
-.school__input {
-  @extend %text-input;
+.school__textarea {
+  text-align: center;
+  margin-bottom: 40px;
 }
