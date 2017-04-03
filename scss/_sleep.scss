@@ -29,6 +29,11 @@
 .sleep__slider {
   margin-top: 30px;
   text-align: center;
+
+  .value,
+  .thumb {
+    display: none;
+  }
 }
 
 .slider__labels {
@@ -52,9 +57,4 @@
 
 .sleep__range {
   @extend %range-input;
-}
-
-.value,
-.thumb {
-  display: none;
 }
