@@ -160,6 +160,15 @@ module.exports = [
   },
   {
     method: 'GET',
+    path: '/public/anime.min.js',
+    handler: {
+      file: {
+        path: 'node_modules/animejs/anime.min.js'
+      }
+    }
+  },
+  {
+    method: 'GET',
     path: '/public/materialize/{file*}',
     handler: {
       directory: {
