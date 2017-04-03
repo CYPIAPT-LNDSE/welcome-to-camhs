@@ -22,18 +22,39 @@
   margin-left: 25px;
 
   @media screen and (min-width: 550px) {
-     margin-left: 33%;
-   }
+    margin-left: 33%;
+  }
 }
 
 .sleep__slider {
+  margin-top: 30px;
   text-align: center;
+}
+
+.slider__labels {
+  width: 80%;
+  margin: auto;
+
+  .slider__label {
+    top: 40px;
+  }
+
+  .slider__label--good {
+    right: 0;
+    float: right;
+  }
+
+  .slider__label--bad {
+    left: 0;
+    float: left;
+  }
 }
 
 .sleep__range {
   @extend %range-input;
 }
 
-.value {
+.value,
+.thumb {
   display: none;
 }
