@@ -117,7 +117,6 @@
     [
       "school__range",
       "friends__range",
-      "slider__range",
       "sleep__range"
     ].forEach(function(range){
       var node = document.getElementsByClassName(range)[0];
@@ -127,8 +126,27 @@
         } else {
           emojiSprite();
         }
-        addSingleValueToStorage(key, value)
+        addSingleValueToStorage(key, value);
       });
+    });
+
+    [
+      "eating__range"
+    ].forEach(function(range) {
+      var node = document.getElementsByClassName(range)[0];
+      addOnInputToElement(node, function(key, value) {
+        addSingleValueToStorage(key, value);
+      });
+    });
+
+    [
+      "frineds__like",
+      "frineds__dislike",
+      "school__like",
+      "school__dislike"
+    ].forEach(function(textarea){
+      var node = document.getElementsByClassName(textarea)[0];
+      addKeyupEvent(textarea, node);
     });
 
     function addKeyupEvent(key, element){
@@ -178,7 +196,7 @@
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
-    changeBackgroundPosition(element, value, -332)
+    changeBackgroundPosition(element, value, -332);
   }
 
   function changeBackgroundPosition(element, value, illustrationSize){
@@ -193,7 +211,7 @@
   function emojiSprite(){
     var value = document.getElementsByClassName("range")[0].value -1;
     var element = document.getElementsByClassName("friends__emoji-sprite")[0];
-    changeBackgroundPosition(element, value, -180)
+    changeBackgroundPosition(element, value, -180);
   }
 
   function emailValidator(emailAddress){
@@ -201,14 +219,14 @@
       '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".' +
       '+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-z' +
       'A-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
-    )
+    );
     return regex.test(emailAddress);
   }
 
   function sendMail(){
     var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
     if (!emailValidator(emailRecipient.value)){
-      emailRecipient.value = 'Please enter a valid email address.'
+      emailRecipient.value = 'Please enter a valid email address.';
       return;
     }
     var emailAddress = emailRecipient.value;
