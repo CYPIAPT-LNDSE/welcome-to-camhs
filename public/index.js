@@ -175,7 +175,9 @@
     var emailAddress = emailRecipient.value;
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
-    var payload = JSON.stringify([emailAddress, sessionStorage]);
+    http.setRequestHeader("Content-type", "application/json");
+    var payload = JSON.stringify({emailAddress:emailAddress,
+      sessionStorage:sessionStorage});
     http.send(payload);
   }
 })(jQuery);
