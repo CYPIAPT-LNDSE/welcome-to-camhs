@@ -29,9 +29,8 @@
   });
 
   function addCheckmark (node) {
-    var checkmark = document.createElement('IMG');
+    var checkmark = document.createElement('DIV');
     checkmark.classList.add('checkmark');
-    checkmark.src = 'assets/checkmark.svg';
     node.appendChild(checkmark);
   }
 
