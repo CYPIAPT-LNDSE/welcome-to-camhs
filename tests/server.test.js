@@ -202,21 +202,6 @@ test('Check GET to /finished', t => {
   });
 });
 
-
-// FIX THIS TEST
-test('Check GET to /info', t => {
-  const options = {
-    method: 'GET',
-    url: '/info'
-  };
-
-  server.inject(options, response => {
-    t.equal(response.statusCode, 200, 'You received a 200 status code');
-    t.ok(response.payload.includes('<h1 class="finish__header">'), 'The h1 header was found in the finished.hbs response');
-    t.end();
-  });
-});
-
 test('Check POST to /finished', t => {
   const options = {
     method: 'POST',
@@ -231,6 +216,18 @@ test('Check POST to /finished', t => {
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.end();
+  });
+});
+
+test('Check /info', t => {
+  const options = {
+    method: 'GET',
+    url: '/info'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.includes('<h2 class="info__title">'), 'The h2 title was found in the info.hbs response');
     t.end();
   });
 });
