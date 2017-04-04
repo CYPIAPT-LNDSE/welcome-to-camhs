@@ -23,5 +23,10 @@
 }
 
 .pop {
-  display: none;
+  visibility: hidden;
+
+  .st2 {
+    visibility: visible;
+    fill: $yellow;
+  }
 }
