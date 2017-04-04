@@ -149,7 +149,7 @@
       "sad"
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
-      addClassToNode(node, 'pop');
+      toggleClass(node, 'pop');
       addClickEventArray('personality', node, emotion, personality);
     });
 
@@ -189,7 +189,7 @@
       "puzzles-mobile"
     ].forEach(function(hobby){
       var node = document.getElementsByClassName(hobby)[0];
-      addClassToNode(node, 'js-chosen');
+      toggleClass(node, 'js-chosen');
       addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
@@ -265,10 +265,10 @@
   }
 
   // Adds a class to node
-  function addClassToNode(node, className){
+  function toggleClass(node, className){
     if (!node){ return; }
     node.addEventListener("click", function(){
-      node.classList.add(className);
+      node.classList.toggle(className);
     });
   }
 
