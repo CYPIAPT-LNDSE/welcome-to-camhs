@@ -1,0 +1,24 @@
+<div class="friends">
+  <div class="friends__text">
+    <h2 class="friends__title">How do you feel about <br> your friendships?</h2>
+  </div>
+  <div class="friends__emoji-sprite"></div>
+  <div class="friends__slider">
+    <label class="slider__label slider__label--bad">Bad</label>
+    <input name="friends" class="friends__range range" type="range" min="1"
+    max="5" value="3" step="1">
+    <label class="slider__label slider__label--good">Good</label>
+  </div>
+  <div class="friends__textarea">
+    <div class="textarea__container">
+      <label class="textarea__label">I like:</label>
+      <textarea class="textarea__text frineds__like" type="text" autofocus=""></textarea>
+    </div>
+    <div class="textarea__container">
+      <label class="textarea__label">I dislike:</label>
+      <textarea class="textarea__text frineds__dislike" type="text" autofocus=""></textarea>
+    </div>
+  </div>
+
+  {{> buttons }}
+</div>
