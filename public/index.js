@@ -251,7 +251,10 @@
 
     function addValueToArray(key, value, array){
       array.push(value);
-      addArrayToStorage(key, array);
+      var unique = array.filter(function(item, index, arr) {
+         return arr.indexOf(item) === index;
+       });
+      addArrayToStorage(key, unique);
     }
 
     function addSingleValueToStorage(key, value){
