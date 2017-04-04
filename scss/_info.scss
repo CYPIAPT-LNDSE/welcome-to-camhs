@@ -1,0 +1,54 @@
+.info {
+  @extend %main-content;
+
+  .buttons {
+    color:red;
+  }
+}
+
+.info__text {
+  @extend %main-text;
+  margin-bottom: 5px;
+}
+
+.info__icon {
+  width: 100px;
+  margin-top: 25px;
+}
+
+.info__title {
+  color: $black;
+  font-size: 2.8rem;
+}
+
+.spacing-dots {
+  font-size: 1rem;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: 5px;
+  color: $black;
+}
+
+li {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
