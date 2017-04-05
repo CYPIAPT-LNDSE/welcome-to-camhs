@@ -189,6 +189,19 @@ test('Check /school', t => {
   });
 });
 
+test('Check /home', t => {
+  const options = {
+    method: 'GET',
+    url: '/home'
+  };
+
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.includes('<h2 class="home__title">'), 'The h2 title was found in the home.hbs response');
+    t.end();
+  });
+});
+
 test('Check GET to /finished', t => {
   const options = {
     method: 'GET',

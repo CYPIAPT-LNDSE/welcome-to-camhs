@@ -188,6 +188,7 @@
     });
 
     [
+      "home__range",
       "school__range",
       "friends__range",
       "sleep__range"
@@ -213,8 +214,10 @@
     });
 
     [
-      "frineds__like",
-      "frineds__dislike",
+      "home__like",
+      "home__dislike",
+      "friends__like",
+      "friends__dislike",
       "school__like",
       "school__dislike"
     ].forEach(function(textarea){
