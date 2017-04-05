@@ -305,6 +305,9 @@
     var emailAddress = emailRecipient.value;
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
-    http.send(emailAddress);
+    http.setRequestHeader("Content-type", "application/json");
+    var payload = JSON.stringify({emailAddress:emailAddress,
+      sessionStorage:sessionStorage});
+    http.send(payload);
   }
 })(jQuery);
