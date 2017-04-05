@@ -7,8 +7,6 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 require('env2')(`${__dirname}/../.env`);
 
-const emailBodyBuilder = require('./email-body.js');
-
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -19,7 +17,7 @@ let transporter = nodemailer.createTransport({
 });
 
 function sendMail(emailAddress, emailContent, cb){
-
+  
   const emailTemplate = fs.readFileSync(path.join(__dirname, '..', 'public', 'views', 'email.hbs'), 'utf8');
   const template = handelbars.compile(emailTemplate);
   const emailBody = template(emailContent);
