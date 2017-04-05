@@ -1,12 +1,12 @@
-sendMail = require('./send-email')
 require('env2')(`${__dirname}/../.env`);
+const sendMail = require('./send-email');
 
 module.exports = [
   {
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-      var data = {
+      const data = {
         isWelcome: true,
         next: '/avatar'
       };
@@ -17,7 +17,7 @@ module.exports = [
     method: 'GET',
     path: '/avatar',
     handler: (request, reply) => {
-      var data = {
+      const data = {
         isAvatar: true,
         prev: '/',
         next: '/introduction'
@@ -29,7 +29,7 @@ module.exports = [
     method: 'GET',
     path: '/introduction',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/avatar',
         next: '/eating'
       };
@@ -40,7 +40,7 @@ module.exports = [
     method: 'GET',
     path: '/eating',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/introduction',
         next: '/feelings'
       };
@@ -51,7 +51,7 @@ module.exports = [
     method: 'GET',
     path: '/feelings',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/eating',
         next: '/personality'
       };
@@ -62,7 +62,7 @@ module.exports = [
     method: 'GET',
     path: '/personality',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/feelings',
         next: '/hobbies'
       };
@@ -73,7 +73,7 @@ module.exports = [
     method: 'GET',
     path: '/hobbies',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/personality',
         next: '/sleep'
       };
@@ -84,7 +84,7 @@ module.exports = [
     method: 'GET',
     path: '/sleep',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/hobbies',
         next: '/friends'
       };
@@ -95,7 +95,7 @@ module.exports = [
     method: 'GET',
     path: '/friends',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/sleep',
         next: '/school'
       };
@@ -106,7 +106,7 @@ module.exports = [
     method: 'GET',
     path: '/school',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         prev: '/friends',
         next: '/finished'
       };
@@ -117,7 +117,7 @@ module.exports = [
     method: 'GET',
     path: '/finished',
     handler: (request, reply) => {
-      var data =  {
+      const data =  {
         isEnd: true,
         prev: '/school'
       };
@@ -156,6 +156,15 @@ module.exports = [
     handler: {
       file: {
         path: 'node_modules/jquery/dist/jquery.min.js'
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/public/anime.min.js',
+    handler: {
+      file: {
+        path: 'node_modules/animejs/anime.min.js'
       }
     }
   },
