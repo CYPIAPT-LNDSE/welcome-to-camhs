@@ -3,7 +3,7 @@ const test = require('tape');
 const fs = require('fs');
 const path = require('path');
 
-const partial = fs.readFileSync(path.join(__dirname, '..', 'public', 'partials', 'buttons.hbs'), 'utf8');
+const partial = fs.readFileSync(path.join(__dirname, '..', 'src', 'templates', 'partials', 'buttons.hbs'), 'utf8');
 const buttonPartial = handelbars.compile(partial);
 
 let html;

@@ -103,9 +103,8 @@
   });
 
   function addCheckmark (node) {
-    var checkmark = document.createElement('IMG');
+    var checkmark = document.createElement('DIV');
     checkmark.classList.add('checkmark');
-    checkmark.src = 'assets/checkmark.svg';
     node.appendChild(checkmark);
   }
 
@@ -173,7 +172,7 @@
     [
       "football",
       "tennis",
-      "gymnastics",
+      "music",
       "dance",
       "drawing",
       "photography",
@@ -182,14 +181,9 @@
       "puzzles",
       "camping",
       "fishing",
-      "walking",
-      "gymnastics-mobile",
-      "photography-mobile",
-      "walking-mobile",
-      "puzzles-mobile"
+      "walking"
     ].forEach(function(hobby){
-      var node = document.getElementsByClassName(hobby)[0];
-      addClassToNode(node, 'js-chosen');
+      var node = document.getElementById(hobby);
       addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
@@ -311,6 +305,9 @@
     var emailAddress = emailRecipient.value;
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
-    http.send(emailAddress);
+    http.setRequestHeader("Content-type", "application/json");
+    var payload = JSON.stringify({emailAddress:emailAddress,
+      sessionStorage:sessionStorage});
+    http.send(payload);
   }
 })(jQuery);

@@ -13,17 +13,18 @@ server.connection({
 });
 
 server.register([Inert, Vision], err => {
-  if(err) console.log(err);
+  if(err){ console.log(err); }
 
   server.views({
     engines: {
       hbs: require('handlebars')
     },
-    relativeTo: Path.join(__dirname, '..', 'public'),
+    relativeTo: Path.join(__dirname, '..', 'src', 'templates'),
     layoutPath: 'layout',
     layout: 'default',
     path: 'views',
-    partialsPath: 'partials'
+    partialsPath: 'partials',
+    helpersPath: 'helpers'
   });
 
   server.route(routes);

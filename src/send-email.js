@@ -1,10 +1,14 @@
 'use strict';
 
+const handelbars = require('handlebars');
+const fs = require('fs');
+const path = require('path');
+
 const nodemailer = require('nodemailer');
 require('env2')(`${__dirname}/../.env`);
 
 // create reusable transporter object using the default SMTP transport
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL,
@@ -12,13 +16,17 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-function sendMail(emailAddress, cb){
+function sendMail(emailAddress, emailContent, cb){
 
-  let mailOptions = {
-    from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>',
-    subject: 'CAHMS Questionnaire',
+  const emailTemplate = fs.readFileSync(path.join(__dirname, '..', 'public', 'views', 'email.hbs'), 'utf8');
+  const template = handelbars.compile(emailTemplate);
+  const emailBody = template(emailContent);
+
+  const mailOptions = {
+    from: '"CAMHS 😀" <welcome.to.cahms@hotmail.co.uk>',
+    subject: 'Getting to know you Questionnaire',
     text: 'Questionnaire',
-    html: '<b>Questionnaire answers will be here :)</b>',
+    html: emailBody,
     to: emailAddress
   };
 
