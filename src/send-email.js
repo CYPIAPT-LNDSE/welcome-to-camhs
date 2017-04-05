@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 require('env2')(`${__dirname}/../.env`);
 
 // create reusable transporter object using the default SMTP transport
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL,
@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 
 function sendMail(emailAddress, cb){
 
-  let mailOptions = {
+  const mailOptions = {
     from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>',
     subject: 'CAHMS Questionnaire',
     text: 'Questionnaire',

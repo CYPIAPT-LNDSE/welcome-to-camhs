@@ -13,7 +13,7 @@ server.connection({
 });
 
 server.register([Inert, Vision], err => {
-  if(err) console.log(err);
+  if(err){ console.log(err); }
 
   server.views({
     engines: {
