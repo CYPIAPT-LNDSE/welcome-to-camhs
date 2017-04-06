@@ -245,7 +245,7 @@
 
     function addValueToArray(key, value, array){
       array.push(value);
-      addArrayToStorage(key, value);
+      addArrayToStorage(key, array);
     }
 
     function addSingleValueToStorage(key, value){
