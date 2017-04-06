@@ -149,17 +149,7 @@
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
-      if (!node) return;
-
-      node.addEventListener('click', function () {
-        if ( node.className.baseVal === 'pop' ) {
-          personality.push(node.id);
-        } else {
-          var index = personality.indexOf(node.id);
-          personality.splice(index, 1);
-        }
-        addArrayToStorage('personality', personality);
-      });
+      updateSessionStorage('personality', node, personality, 'pop');
     });
 
     [
@@ -265,6 +255,19 @@
     // JSON.stringify() is used here as session storage only supports strings
     function addArrayToStorage(key, array){
       sessionStorage.setItem(key, JSON.stringify(array));
+    }
+
+    function updateSessionStorage (key, node, array, className) {
+      if (!node) return;
+      node.addEventListener('click', function () {
+        if ( node.className.baseVal === className ) {
+          array.push(node.id);
+        } else {
+          var index = array.indexOf(node.id);
+          array.splice(index, 1);
+        }
+        addArrayToStorage(key, array);
+      });
     }
   }
 
