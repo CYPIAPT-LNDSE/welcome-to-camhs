@@ -150,21 +150,16 @@
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
       if (!node) return;
+
       node.addEventListener('click', function () {
-          if ( node.className.baseVal !== 'pop' ) {
-          var personalitySession = JSON.parse(sessionStorage.getItem('personality'));
-          var index = personalitySession.indexOf(node.id);
-          console.log(index, node.id, 'index');
-          if ( index > -1 ) {
-            personalitySession.splice( index, 1);
-            console.log(personalitySession.splice( index, 1), 'remove personality');
-            console.log(personalitySession,  'personalitySession');
-          }
-          // sessionStorage.setItem('personality', JSON.stringify(personalitySession))
-          // addClickEventArray('personality', node, emotion, personalitySession);
+        if ( node.className.baseVal === 'pop' ) {
+          personality.push(node.id);
+        } else {
+          var index = personality.indexOf(node.id);
+          personality.splice(index, 1);
         }
+        addArrayToStorage('personality', personality);
       });
-      addClickEventArray('personality', node, emotion, personality);
     });
 
     [
@@ -260,10 +255,7 @@
 
     function addValueToArray(key, value, array){
       array.push(value);
-      var unique = array.filter(function(item, index, arr) {
-        return arr.indexOf(item) === index;
-      });
-      addArrayToStorage(key, unique);
+      addArrayToStorage(key, value);
     }
 
     function addSingleValueToStorage(key, value){
