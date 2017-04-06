@@ -130,7 +130,8 @@ module.exports = [
     handler: (request, reply) => {
       reply({status: 'ok'});
       if (process.env.NODE_ENV === 'testing'){ return; }
-      sendMail(request.payload, function(err, info){
+      const { emailAddress, sessionStorage } = request.payload;
+      sendMail(emailAddress, sessionStorage, function(err, info){
         if (err){
           console.log(err);
         }

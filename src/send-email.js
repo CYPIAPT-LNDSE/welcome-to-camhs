@@ -1,5 +1,9 @@
 'use strict';
 
+const handelbars = require('handlebars');
+const fs = require('fs');
+const path = require('path');
+
 const nodemailer = require('nodemailer');
 require('env2')(`${__dirname}/../.env`);
 
@@ -12,13 +16,17 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-function sendMail(emailAddress, cb){
+function sendMail(emailAddress, emailContent, cb){
+
+  const emailTemplate = fs.readFileSync(path.join(__dirname, '..', 'public', 'views', 'email.hbs'), 'utf8');
+  const template = handelbars.compile(emailTemplate);
+  const emailBody = template(emailContent);
 
   const mailOptions = {
-    from: '"CAHMS 👻" <welcome.to.cahms@hotmail.co.uk>',
-    subject: 'CAHMS Questionnaire',
+    from: '"CAMHS 😀" <welcome.to.cahms@hotmail.co.uk>',
+    subject: 'Getting to know you Questionnaire',
     text: 'Questionnaire',
-    html: '<b>Questionnaire answers will be here :)</b>',
+    html: emailBody,
     to: emailAddress
   };
 

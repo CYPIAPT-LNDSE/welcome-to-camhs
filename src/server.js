@@ -19,11 +19,12 @@ server.register([Inert, Vision], err => {
     engines: {
       hbs: require('handlebars')
     },
-    relativeTo: Path.join(__dirname, '..', 'public'),
+    relativeTo: Path.join(__dirname, '..', 'src', 'templates'),
     layoutPath: 'layout',
     layout: 'default',
     path: 'views',
-    partialsPath: 'partials'
+    partialsPath: 'partials',
+    helpersPath: 'helpers'
   });
 
   server.route(routes);
