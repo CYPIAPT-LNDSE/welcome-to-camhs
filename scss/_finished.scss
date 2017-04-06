@@ -21,6 +21,12 @@
   }
 }
 
+.finish__prompt {
+  height: 180px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .finish__text {
  @extend %main-text;
 }

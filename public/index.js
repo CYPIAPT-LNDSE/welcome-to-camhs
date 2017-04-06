@@ -4,6 +4,7 @@
   addAnswersToSessionStorage();
   updateAvatar('introduction', 'sleeping-lion');
   updateAvatar('finish', 'finish__lion');
+  const finishPrompt = document.getElementsByClassName("finish__prompt")[0];
 
   $('.carousel').carousel({
     indicators: true,
@@ -308,6 +309,18 @@
     http.setRequestHeader("Content-type", "application/json");
     var payload = JSON.stringify({emailAddress:emailAddress,
       sessionStorage:sessionStorage});
+
+    http.onreadystatechange = function() {
+      if (http.readyState === 4) {
+        var response = JSON.parse(http.responseText);
+          if (response.status === 'Email sent'){
+            finishPrompt.innerHTML = '<div class="checkmark"></div>' + response.status;
+          } else {
+            finishPrompt.innerHTML = '<div class="cross"></div>' + response.status;;
+          }
+      }
+    }
+
     http.send(payload);
   }
 })(jQuery);
