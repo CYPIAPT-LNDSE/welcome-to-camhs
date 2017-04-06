@@ -4,8 +4,12 @@
   background: {
     image: url('./assets/home-illustration.svg');
     repeat: no-repeat;
-    position: 15% 220px;
-    size: 200px 200px;
+    position: 50% 30px;
+    size: 150px 150px;
+  }
+
+  .emoji-sprite {
+    margin-top: 45px;
   }
 }
 
@@ -15,12 +19,13 @@
 }
 
 .home__title {
-  margin-top: 0;
+  margin-top: 145px;
+  margin-bottom: 0;
 }
 
 .home__slider {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 15px;
 
   .thumb {
     display: none;

@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 %range-input {
   -webkit-appearance: none;
   width: 80%;
-  margin: 70px 0;
+  margin: 90px 0;
 
   &::-webkit-slider-runnable-track {
     width: 300px;
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button {
   text-decoration: none;
-  padding: 15px 0px;
+  padding: 10px 0px;
   color: $white;
   font-size: 1.5rem;
   background-color: $dark-blue;
