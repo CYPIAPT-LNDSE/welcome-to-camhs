@@ -1,5 +1,12 @@
 .home {
   @extend %main-content;
+
+  background: {
+    image: url('./assets/home-illustration.svg');
+    repeat: no-repeat;
+    position: 15% 220px;
+    size: 200px 200px;
+  }
 }
 
 .home__text {

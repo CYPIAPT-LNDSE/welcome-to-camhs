@@ -286,7 +286,7 @@
 
   function emojiSprite(){
     var value = document.getElementsByClassName("range")[0].value -1;
-    var element = document.getElementsByClassName("friends__emoji-sprite")[0];
+    var element = document.getElementsByClassName("emoji-sprite")[0];
     changeBackgroundPosition(element, value, -180);
   }
 

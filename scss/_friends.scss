@@ -29,22 +29,6 @@
   @extend %range-input;
 }
 
-.friends__emoji-sprite {
-  background: {
-    image: url("../assets/emoji-sprite.svg");
-    repeat: no-repeat;
-    position: -360px;
-    size: 900px;
-  }
-  height: 175px;
-  width: 175px;
-  margin: auto;
-
-  span {
-    display: none;
-  }
-}
-
 .friends__textarea {
   text-align: center;
   margin-bottom: 40px;
