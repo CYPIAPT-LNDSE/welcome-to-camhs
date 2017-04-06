@@ -1,5 +1,16 @@
 .school {
   @extend %main-content;
+
+  background: {
+    image: url('./assets/school-illustration.svg');
+    repeat: no-repeat;
+    position: 50% 0;
+    size: 265px;
+  }
+
+  .emoji-sprite {
+    margin-top: 45px;
+  }
 }
 
 .school__text {
@@ -8,7 +19,8 @@
 }
 
 .school__title {
-  margin-top: 0px;
+  margin-top: 145px;
+  margin-bottom: 0;
 }
 
 .school__subtitle {
@@ -18,7 +30,7 @@
 
 .school__slider {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 15px;
 
   .thumb {
     display: none;
