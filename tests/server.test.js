@@ -219,3 +219,15 @@ test('Check POST to /finished', t => {
     t.end();
   });
 });
+
+test('Check /info', t => {
+  const options = {
+    method: 'GET',
+    url: '/info'
+  };
+  server.inject(options, response => {
+    t.equal(response.statusCode, 200, 'You received a 200 status code');
+    t.ok(response.payload.includes('<h1 class="info__title">'), 'The h1 title was found in the info.hbs response');
+    t.end();
+  });
+});

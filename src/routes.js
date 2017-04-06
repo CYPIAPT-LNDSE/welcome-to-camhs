@@ -125,6 +125,17 @@ module.exports = [
     }
   },
   {
+    method: 'GET',
+    path: '/info',
+    handler: (request, reply) => {
+      var data =  {
+        isEnd: true,
+        prev: '/finished'
+      };
+      reply.view('info', data);
+    }
+  },
+  {
     method: 'POST',
     path: '/finished',
     handler: (request, reply) => {
