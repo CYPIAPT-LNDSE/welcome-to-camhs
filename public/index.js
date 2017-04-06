@@ -103,9 +103,8 @@
   });
 
   function addCheckmark (node) {
-    var checkmark = document.createElement('IMG');
+    var checkmark = document.createElement('DIV');
     checkmark.classList.add('checkmark');
-    checkmark.src = 'assets/checkmark.svg';
     node.appendChild(checkmark);
   }
 
@@ -150,6 +149,21 @@
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
+      if (!node) return;
+      node.addEventListener('click', function () {
+          if ( node.className.baseVal !== 'pop' ) {
+          var personalitySession = JSON.parse(sessionStorage.getItem('personality'));
+          var index = personalitySession.indexOf(node.id);
+          console.log(index, node.id, 'index');
+          if ( index > -1 ) {
+            personalitySession.splice( index, 1);
+            console.log(personalitySession.splice( index, 1), 'remove personality');
+            console.log(personalitySession,  'personalitySession');
+          }
+          // sessionStorage.setItem('personality', JSON.stringify(personalitySession))
+          // addClickEventArray('personality', node, emotion, personalitySession);
+        }
+      });
       addClickEventArray('personality', node, emotion, personality);
     });
 
@@ -173,7 +187,7 @@
     [
       "football",
       "tennis",
-      "gymnastics",
+      "music",
       "dance",
       "drawing",
       "photography",
@@ -182,14 +196,9 @@
       "puzzles",
       "camping",
       "fishing",
-      "walking",
-      "gymnastics-mobile",
-      "photography-mobile",
-      "walking-mobile",
-      "puzzles-mobile"
+      "walking"
     ].forEach(function(hobby){
-      var node = document.getElementsByClassName(hobby)[0];
-      toggleClass(node, 'js-chosen');
+      var node = document.getElementById(hobby);
       addClickEventArray('hobbies', node, hobby, hobbies);
     });
 
@@ -252,8 +261,8 @@
     function addValueToArray(key, value, array){
       array.push(value);
       var unique = array.filter(function(item, index, arr) {
-         return arr.indexOf(item) === index;
-       });
+        return arr.indexOf(item) === index;
+      });
       addArrayToStorage(key, unique);
     }
 
