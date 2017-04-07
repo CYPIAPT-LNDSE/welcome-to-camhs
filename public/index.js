@@ -4,7 +4,7 @@
   addAnswersToSessionStorage();
   updateAvatar('introduction', 'sleeping-lion');
   updateAvatar('finish', 'finish__lion');
-  const finishPrompt = document.getElementsByClassName("finish__prompt")[0];
+  var finishPrompt = document.getElementsByClassName("finish__prompt")[0];
 
   $('.carousel').carousel({
     indicators: true,
@@ -317,7 +317,7 @@
             finishPrompt.innerHTML = '<div class="checkmark"></div>' + response.status;
             sessionStorage.clear();
           } else {
-            finishPrompt.innerHTML = '<div class="cross"></div>' + response.status;;
+            finishPrompt.innerHTML = '<div class="cross"></div>' + response.status;
           }
       }
     }
