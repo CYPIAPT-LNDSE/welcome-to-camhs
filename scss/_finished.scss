@@ -76,6 +76,15 @@
   border: none;
 }
 
+.finish__info-icon {
+  width: 50px;
+  float: right;
+  position: relative;
+  bottom: -50px;
+  right: 10px;
+  z-index: 2;
+}
+
 .send-email-button {
   -webkit-appearance: none;
   font: {
