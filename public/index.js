@@ -315,6 +315,7 @@
         var response = JSON.parse(http.responseText);
           if (response.status === 'Email sent'){
             finishPrompt.innerHTML = '<div class="checkmark"></div>' + response.status;
+            sessionStorage.clear();
           } else {
             finishPrompt.innerHTML = '<div class="cross"></div>' + response.status;;
           }
