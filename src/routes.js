@@ -139,7 +139,10 @@ module.exports = [
     method: 'POST',
     path: '/finished',
     handler: (request, reply) => {
-      if (process.env.NODE_ENV === 'testing'){ return; }
+      if (process.env.NODE_ENV === 'testing'){
+        reply();
+        return;
+      }
       const { emailAddress, sessionStorage } = request.payload;
       sendMail(emailAddress, sessionStorage, function(err, info){
         if (err){
