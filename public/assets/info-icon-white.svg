@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 196 196" style="baseProfile:basic;version:1.1">
+  <style type="text/css">
+
+	.st0{fill:#FFFFFF;}
+
+  </style>
+  <switch>
+    <foreignObject requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" y="0" width="1" height="1"/>
+    <g>
+      <g>
+        <path class="st0" d="M98 196c-54.038 0-98-43.963-98-98S43.963 0 98 0c54.037 0 98 43.963 98 98S152.037 196 98 196zM98 16c-45.215 0-82 36.785-82 82s36.785 82 82 82c45.214 0 82-36.785 82-82S143.214 16 98 16z"/>
+      </g>
+      <g>
+        <path class="st0" d="M107.381 52.623c0 5.92-4.319 10.56-11.2 10.56 -6.56 0-10.88-4.64-10.88-10.56 0-6.08 4.48-10.721 11.04-10.721C103.061 41.903 107.22 46.543 107.381 52.623zM86.42 152.305V74.383h19.84v77.922H86.42z"/>
+      </g>
+    </g>
+  </switch>
+</svg>

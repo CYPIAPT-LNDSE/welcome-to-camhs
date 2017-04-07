@@ -1,0 +1,43 @@
+.info {
+  @extend %main-content;
+
+  .buttons {
+    width: 300px;
+  }
+
+  h1 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 5px;
+    color: $black;
+  }
+
+  .info__para {
+    font-size: 1.2rem;
+    color: $white
+  }
+
+  .spacing-dots {
+    font-size: 1rem;
+    color: $white;
+  }
+}
+
+.info__text {
+  @extend %main-text;
+  margin-bottom: 5px;
+}
+
+.info__icon {
+  width: 85px;
+  margin-top: 25px;
+}
+
+.info__title {
+  color: $black;
+  font-size: 2.8rem;
+}
