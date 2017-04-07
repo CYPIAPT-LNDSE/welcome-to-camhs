@@ -149,7 +149,7 @@
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
-      updateSessionStorage('personality', node, personality, 'pop');
+      setSessionStorageOnClick(node, 'pop', 'personality', personality)
     });
 
     [
@@ -257,16 +257,16 @@
       sessionStorage.setItem(key, JSON.stringify(array));
     }
 
-    function updateSessionStorage (key, node, array, className) {
+    function setSessionStorageOnClick(node, className, key, baseArray) {
       if (!node) return;
       node.addEventListener('click', function () {
         if ( node.className.baseVal === className ) {
-          array.push(node.id);
+          baseArray.push(node.id);
         } else {
-          var index = array.indexOf(node.id);
-          array.splice(index, 1);
+          var index = baseArray.indexOf(node.id);
+          baseArray.splice(index, 1);
         }
-        addArrayToStorage(key, array);
+        addArrayToStorage(key, baseArray);
       });
     }
   }
