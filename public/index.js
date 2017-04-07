@@ -155,10 +155,14 @@
     [
       "sad-emoji",
       "happy-emoji",
-      "indifferent-emoji"
+      "indifferent-emoji",
+      "nervous-emoji",
+      "shocked-emoji",
+      "scared-emoji"
     ].forEach(function(emoji){
       var node = document.getElementsByClassName(emoji)[0];
       addClickEventSingle('feelings', node, emoji.match(/^[a-z]+/));
+      addHaloClickEvent(node);
     });
 
     [
@@ -234,6 +238,20 @@
       element.addEventListener("click", function(){
         addSingleValueToStorage(key, value);
       });
+    }
+
+    function addHaloClickEvent(element){
+      if (!element){ return; }
+      element.addEventListener("click", function(){
+        addHalo(element);
+      });
+    }
+
+    var prev = null;
+    function addHalo(element){
+      element.classList.toggle('haloVisible');
+      if (prev && element !== prev){ prev.classList.remove('haloVisible'); }
+      prev = element;
     }
 
     function addClickEventArray(key, element, value, array){

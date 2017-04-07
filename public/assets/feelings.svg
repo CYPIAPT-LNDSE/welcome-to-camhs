@@ -11,7 +11,7 @@
 	.st5{fill:none;stroke:#E87325;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
 	.st6{fill:none;stroke:#FFCA07;stroke-width:2;stroke-miterlimit:10;}
 </style>
-<g id="happy_1_">
+<g class="happy-emoji">
 	<g id="XMLID_211_">
 		<circle id="XMLID_208_" class="st0" cx="663.3" cy="278" r="86"/>
 		<g id="XMLID_193_" class="st1">
@@ -165,7 +165,7 @@
 		<circle id="XMLID_267_" class="st6" cx="663.6" cy="278.5" r="92.9"/>
 	</g>
 </g>
-<g id="nervous_1_">
+<g class="nervous-emoji">
 	<g id="nervous">
 		<circle id="XMLID_21_" class="st0" cx="450.4" cy="168.2" r="86"/>
 		<g id="XMLID_11_" class="st1">
@@ -328,7 +328,7 @@
 		<circle id="XMLID_269_" class="st6" cx="450.4" cy="168.1" r="92.9"/>
 	</g>
 </g>
-<g id="scared_1_">
+<g class="scared-emoji">
 	<g id="scared">
 		<circle id="XMLID_129_" class="st0" cx="274.3" cy="352.2" r="86"/>
 		<g id="XMLID_114_" class="st1">
@@ -492,7 +492,7 @@
 			C367.4,401.5,325.8,445.8,274.5,445.8z"/>
 	</g>
 </g>
-<g id="sad_1_">
+<g class="sad-emoji">
 	<g id="XMLID_135_">
 		<circle id="XMLID_172_" class="st0" cx="478" cy="439" r="86"/>
 		<g id="XMLID_157_" class="st1">
@@ -643,7 +643,7 @@
 			C570.8,488.4,529.2,532.7,477.9,532.7z"/>
 	</g>
 </g>
-<g id="shocked_1_">
+<g class="shocked-emoji">
 	<g id="shocked">
 		<circle id="XMLID_93_" class="st0" cx="643" cy="596.7" r="86"/>
 		<g id="XMLID_78_" class="st1">
@@ -805,7 +805,7 @@
 		<circle id="XMLID_277_" class="st6" cx="642.6" cy="596.5" r="92.9"/>
 	</g>
 </g>
-<g id="ok">
+<g class="indifferent-emoji">
 	<g id="XMLID_215_">
 		<circle id="XMLID_250_" class="st0" cx="305.4" cy="598.6" r="86"/>
 		<g id="XMLID_235_" class="st1">

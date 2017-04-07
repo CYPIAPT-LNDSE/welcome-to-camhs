@@ -23,13 +23,8 @@
    }
 }
 
-#halo_1_,
-#halo_2_,
-#halo_3_,
-#halo_4_,
-#halo_5_,
-#halo_6_ {
+.haloVisible {
   .st6 {
-    stroke: $transparent;
+    stroke: $dark-yellow;
   }
 }
