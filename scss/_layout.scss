@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 %range-input {
   -webkit-appearance: none;
   width: 80%;
-  margin: 100px 0;
+  margin: 90px 0;
 
   &::-webkit-slider-runnable-track {
     width: 300px;
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button {
   text-decoration: none;
-  padding: 15px 0px;
+  padding: 10px 0px;
   color: $white;
   font-size: 1.5rem;
   background-color: $dark-blue;
@@ -118,9 +118,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider__label {
   position: relative;
-  top: -70px;
+  top: -55px;
   padding: 6px;
   font-size: 1.5rem;
+}
+
+.emoji-sprite {
+  background: {
+    image: url("../assets/emoji-sprite.svg");
+    repeat: no-repeat;
+    position: -360px;
+    size: 900px;
+  }
+  height: 175px;
+  width: 175px;
+  margin: 20px auto 0 auto;
+
+  span {
+    display: none;
+  }
 }
 
 .slider__label--bad {
@@ -146,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .textarea__text {
   width: 300px;
-  height: 150px;
+  height: 120px;
   background-color: $transparent;
   color: $yellow;
   text-align: center;

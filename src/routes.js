@@ -108,9 +108,20 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         prev: '/friends',
-        next: '/finished'
+        next: '/home'
       };
       reply.view('school', data);
+    }
+  },
+  {
+    method: 'GET',
+    path: '/home',
+    handler: (request, reply) => {
+      const data =  {
+        prev: '/school',
+        next: '/finished'
+      };
+      reply.view('home', data);
     }
   },
   {
@@ -119,7 +130,7 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         isEnd: true,
-        prev: '/school'
+        prev: '/home'
       };
       reply.view('finished', data);
     }
