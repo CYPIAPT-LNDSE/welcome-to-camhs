@@ -148,8 +148,8 @@
       "sad"
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
-      addClassToNode(node, 'pop');
-      addClickEventArray('personality', node, emotion, personality);
+      toggleClass(node, 'pop');
+      setSessionStorageOnClick(node, 'pop', 'personality', personality)
     });
 
     [
@@ -256,13 +256,26 @@
     function addArrayToStorage(key, array){
       sessionStorage.setItem(key, JSON.stringify(array));
     }
+
+    function setSessionStorageOnClick(node, className, key, baseArray) {
+      if (!node) return;
+      node.addEventListener('click', function () {
+        if ( node.className.baseVal === className ) {
+          baseArray.push(node.id);
+        } else {
+          var index = baseArray.indexOf(node.id);
+          baseArray.splice(index, 1);
+        }
+        addArrayToStorage(key, baseArray);
+      });
+    }
   }
 
   // Adds a class to node
-  function addClassToNode(node, className){
+  function toggleClass(node, className){
     if (!node){ return; }
     node.addEventListener("click", function(){
-      node.classList.add(className);
+      node.classList.toggle(className);
     });
   }
 
