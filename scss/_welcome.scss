@@ -4,10 +4,9 @@
   .button {
     width: 100%;
 
-    @media screen and (min-width: 768px)
-     {
-       width: 40%;
-     }
+    @media screen and (min-width: 768px) {
+      width: 40%;
+    }
   }
 }
 
@@ -25,17 +24,17 @@
   line-height: 4.5rem;
 
   @media screen and (min-width: 768px)
-   {
-     font-size: 4rem;
-   }
- }
+  {
+    font-size: 4rem;
+  }
+}
 
 .welcome__image {
   margin: $small-margin auto;
   height: $medium-image;
 
   @media screen and (min-width: 768px)
-   {
-     height: $medium-image + 100px;
-   }
+  {
+    height: $medium-image + 100px;
+  }
 }

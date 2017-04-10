@@ -5,13 +5,7 @@ body {
   background: $background;
   font-size: 1.1rem;
   color: $white;
-  width: 100%;
-  height:100%;
-
-
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
+  max-width: 768px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,15 +13,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 %main-content {
-  position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: column;
   color: $white;
-  padding-bottom: 50px;
-
-  @media screen and (min-width: 768px) {
-    position: static;
-  }
 }
 
 %main-text {
@@ -100,13 +88,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .buttons {
-  position: absolute;
+  position: relative;
   bottom: 0;
   z-index: 1;
   width: 100%;
-  max-width: 800px;
-  margin: auto;
-  height: 50px;
+  max-width: 768px;
+
+  @media screen and (min-width: 425px) {
+    position: absolute;
+  }
+
+  @media only screen and (orientation: landscape) {
+    position: relative;
+  }
 }
 
 .button {
