@@ -18,8 +18,7 @@
   position: relative;
   height: 540px;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      margin-bottom: 60px
    }
 }
@@ -42,8 +41,7 @@
   }
   @include rotate (270);
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      margin-left: 95px;
    }
 

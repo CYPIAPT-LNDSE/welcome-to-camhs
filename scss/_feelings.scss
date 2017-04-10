@@ -17,8 +17,7 @@
   margin: 5px $small-margin;
   width: $small-image / 2;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      width: $small-image;
    }
 }
@@ -27,8 +26,7 @@
   width: $small-image / 2;
   margin-bottom: 50px;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      width: $small-image;
    }
 }
