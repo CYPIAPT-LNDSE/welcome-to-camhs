@@ -4,7 +4,6 @@
   addAnswersToSessionStorage();
   updateAvatar('introduction', 'sleeping-lion');
   updateAvatar('finish', 'finish__lion');
-  var finishPrompt = document.getElementsByClassName("finish__prompt")[0];
 
   $('.carousel').carousel({
     indicators: true,
@@ -122,7 +121,7 @@
   ].forEach(function(button){
     var node = document.getElementsByClassName(button)[0];
     if (node){
-      node.addEventListener('click', function(){ sendMail() });
+      node.addEventListener('click', function(){ sendMail(); });
     }
   });
 
@@ -279,7 +278,7 @@
 
   function addOnInputToElement(element, func){
     if (!element){ return; }
-    element.oninput = function(){ func(element.name, this.value) }
+    element.oninput = function(){ func(element.name, this.value); };
   }
 
   function emojiSprite(){
@@ -304,24 +303,44 @@
       return;
     }
     var emailAddress = emailRecipient.value;
-    var http = new XMLHttpRequest();
-    http.open("POST", '/finished', true);
-    http.setRequestHeader("Content-type", "application/json");
     var payload = JSON.stringify({emailAddress:emailAddress,
       sessionStorage:sessionStorage});
 
+    httpPostRequest(payload, function(responseText){
+      var response = JSON.parse(responseText);
+      if (response.status === 'Email sent'){
+        addElement(response.status, 'checkmark');
+        sessionStorage.clear();
+      } else {
+        addElement(response.status, 'cross');
+      }
+    });
+  }
+
+  function addElement(htmlContent, className) {
+    var newDiv = document.createElement("div");
+    var newP = document.createElement("p");
+    var newContent = document.createTextNode(htmlContent);
+    var container = document.getElementsByClassName("finish__prompt-container")[0];
+    while (container.hasChildNodes()) {
+      container.removeChild(container.lastChild);
+    }
+    newDiv.className = className;
+    newP.appendChild(newContent);
+    container.appendChild(newDiv);
+    container.appendChild(newP);
+  }
+
+  function httpPostRequest(payload, cb){
+    var http = new XMLHttpRequest();
+    http.open("POST", '/finished', true);
+    http.setRequestHeader("Content-type", "application/json");
     http.onreadystatechange = function() {
       if (http.readyState === 4) {
-        var response = JSON.parse(http.responseText);
-          if (response.status === 'Email sent'){
-            finishPrompt.innerHTML = '<div class="checkmark"></div>' + response.status;
-            sessionStorage.clear();
-          } else {
-            finishPrompt.innerHTML = '<div class="cross"></div>' + response.status;
-          }
+        cb(http.responseText);
       }
-    }
-
+    };
     http.send(payload);
   }
+
 })(jQuery);
