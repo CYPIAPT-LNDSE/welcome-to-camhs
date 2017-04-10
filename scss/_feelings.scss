@@ -22,11 +22,8 @@
    }
 }
 
-.eaten-banana {
-  width: $small-image / 2;
-  margin-bottom: 50px;
-
-  @media screen and (min-width: 768px) {
-     width: $small-image;
-   }
+.haloVisible {
+  .st6 {
+    stroke: $dark-yellow;
+  }
 }

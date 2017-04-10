@@ -255,6 +255,11 @@ span.value {
 .finish .button {
   width: 40%; }
 
+.finish__prompt {
+  height: 180px;
+  display: table-cell;
+  vertical-align: middle; }
+
 .finish__lion {
   width: 200px;
   display: block;
@@ -274,7 +279,7 @@ span.value {
   font-size: 1.3em;
   color: black; }
   .finish__email-form p {
-    margin-bottom: 10px; }
+    margin: 10px; }
   .finish__email-form :focus {
     outline: none; }
 
@@ -330,12 +335,8 @@ span.value {
     .emoji {
       width: 200px; } }
 
-.eaten-banana {
-  width: 100px;
-  margin-bottom: 50px; }
-  @media screen and (min-width: 768px) {
-    .eaten-banana {
-      width: 200px; } }
+.haloVisible .st6 {
+  stroke: #ffc900; }
 
 .avatar__text {
   margin: 0; }
@@ -455,8 +456,14 @@ span.value {
   margin-bottom: 40px; }
 
 .checkmark {
-  height: 100px;
+  height: 80px;
   background-image: url("../assets/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.cross {
+  height: 80px;
+  background-image: url("../assets/cross.svg");
   background-repeat: no-repeat;
   background-position: center; }
 
