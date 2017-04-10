@@ -4,13 +4,11 @@
 
 .friends__text {
   @extend %main-text;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 0;
 }
 
 .friends__title {
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 0px;
 }
 
 .friends__subtitle {
@@ -19,7 +17,6 @@
 }
 
 .friends__slider {
-  height: 120px;
   text-align: center;
   margin-top: 40px;
 
@@ -32,23 +29,7 @@
   @extend %range-input;
 }
 
-.friends__emoji-sprite {
-  background: {
-    image: url("../assets/emoji-sprite.svg");
-    repeat: no-repeat;
-    position: -360px;
-    size: 900px;
-  }
-  height: 175px;
-  width: 175px;
-  margin: auto;
-
-  span {
-    display: none;
-  }
-}
-
 .friends__textarea {
   text-align: center;
-  margin: 40px 0;
+  margin-bottom: 40px;
 }

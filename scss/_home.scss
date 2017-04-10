@@ -1,11 +1,11 @@
-.school {
+.home {
   @extend %main-content;
 
   background: {
-    image: url('./assets/school-illustration.svg');
+    image: url('./assets/home-illustration.svg');
     repeat: no-repeat;
-    position: 50% 0;
-    size: 265px;
+    position: 50% 30px;
+    size: 150px 150px;
   }
 
   .emoji-sprite {
@@ -13,22 +13,17 @@
   }
 }
 
-.school__text {
+.home__text {
   @extend %main-text;
   margin-bottom: 0;
 }
 
-.school__title {
+.home__title {
   margin-top: 145px;
   margin-bottom: 0;
 }
 
-.school__subtitle {
-  margin: 0;
-  font-size: 1.9rem;
-}
-
-.school__slider {
+.home__slider {
   text-align: center;
   margin-top: 15px;
 
@@ -37,11 +32,11 @@
   }
 }
 
-.school__range {
-  @extend %range-input;
-}
-
-.school__textarea {
+.home__textarea {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.home__range {
+  @extend %range-input;
 }
