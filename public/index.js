@@ -244,7 +244,7 @@
       });
     }
 
-    function addHaloClickEvent(element, type){
+    function addHaloClickEvent(element){
       if (!element){ return; }
       element.addEventListener("click", function(){
         addHalo(element);
