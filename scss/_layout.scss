@@ -88,19 +88,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .buttons {
-  position: relative;
+  position: absolute;
   bottom: 0;
   z-index: 1;
   width: 100%;
   max-width: 768px;
-
-  @media screen and (min-width: 425px) {
-    position: absolute;
-  }
-
-  @media only screen and (orientation: landscape) {
-    position: relative;
-  }
 }
 
 .button {
