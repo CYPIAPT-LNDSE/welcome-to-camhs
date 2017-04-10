@@ -10,6 +10,11 @@
 
 .finish {
   @extend %main-content;
+  padding-bottom: 0;
+
+  .buttons {
+    position: relative;
+  }
 
   .button {
     width: 100%;
@@ -30,8 +35,7 @@
   display: block;
   margin: 40px auto;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      width: $medium-image;
    }
 }
@@ -40,8 +44,7 @@
   color: $black;
   margin-bottom: 5px;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      margin-top: 55px;
    }
 }
@@ -61,13 +64,17 @@
 }
 
 .finish__email-input {
-  width: 500px;
+  width: 90%;
   height: 30px;
   font-size: 0.45em;
   font-family: $main-font;
   margin: 15px 0;
   text-align: center;
   border: none;
+
+  @media screen and (min-width: 500px) {
+    width: 500px;
+   }
 }
 
 .finish__info-icon {
