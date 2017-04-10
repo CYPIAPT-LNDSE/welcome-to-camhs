@@ -184,7 +184,8 @@
       "walking"
     ].forEach(function(hobby){
       var node = document.getElementById(hobby);
-      addClickEventArray('hobbies', node, hobby, hobbies);
+      addHaloClickEvent(node);
+      setSessionStorageOnClick(node, 'haloVisible', 'hobbies', hobbies)
     });
 
     [
@@ -239,6 +240,24 @@
       });
     }
 
+    function addHaloClickEvent(element, type){
+      if (!element){ return; }
+      element.addEventListener("click", function(){
+        addHalo(element);
+      });
+    }
+
+    var prev = null;
+    function addHalo(element){
+      if (window.location.pathname === 'feelings'){
+        element.classList.toggle('haloVisible');
+        if (prev && element !== prev){ prev.classList.remove('haloVisible'); }
+        prev = element;
+      } else {
+        element.classList.toggle('haloVisible');
+      }
+    }
+
     function addClickEventArray(key, element, value, array){
       if(!element){ return; }
       element.addEventListener("click", function(){
@@ -255,7 +274,6 @@
       sessionStorage.setItem(key, value);
     }
 
-    // JSON.stringify() is used here as session storage only supports strings
     function addArrayToStorage(key, array){
       sessionStorage.setItem(key, JSON.stringify(array));
     }
