@@ -1,6 +1,11 @@
 .welcome {
   @extend %main-content;
 
+  .buttons {
+    position: absolute;
+    bottom: -10px;
+  }
+
   .button {
     width: 100%;
 
