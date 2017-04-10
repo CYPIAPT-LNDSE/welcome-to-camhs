@@ -433,8 +433,6 @@ span.value {
   background-size: 265px; }
   .school .emoji-sprite {
     margin-top: 45px; }
-  .school .buttons {
-    position: relative; }
 
 .school__text {
   margin-bottom: 0; }
@@ -470,8 +468,6 @@ span.value {
   background-size: 150px 150px; }
   .home .emoji-sprite {
     margin-top: 45px; }
-  .home .buttons {
-    position: relative; }
 
 .home__text {
   margin-bottom: 0; }
