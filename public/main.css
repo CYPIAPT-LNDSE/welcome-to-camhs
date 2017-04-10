@@ -146,8 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     outline: none; }
 
 .welcome .buttons {
-  position: absolute;
-  bottom: -10px; }
+  position: absolute; }
 .welcome .button {
   width: 100%; }
   @media screen and (min-width: 768px) {
