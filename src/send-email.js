@@ -32,9 +32,9 @@ function sendMail(emailAddress, emailContent, cb){
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return cb(error)
+      return cb(error);
     }
-    return cb(null, `Message ${info.messageId} sent: ${info.response}`)
+    return cb(null, `Message ${info.messageId} sent: ${info.response}`);
   });
 }
 

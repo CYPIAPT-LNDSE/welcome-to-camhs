@@ -121,7 +121,7 @@
   ].forEach(function(button){
     var node = document.getElementsByClassName(button)[0];
     if (node){
-      node.addEventListener('click', function(){ sendMail() });
+      node.addEventListener('click', function(){ sendMail(); });
     }
   });
 
@@ -155,10 +155,14 @@
     [
       "sad-emoji",
       "happy-emoji",
-      "indifferent-emoji"
+      "indifferent-emoji",
+      "nervous-emoji",
+      "shocked-emoji",
+      "scared-emoji"
     ].forEach(function(emoji){
       var node = document.getElementsByClassName(emoji)[0];
       addClickEventSingle('feelings', node, emoji.match(/^[a-z]+/));
+      addHaloClickEvent(node);
     });
 
     [
@@ -249,7 +253,7 @@
 
     var prev = null;
     function addHalo(element){
-      if (window.location.pathname === 'feelings'){
+      if (window.location.pathname === '/feelings'){
         element.classList.toggle('haloVisible');
         if (prev && element !== prev){ prev.classList.remove('haloVisible'); }
         prev = element;
@@ -312,7 +316,7 @@
 
   function addOnInputToElement(element, func){
     if (!element){ return; }
-    element.oninput = function(){ func(element.name, this.value) }
+    element.oninput = function(){ func(element.name, this.value); };
   }
 
   function emojiSprite(){
@@ -337,11 +341,44 @@
       return;
     }
     var emailAddress = emailRecipient.value;
+    var payload = JSON.stringify({emailAddress:emailAddress,
+      sessionStorage:sessionStorage});
+
+    httpPostRequest(payload, function(responseText){
+      var response = JSON.parse(responseText);
+      if (response.status === 'Email sent'){
+        addElement(response.status, 'checkmark');
+        sessionStorage.clear();
+      } else {
+        addElement(response.status, 'cross');
+      }
+    });
+  }
+
+  function addElement(htmlContent, className) {
+    var newDiv = document.createElement("div");
+    var newP = document.createElement("p");
+    var newContent = document.createTextNode(htmlContent);
+    var container = document.getElementsByClassName("finish__prompt-container")[0];
+    while (container.hasChildNodes()) {
+      container.removeChild(container.lastChild);
+    }
+    newDiv.className = className;
+    newP.appendChild(newContent);
+    container.appendChild(newDiv);
+    container.appendChild(newP);
+  }
+
+  function httpPostRequest(payload, cb){
     var http = new XMLHttpRequest();
     http.open("POST", '/finished', true);
     http.setRequestHeader("Content-type", "application/json");
-    var payload = JSON.stringify({emailAddress:emailAddress,
-      sessionStorage:sessionStorage});
+    http.onreadystatechange = function() {
+      if (http.readyState === 4) {
+        cb(http.responseText);
+      }
+    };
     http.send(payload);
   }
+
 })(jQuery);
