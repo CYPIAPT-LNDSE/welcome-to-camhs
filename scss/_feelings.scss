@@ -1,5 +1,9 @@
 .feelings {
   @extend %main-content;
+
+  .buttons {
+    position: absolute;
+  }
 }
 
 .feelings__text {

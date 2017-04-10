@@ -72,6 +72,8 @@ h1, h2, h3, h4, h5, h6 {
 .buttons {
   position: relative;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
   width: 100%;
   max-width: 768px; }
@@ -323,6 +325,9 @@ span.value {
   .send-email-button:active {
     box-shadow: 0 2px #e87325;
     transform: translateY(2px); }
+
+.feelings .buttons {
+  position: absolute; }
 
 .feelings__title {
   margin-top: 0px;
