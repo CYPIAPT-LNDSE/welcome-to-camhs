@@ -130,8 +130,12 @@ h1, h2, h3, h4, h5, h6 {
 .slider__label {
   position: relative;
   top: -55px;
-  padding: 6px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 6px;
+    font-size: 1.5rem;
+  }
 }
 
 .emoji-sprite {
@@ -150,13 +154,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.slider__label--bad {
-  left: 70px;
+.slider__labels {
+  width: 80%;
+  margin: auto;
+
+  .slider__label {
+    top: 40px;
+  }
+
+  .slider__label--good {
+    float: right;
+  }
+
+  .slider__label--bad {
+    float: left;
+  }
 }
 
-.slider__label--good {
-  right: 80px;
-}
 
 .textarea__container {
   position: relative;

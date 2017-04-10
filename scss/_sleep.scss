@@ -36,25 +36,6 @@
   }
 }
 
-.slider__labels {
-  width: 80%;
-  margin: auto;
-
-  .slider__label {
-    top: 40px;
-  }
-
-  .slider__label--good {
-    right: 0;
-    float: right;
-  }
-
-  .slider__label--bad {
-    left: 0;
-    float: left;
-  }
-}
-
 .sleep__range {
   @extend %range-input;
 }
