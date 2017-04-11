@@ -5,13 +5,6 @@
   updateAvatar('introduction', 'sleeping-lion');
   updateAvatar('finish', 'finish__lion');
 
-  // var buttons = document.getElementsByClassName('buttons')[0];
-  // if ( window.outerHeight <= 870 ) {
-  //   buttons.style.position = 'relative';
-  // } else {
-  //   buttons.style.position = 'absolute';
-  // }
-
   $('.carousel').carousel({
     indicators: true,
     shift: 100

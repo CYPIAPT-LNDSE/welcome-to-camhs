@@ -99,12 +99,12 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 768px;
   margin: auto;
 
-  @media screen and (min-width: 768px) and (orientation: landscape)  {
-    position: relative;
-  }
-
   @media screen and (min-width: 768px) and (orientation: portrait)  {
     position: absolute;
+  }
+
+  @media screen and (min-width: 768px) and (orientation: landscape)  {
+    position: relative;
   }
 }
 
