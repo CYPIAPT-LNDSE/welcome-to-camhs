@@ -1,15 +1,14 @@
 .welcome {
   @extend %main-content;
 
-  // .buttons {
-  //   position: absolute;
-  // }
+  & + .buttons {
 
-  .button {
-    width: 100%;
+    .button {
+      width: 100%;
 
-    @media screen and (min-width: 768px) {
-      width: 40%;
+      @media screen and (min-width: 768px) {
+        width: 40%;
+      }
     }
   }
 }
