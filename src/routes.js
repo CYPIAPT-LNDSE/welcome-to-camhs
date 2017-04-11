@@ -130,7 +130,8 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         isEnd: true,
-        prev: '/home'
+        prev: '/home',
+        next: '/info'
       };
       reply.view('finished', data);
     }
@@ -140,7 +141,7 @@ module.exports = [
     path: '/info',
     handler: (request, reply) => {
       var data =  {
-        isEnd: true,
+        isInfo: true,
         prev: '/finished'
       };
       reply.view('info', data);
