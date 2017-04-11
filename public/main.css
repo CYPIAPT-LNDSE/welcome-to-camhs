@@ -6,8 +6,7 @@ body {
   background: radial-gradient(ellipse at center, rgba(56, 185, 242, 0.8) 0%, rgba(57, 138, 187, 0.8) 100%);
   font-size: 1.1rem;
   color: white;
-  max-width: 768px;
-  min-height: 100vh; }
+  max-width: 768px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
@@ -147,8 +146,6 @@ h1, h2, h3, h4, h5, h6 {
   .textarea__text:focus {
     outline: none; }
 
-.welcome .buttons {
-  position: absolute; }
 .welcome .button {
   width: 100%; }
   @media screen and (min-width: 768px) {
