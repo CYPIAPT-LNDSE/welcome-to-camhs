@@ -348,7 +348,7 @@
       var response = JSON.parse(responseText);
       if (response.status === 'Email sent'){
         addElement(response.status, 'checkmark');
-        sessionStorage.clear();
+        // sessionStorage.clear();
       } else {
         addElement(response.status, 'cross');
       }

@@ -21,6 +21,12 @@
   }
 }
 
+.finish__prompt-container {
+  color: $black;
+  font-size: 1.3em;
+  display: inline-block;
+}
+
 .finish__prompt {
   height: 180px;
   display: table-cell;
@@ -68,12 +74,18 @@
 
 .finish__email-input {
   width: 500px;
-  height: 30px;
+  height: 50px;
   font-size: 0.45em;
   font-family: $main-font;
   margin: 15px 0;
   text-align: center;
   border: none;
+}
+
+.input__label {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: -10px;
 }
 
 .finish__info-icon {
