@@ -343,12 +343,17 @@
     var emailAddress = emailRecipient.value;
     var payload = JSON.stringify({emailAddress:emailAddress,
       sessionStorage:sessionStorage});
+    var form = document.getElementsByClassName('finish__email-form')[0];
+    var homeBtn =document.getElementsByClassName('home-button')[0];
+
 
     httpPostRequest(payload, function(responseText){
       var response = JSON.parse(responseText);
       if (response.status === 'Email sent'){
         addElement(response.status, 'checkmark');
-        // sessionStorage.clear();
+        sessionStorage.clear();
+        form.classList.add('hidden');
+        homeBtn.classList.remove('hidden');
       } else {
         addElement(response.status, 'cross');
       }

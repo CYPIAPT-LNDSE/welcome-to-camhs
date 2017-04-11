@@ -24,13 +24,7 @@
 .finish__prompt-container {
   color: $black;
   font-size: 1.3em;
-  display: inline-block;
-}
-
-.finish__prompt {
-  height: 180px;
-  display: table-cell;
-  vertical-align: middle;
+  text-align: center;
 }
 
 .finish__text {
@@ -69,7 +63,6 @@
   :focus {
     outline: none;
   }
-
 }
 
 .finish__email-input {
@@ -97,7 +90,8 @@
   z-index: 2;
 }
 
-.send-email-button {
+.send-email-button,
+.home-button {
   -webkit-appearance: none;
   font: {
     family: $main-font;
@@ -107,7 +101,7 @@
   border: none;
   border-radius: 4px;
   color: $black;
-  width: 160px;
+  padding: 0 20px;
   height: 65px;
   background-color: $yellow;
   cursor: pointer;
@@ -123,4 +117,13 @@
     box-shadow: 0 2px $orange;
     transform: translateY(2px);
   }
+}
+
+.home-button {
+  text-decoration: none;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
 }

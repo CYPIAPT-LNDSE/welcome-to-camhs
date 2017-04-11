@@ -130,7 +130,8 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         isEnd: true,
-        prev: '/home'
+        prev: '/home',
+        home: '/'
       };
       reply.view('finished', data);
     }
