@@ -188,7 +188,8 @@
       "walking"
     ].forEach(function(hobby){
       var node = document.getElementById(hobby);
-      addClickEventArray('hobbies', node, hobby, hobbies);
+      addHaloClickEvent(node);
+      setSessionStorageOnClick(node, 'haloVisible', 'hobbies', hobbies)
     });
 
     [
@@ -252,9 +253,13 @@
 
     var prev = null;
     function addHalo(element){
-      element.classList.toggle('haloVisible');
-      if (prev && element !== prev){ prev.classList.remove('haloVisible'); }
-      prev = element;
+      if (window.location.pathname === '/feelings'){
+        element.classList.toggle('haloVisible');
+        if (prev && element !== prev){ prev.classList.remove('haloVisible'); }
+        prev = element;
+      } else {
+        element.classList.toggle('haloVisible');
+      }
     }
 
     function addClickEventArray(key, element, value, array){
@@ -273,7 +278,6 @@
       sessionStorage.setItem(key, value);
     }
 
-    // JSON.stringify() is used here as session storage only supports strings
     function addArrayToStorage(key, array){
       sessionStorage.setItem(key, JSON.stringify(array));
     }
