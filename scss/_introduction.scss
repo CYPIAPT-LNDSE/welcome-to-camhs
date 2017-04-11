@@ -1,8 +1,10 @@
 .introduction {
   @extend %main-content;
+  margin-top: 35px;
 
   .buttons {
     margin-top: 60px;
+    // position: relative;
   }
 }
 
