@@ -31,20 +31,9 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         prev: '/avatar',
-        next: '/eating'
-      };
-      reply.view('introduction', data);
-    }
-  },
-  {
-    method: 'GET',
-    path: '/eating',
-    handler: (request, reply) => {
-      const data =  {
-        prev: '/introduction',
         next: '/feelings'
       };
-      reply.view('eating', data);
+      reply.view('introduction', data);
     }
   },
   {
@@ -52,7 +41,7 @@ module.exports = [
     path: '/feelings',
     handler: (request, reply) => {
       const data =  {
-        prev: '/eating',
+        prev: '/introduction',
         next: '/personality'
       };
       reply.view('feelings', data);
@@ -108,9 +97,20 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         prev: '/friends',
-        next: '/home'
+        next: '/eating'
       };
       reply.view('school', data);
+    }
+  },
+  {
+    method: 'GET',
+    path: '/eating',
+    handler: (request, reply) => {
+      const data =  {
+        prev: '/school',
+        next: '/home'
+      };
+      reply.view('eating', data);
     }
   },
   {
@@ -118,7 +118,7 @@ module.exports = [
     path: '/home',
     handler: (request, reply) => {
       const data =  {
-        prev: '/school',
+        prev: '/eating',
         next: '/finished'
       };
       reply.view('home', data);
