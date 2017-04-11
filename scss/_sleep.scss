@@ -1,5 +1,10 @@
 .sleep {
   @extend %main-content;
+  background: {
+    image: url("../assets/sleep-background.svg");
+    repeat: no-repeat;
+    size: 100%;
+  }
 }
 
 .sleep__text {
@@ -7,7 +12,7 @@
 }
 
 .sleep__title {
-  margin-top: 0px;
+  margin-top: 25px;
 }
 
 .sleep__sleeping-lion {
