@@ -131,7 +131,7 @@ module.exports = [
       const data =  {
         isEnd: true,
         prev: '/home',
-        home: '/'
+        welcome: '/'
       };
       reply.view('finished', data);
     }
