@@ -4,6 +4,8 @@
   addAnswersToSessionStorage();
   updateAvatar('introduction', 'sleeping-lion');
   updateAvatar('finish', 'finish__lion');
+  var rangeValue = document.getElementsByClassName('range-value')[0];
+  var verticalArrow = document.getElementsByClassName('vertical-arrow')[0];
 
   $('.carousel').carousel({
     indicators: true,
@@ -83,6 +85,13 @@
     direction: 'alternate',
     loop: true
   });
+
+  anime({
+    targets: '.vertical-arrow',
+    translateY: 30,
+    direction: 'alternate',
+    loop: true,
+    });
 
   [
     'lion',
@@ -320,7 +329,21 @@
 
   function addOnInputToElement(element, func){
     if (!element){ return; }
-    element.oninput = function(){ func(element.name, this.value); };
+    element.addEventListener('input', function(){
+      if (rangeValue){
+        addTextToElement(rangeValue, this.value);
+        hideElement(verticalArrow, 'hide');
+      }
+      func(element.name, this.value);
+    });
+  }
+
+  function addTextToElement(element, value){
+    element.innerText = value;
+  }
+
+  function hideElement(element, className){
+    element.classList.add(className);
   }
 
   function emojiSprite(){
