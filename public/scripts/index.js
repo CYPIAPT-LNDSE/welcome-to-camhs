@@ -1,4 +1,4 @@
-(function ($) {
+(function () {
   "use strict";
 
   addAnswersToSessionStorage();
@@ -7,116 +7,6 @@
   var rangeValue = document.getElementsByClassName('range-value')[0];
   var verticalArrow = document.getElementsByClassName('vertical-arrow')[0];
 
-  $('.carousel').carousel({
-    indicators: true,
-    shift: 100
-  });
-
-  anime({
-    targets: '#strange',
-    translateY: '-5px',
-    rotate: [-0.5, 0.5],
-    easing: 'easeInOutSine',
-    duration: 4000,
-    direction: 'alternate',
-    loop: true,
-  });
-
-  anime({
-    targets: '#happy',
-    rotate: 1,
-    translateY: ['-2px', '-9px'],
-    easing: 'easeInOutSine',
-    duration: 4000,
-    direction: 'alternate',
-    loop: true,
-  });
-
-  anime({
-    targets: '#sad',
-    translateX: '-20px',
-    rotate: [-1, -2],
-    easing: 'easeInOutSine',
-    duration: 4000,
-    direction: 'alternate',
-    loop: true,
-  });
-
-  anime({
-    targets: '#boring',
-    translateX: '2px',
-    translateY: '-2px',
-    rotate: -1,
-    easing: 'easeInOutSine',
-    duration: 4000,
-    direction: 'alternate',
-    loop: true
-  });
-
-  anime({
-    targets: '#angry',
-    translateX: '-5px',
-    translateY: '15px',
-    rotate: [-1, -2],
-    easing: 'easeInOutSine',
-    duration: 5000,
-    direction: 'alternate',
-    loop: true
-  });
-
-  anime({
-    targets: '#kind',
-    translateX: '-20px',
-    translateY: '5px',
-    rotate: -3,
-    easing: 'easeInOutSine',
-    duration: 4000,
-    direction: 'alternate',
-    loop: true
-  });
-
-  anime({
-    targets: '#fun',
-    translateX: '-20px',
-    translateY: '5px',
-    rotate: -1.5,
-    easing: 'easeInOutSine',
-    duration: 5000,
-    direction: 'alternate',
-    loop: true
-  });
-
-  anime({
-    targets: '.vertical-arrow',
-    translateY: 30,
-    direction: 'alternate',
-    loop: true,
-    });
-
-  [
-    'lion',
-    'bear',
-    'monkey'
-  ].forEach(function (avatar) {
-    var node = document.getElementsByClassName(avatar)[0];
-    if (!node ) return;
-    node.addEventListener('click', function () {
-      var checkmark = node.getElementsByClassName('checkmark')[0];
-      if ( !checkmark ) {
-        addCheckmark(node);
-        location.href = '/introduction';
-      } else {
-        node.removeChild(checkmark);
-      }
-    });
-  });
-
-  function addCheckmark (node) {
-    var checkmark = document.createElement('DIV');
-    checkmark.classList.add('checkmark');
-    node.appendChild(checkmark);
-  }
-
   function updateAvatar (selector, avatarSelector) {
     var page = document.getElementsByClassName(selector)[0];
     if (!page) return;
@@ -124,15 +14,6 @@
     var avatar = sessionStorage.getItem('avatar');
     avatarImg.src = 'assets/' + avatar + '.svg';
   }
-
-  [
-    "send-email-button"
-  ].forEach(function(button){
-    var node = document.getElementsByClassName(button)[0];
-    if (node){
-      node.addEventListener('click', function(){ sendMail(); });
-    }
-  });
 
   function addAnswersToSessionStorage(){
     var personality = [];
@@ -170,8 +51,8 @@
       "scared-emoji"
     ].forEach(function(emoji){
       var node = document.getElementsByClassName(emoji)[0];
-      addClickEventSingle('feelings', node, emoji.match(/^[a-z]+/));
       addHaloClickEvent(node);
+      addClickEventSingle('feelings', node, emoji.match(/^[a-z]+/));
     });
 
     [
@@ -260,12 +141,12 @@
       });
     }
 
-    var prev = null;
     function addHalo(element){
       if (window.location.pathname === '/feelings'){
+        var prev = sessionStorage.getItem('feelings') + '-emoji';
+        var emoji = document.getElementsByClassName(prev)[0];
+        emoji.classList.remove('haloVisible');
         element.classList.toggle('haloVisible');
-        if (prev && element !== prev){ prev.classList.remove('haloVisible'); }
-        prev = element;
       } else {
         element.classList.toggle('haloVisible');
       }
@@ -348,60 +229,4 @@
     changeBackgroundPosition(element, value, -180);
   }
 
-  function emailValidator(emailAddress){
-    var regex = RegExp(
-      '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".' +
-      '+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-z' +
-      'A-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
-    );
-    return regex.test(emailAddress);
-  }
-
-  function sendMail(){
-    var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
-    if (!emailValidator(emailRecipient.value)){
-      emailRecipient.value = 'Please enter a valid email address.';
-      return;
-    }
-    var emailAddress = emailRecipient.value;
-    var payload = JSON.stringify({emailAddress:emailAddress,
-      sessionStorage:sessionStorage});
-
-    httpPostRequest(payload, function(responseText){
-      var response = JSON.parse(responseText);
-      if (response.status === 'Email sent'){
-        addElement(response.status, 'checkmark');
-        sessionStorage.clear();
-      } else {
-        addElement(response.status, 'cross');
-      }
-    });
-  }
-
-  function addElement(htmlContent, className) {
-    var newDiv = document.createElement("div");
-    var newP = document.createElement("p");
-    var newContent = document.createTextNode(htmlContent);
-    var container = document.getElementsByClassName("finish__prompt-container")[0];
-    while (container.hasChildNodes()) {
-      container.removeChild(container.lastChild);
-    }
-    newDiv.className = className;
-    newP.appendChild(newContent);
-    container.appendChild(newDiv);
-    container.appendChild(newP);
-  }
-
-  function httpPostRequest(payload, cb){
-    var http = new XMLHttpRequest();
-    http.open("POST", '/finished', true);
-    http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function() {
-      if (http.readyState === 4) {
-        cb(http.responseText);
-      }
-    };
-    http.send(payload);
-  }
-
-})(jQuery);
+})();
