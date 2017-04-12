@@ -3,19 +3,25 @@
 [![Build Status](https://travis-ci.org/CYPIAPT-LNDSE/welcome-to-camhs.svg?branch=master)](https://travis-ci.org/CYPIAPT-LNDSE/welcome-to-camhs)
 [![codecov](https://codecov.io/gh/CYPIAPT-LNDSE/welcome-to-camhs/branch/master/graph/badge.svg)](https://codecov.io/gh/CYPIAPT-LNDSE/welcome-to-camhs)
 
+A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services). Designed for tablets.
 
-A fun and accessible questionnaire for children when first visiting CAMHS (Child and Adolescent Mental Health Services).
-
-Our prototype can be found [here](https://welcome-in.herokuapp.com/). This app has been designed for tablets, to change page swipe left and right.
+The app can be found [here](https://welcome-in.herokuapp.com/).
 
 This questionnaire aims to reduce the anxieties of children (5 - 12 years old) coming to CAMHS for the first time. It offers an alternative questionnaire to the paper based one which is currently used and is not appropriately designed for children.
 
-CAMHS helps to support children and young people who need help with their emotional, behavioural and psychological/mental health difficulties. Children, young people and their families can be referred to CAMHS if the children are finding it hard to cope with family life, school or the wider world. CAMHS currently gives the questionnaire to children to complete when they are sitting in the waiting room. Our app intends to replace this often unenjoyable experience with one which provides a positive first interaction with CAMHS, while taking no more time or resources to complete than the paper-based method.
+CAMHS helps to support children and young people who need help with their emotional, behavioural and psychological/mental health difficulties. Children, young people and their families can be referred to CAMHS if the children are finding it hard to cope with family life, school or the wider world. CAMHS currently gives the questionnaire to children to complete when they are sitting in the waiting room. Our app replaces this often unenjoyable experience with one which provides a positive first interaction with CAMHS, while taking no more time or resources to complete than the paper-based method.
+
+The questions in the questionnaire are ones that are required by CAMHS but general enough to be of use to other organisations who want to get to know their users better.
 
 ## Team
 [Jasmin Patel](https://github.com/Jasminpatel1) - Product Owner <br>
 [Ewelina Skibinska](https://github.com/skibinska) - Developer <br>
 [Peter Rhodes](https://github.com/rhodespeter) - Developer
+
+## Project Support
+[Noga Inbar](https://github.com/nogainbar) - UX/UI <br>
+[Bradley Reeder](https://github.com/bradreeder) - Scrum Master <br>
+[Eoin McCarthy](https://github.com/des-des) - Code Review & QA
 
 ## Why?
 
@@ -30,32 +36,38 @@ The therapist and the child will be able to download a PDF of the children's ans
 
 ## What?
 
-We aim to create an engaging web app for children which makes the experience of filling out the questionnaire enjoyable and more pictorial based which is appropriate for their developmental stage.
+An engaging web app for children which makes the experience of filling out the questionnaire enjoyable and appropriate for their developmental stage.
 
-This web application will be build tablet first, as this is the technology most commonly used by the therapists at CAMHS.
+This web application has been dsigned for tablet screens, as this is the technology most commonly used by the clinicians at CAMHS.
 
-## Next Steps
+## Tech stack
+- [Heroku](https://heroku.com/) for hosting
+- [Hapi.js](https://hapijs.com/)/Node server
+- [Sass](http://sass-lang.com/)
+- [normalize-scss](https://www.npmjs.com/package/normalize.scss)
+- [Tape](https://github.com/substack/tape) for backend testing
+- [Travis](https://travis-ci.org/) for continuous intergration
+- [Codecov](https://codecov.io/) for code coverage
+- [Istanbul](https://github.com/istanbuljs) for code coverage (local)
+- [tap-spec](https://www.npmjs.com/package/tap-spec) for formatted tests
+- [sessionStorage](https://developer.mozilla.org/en/docs/Web/API/Window/sessionStorage) for data management and state storage
+- [anime.js](http://anime-js.com/) for animating SVG images
+- [Nodemailer](https://nodemailer.com/about/) for sending emails via a gmail account
+- [Handelbars.js](http://handlebarsjs.com/) - templating engine
+- [Materialize-css](http://materializecss.com/) for css carousel (jquery)
 
-Building on from the design sprint these would be our next steps:
- - Respond to the user feedback from testing with our product owner. Tweak the illustration style and design to most appropriately target the full age range of our users.
- - Meet with our product owner to create a more comprehensive brief and timeline
- - Add the additional pages that relate to our full user journey
- - Create 3 characters/avatars
- - Animate the illustrations and transitions
- - Create a stronger narrative throughout the questionnaire, including the increased use of characters/avatars
- - Create backend to store the user data and link to download button
+## Testing
+##### To run tests:
+Clone this repo:
+```
+git clone https://github.com/CYPIAPT-LNDSE/welcome-to-camhs.git
+```
 
-## Stretch goal
- - It would be brilliant to create a website with a content management system so that other charities and organisations can create their own questionnaire. They would be able to choose from a range of pages and alter some of the text to make it appropriate for them.
-
-## Current tech stack & technologies needed for MVP
-- Hosting on Heroku (currently hosted on GitHub Pages)
-- Node server with Hapi.js
-- Backend testing with Tape
-- Frontend testing with Nightwatch.js
-- Continuous intergration with Travis
-- Code coverage with Codecov
-- data management and state storage with redux
-- hammer.js library for swiping
-- snap.svg for animating SVG images
-- We do not intend to have any accounts, the user data will not be stored after their questionnaire has been downloaded.
+Install node modules:
+```
+npm install
+```
+Run the Tape tests:
+```
+npm test
+```
