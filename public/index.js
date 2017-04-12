@@ -325,13 +325,13 @@
 
   function addOnInputToElement(element, func){
     if (!element){ return; }
-    element.oninput = function(){
+    element.addEventListener('input', function(){
       if (rangeValue){
         addTextToElement(rangeValue, this.value);
         hideElement(verticalArrow, 'hide');
       }
       func(element.name, this.value);
-    };
+    });
   }
 
   function addTextToElement(element, value){
