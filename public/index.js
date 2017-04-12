@@ -380,7 +380,7 @@
       var response = JSON.parse(responseText);
       if (response.status === 'Email sent'){
         addElement(response.status, 'checkmark');
-        // sessionStorage.clear();
+        sessionStorage.clear();
         form.classList.add('hidden');
         loading.classList.add('hidden');
         homeBtn.classList.remove('hidden');
