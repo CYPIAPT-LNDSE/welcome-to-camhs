@@ -36,15 +36,13 @@
 .eating__range {
   -webkit-appearance: none;
   width: 450px;
-  margin: {
-    left: -95px;
-    top: 300px;
-  }
+  margin-top: 300px;
+
   @include rotate (270);
 
   @media screen and (min-width: 768px)
    {
-     margin-left: 95px;
+     margin-left: 100px;
    }
 
   &::-webkit-slider-runnable-track {
@@ -71,7 +69,18 @@
   }
 }
 
-span.value {
+.range-value {
   font-size: 3rem;
   margin-left: 60px;
+}
+
+span.value {
+  display: none;
+}
+
+.vertical-arrow {
+  position: absolute;
+  height: 115px;
+  left: 48.7%;
+  top: 300px;
 }
