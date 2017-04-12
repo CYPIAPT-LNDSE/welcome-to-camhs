@@ -20,9 +20,22 @@ test('Check if button partial returns only next button on welcome.hbs page', t =
   t.end();
 });
 
-test('Check if button partial returns only prev button on finished.hbs page', t => {
+test('Check if button partial returns prev button on finished.hbs page', t => {
   const data = {
-    prev: '/school'
+    prev: '/school',
+    next: '/info'
+  };
+  html = buttonPartial(data);
+
+  const prevButton = `<a class="button button--prev" href="${data.prev}">Prev</a>`;
+
+  t.ok(html.includes(prevButton));
+  t.end();
+});
+
+test('Check if button partial returns prev button on info.hbs page', t => {
+  const data = {
+    prev: '/finished'
   };
   html = buttonPartial(data);
 

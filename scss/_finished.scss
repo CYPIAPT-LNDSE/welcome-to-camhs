@@ -4,20 +4,22 @@
     size: $small-image;
     position: center;
   }
+  height: 100vh;
   -webkit-filter: brightness(0.95);
   filter: brightness(0.95);
+
+  @media screen and (min-width: 768px) and (orientation: landscape)  {
+    height: 100%;
+  }
 }
 
 .finish {
   @extend %main-content;
 
-  .button {
-    width: 100%;
-
-    @media screen and (min-width: 768px)
-     {
-       width: 40%;
-     }
+  & + .buttons {
+    .button {
+      width: 40%;
+    }
   }
 }
 
@@ -28,7 +30,7 @@
 }
 
 .finish__text {
- @extend %main-text;
+  @extend %main-text;
 }
 
 .finish__lion {
@@ -36,20 +38,18 @@
   display: block;
   margin: 40px auto;
 
-  @media screen and (min-width: 768px)
-   {
-     width: $medium-image;
-   }
+  @media screen and (min-width: 768px) {
+    width: $medium-image;
+  }
 }
 
 .finish__header {
   color: $black;
   margin-bottom: 5px;
 
-  @media screen and (min-width: 768px)
-   {
-     margin-top: 55px;
-   }
+  @media screen and (min-width: 768px) {
+    margin-top: 55px;
+  }
 }
 
 .finish__email-form {
@@ -63,24 +63,26 @@
   :focus {
     outline: none;
   }
-
 }
 
 .finish__email-input {
-  width: 500px;
+  width: 90%;
   height: 30px;
   font-size: 0.45em;
   font-family: $main-font;
   margin: 15px 0;
   text-align: center;
   border: none;
+
+  @media screen and (min-width: 500px) {
+    width: 500px;
+  }
 }
 
 .finish__info-icon {
   width: 50px;
   float: right;
   position: relative;
-  bottom: -50px;
   right: 10px;
   z-index: 2;
 }

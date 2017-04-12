@@ -6,10 +6,12 @@
 
   <div class="emoji-sprite"></div>
   <div class="school__slider">
-    <label class="slider__label slider__label--bad">Bad</label>
+    <div class="slider__labels">
+      <label class="slider__label slider__label--bad">Bad</label>
+      <label class="slider__label slider__label--good">Good</label>
+    </div>
     <input name="school" class="school__range range" type="range" min="1"
     max="5" value="3" step="1">
-    <label class="slider__label slider__label--good">Good</label>
   </div>
   <div class="school__textarea">
     <div class="textarea__container">
@@ -21,6 +23,5 @@
       <textarea class="textarea__text school__dislike" type="text" autofocus=""></textarea>
     </div>
   </div>
-
-  {{> buttons }}
 </div>
+{{> buttons }}
