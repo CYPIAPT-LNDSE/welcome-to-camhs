@@ -5,12 +5,8 @@ body {
   background: $background;
   font-size: 1.1rem;
   color: $white;
-  width: 100%;
-
-  @media screen and (min-width: 768px)
-   {
-     max-width: 768px;
-   }
+  max-width: 768px;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,21 +14,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 %main-content {
+  position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: column;
   color: $white;
 }
 
 %main-text {
-  margin: 40px 0;
   font-size: 1.5rem;
   text-align: center;
+  margin: 40px 0;
 
-  @media screen and (min-width: 768px)
-   {
-     padding: 0 25px;
-     font-size: 2.2rem;
-   }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 25px;
+    font-size: 2.2rem;
+  }
 }
 
 %text-input {
@@ -47,12 +44,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-     font-size: 3.9rem;
-   }
+    font-size: 3.9rem;
+  }
 
-   &:focus {
-     outline: none;
-   }
+  &:focus {
+    outline: none;
+  }
 }
 
 %range-input {
@@ -85,17 +82,30 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     @media screen and (min-width: 768px) {
-       width: 65px;
-       height: 65px;
-       margin-top: -31px;
-     }
+      width: 65px;
+      height: 65px;
+      margin-top: -31px;
+    }
   }
 }
 
 .buttons {
   position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
   width: 100%;
+  max-width: 768px;
+  margin: auto;
+
+  @media screen and (min-width: 768px) and (orientation: portrait)  {
+    position: absolute;
+  }
+
+  @media screen and (min-width: 768px) and (orientation: landscape)  {
+    position: relative;
+  }
 }
 
 .button {
@@ -119,8 +129,12 @@ h1, h2, h3, h4, h5, h6 {
 .slider__label {
   position: relative;
   top: -55px;
-  padding: 6px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 6px;
+    font-size: 1.5rem;
+  }
 }
 
 .emoji-sprite {
@@ -139,12 +153,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.slider__label--bad {
-  left: 70px;
-}
+.slider__labels {
+  width: 80%;
+  margin: auto;
 
-.slider__label--good {
-  right: 80px;
+  .slider__label {
+    top: 40px;
+  }
+
+  .slider__label--good {
+    float: right;
+  }
+
+  .slider__label--bad {
+    float: left;
+  }
 }
 
 .textarea__container {
