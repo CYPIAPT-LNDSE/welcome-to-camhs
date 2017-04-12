@@ -9,7 +9,7 @@
 
   function updateAvatar (selector, avatarSelector) {
     var page = document.getElementsByClassName(selector)[0];
-    if (!page) return;
+    if (!page) { return; }
     var avatarImg = page.getElementsByClassName(avatarSelector)[0];
     var avatar = sessionStorage.getItem('avatar');
     avatarImg.src = 'assets/' + avatar + '.svg';
@@ -141,6 +141,7 @@
     function addHalo(element){
       if (window.location.pathname === '/feelings'){
         var prev = sessionStorage.getItem('feelings') + '-emoji';
+        if (prev === 'null-emoji'){ prev = 'happy-emoji'; }
         var emoji = document.getElementsByClassName(prev)[0];
         emoji.classList.remove('haloVisible');
       }
@@ -168,10 +169,9 @@
     }
 
     function setSessionStorageOnClick(node, className, key) {
-      if (!node) return;
+      if (!node) { return; }
       node.addEventListener('click', function () {
-        var baseArray = JSON.parse(sessionStorage.getItem(key));
-        if (!baseArray){ baseArray = []; }
+        var baseArray = JSON.parse(sessionStorage.getItem(key)) || [];
         if (node.className.baseVal === className) {
           baseArray.push(node.id);
         } else {
