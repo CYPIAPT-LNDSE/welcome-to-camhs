@@ -16,9 +16,6 @@
   }
 
   function addAnswersToSessionStorage(){
-    var personality = [];
-    var hobbies = [];
-
     [
       'lion',
       'bear',
@@ -39,7 +36,7 @@
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
-      setSessionStorageOnClick(node, 'pop', 'personality', personality)
+      setSessionStorageOnClick(node, 'pop', 'personality');
     });
 
     [
@@ -79,7 +76,7 @@
     ].forEach(function(hobby){
       var node = document.getElementById(hobby);
       addHaloClickEvent(node);
-      setSessionStorageOnClick(node, 'haloVisible', 'hobbies', hobbies)
+      setSessionStorageOnClick(node, 'haloVisible', 'hobbies');
     });
 
     [
@@ -146,10 +143,8 @@
         var prev = sessionStorage.getItem('feelings') + '-emoji';
         var emoji = document.getElementsByClassName(prev)[0];
         emoji.classList.remove('haloVisible');
-        element.classList.toggle('haloVisible');
-      } else {
-        element.classList.toggle('haloVisible');
       }
+      element.classList.toggle('haloVisible');
     }
 
     function addClickEventArray(key, element, value, array){
@@ -172,10 +167,12 @@
       sessionStorage.setItem(key, JSON.stringify(array));
     }
 
-    function setSessionStorageOnClick(node, className, key, baseArray) {
+    function setSessionStorageOnClick(node, className, key) {
       if (!node) return;
       node.addEventListener('click', function () {
-        if ( node.className.baseVal === className ) {
+        var baseArray = JSON.parse(sessionStorage.getItem(key));
+        if (!baseArray){ baseArray = []; }
+        if (node.className.baseVal === className) {
           baseArray.push(node.id);
         } else {
           var index = baseArray.indexOf(node.id);
