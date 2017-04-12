@@ -21,7 +21,7 @@ module.exports = [
         isAvatar: true,
         prev: '/',
         next: '/introduction'
-       };
+      };
       reply.view('choose-an-avatar', data);
     }
   },
