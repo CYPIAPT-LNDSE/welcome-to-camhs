@@ -121,7 +121,11 @@
   ].forEach(function(button){
     var node = document.getElementsByClassName(button)[0];
     if (node){
-      node.addEventListener('click', function(){ sendMail(); });
+      node.addEventListener('click', function(){
+        var loading = document.getElementsByClassName('loading')[0];
+        loading.classList.remove('hidden');
+        sendMail();
+      });
     }
   });
 
@@ -346,14 +350,18 @@
       sessionStorage:sessionStorage});
     var form = document.getElementsByClassName('finish__email-form')[0];
     var homeBtn = document.getElementsByClassName('home-button')[0];
+    var loading = document.getElementsByClassName('loading')[0];
+    var prevButton = document.getElementsByClassName('button--prev')[0];
 
     httpPostRequest(payload, function(responseText){
       var response = JSON.parse(responseText);
       if (response.status === 'Email sent'){
         addElement(response.status, 'checkmark');
-        sessionStorage.clear();
+        // sessionStorage.clear();
         form.classList.add('hidden');
+        loading.classList.add('hidden');
         homeBtn.classList.remove('hidden');
+        prevButton.classList.add('hidden');
       } else {
         addElement(response.status, 'cross');
       }
