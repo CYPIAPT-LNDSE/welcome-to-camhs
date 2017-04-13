@@ -430,12 +430,14 @@
     }
 
     function addElement(htmlContent) {
+      var checkmark = document.getElementById('checkmark');
       var newP = document.createElement("p");
       var newContent = document.createTextNode(htmlContent);
       var container = document.getElementsByClassName("finish__prompt-container")[0];
       while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
       }
+      checkmark.classList.remove('hidden');
       newP.appendChild(newContent);
       animateCheckmark();
       container.appendChild(newP);
