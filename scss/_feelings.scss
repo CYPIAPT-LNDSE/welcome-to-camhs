@@ -17,10 +17,13 @@
   margin: 5px $small-margin;
   width: $small-image / 2;
 
-  @media screen and (min-width: 768px)
-   {
-     width: $small-image;
-   }
+  @media screen and (min-width: 768px) {
+    width: $small-image;
+  }
+}
+
+.feelings__illustration {
+  margin-top: -50px;
 }
 
 .haloVisible {

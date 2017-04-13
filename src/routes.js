@@ -21,7 +21,7 @@ module.exports = [
         isAvatar: true,
         prev: '/',
         next: '/introduction'
-       };
+      };
       reply.view('choose-an-avatar', data);
     }
   },
@@ -130,7 +130,9 @@ module.exports = [
     handler: (request, reply) => {
       const data =  {
         isEnd: true,
-        prev: '/home'
+        prev: '/home',
+        next: '/info',
+        welcome: '/'
       };
       reply.view('finished', data);
     }
@@ -140,7 +142,7 @@ module.exports = [
     path: '/info',
     handler: (request, reply) => {
       var data =  {
-        isEnd: true,
+        isInfo: true,
         prev: '/finished'
       };
       reply.view('info', data);
