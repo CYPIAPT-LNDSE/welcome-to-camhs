@@ -1,5 +1,10 @@
 .personality {
   @extend %main-content;
+  background: {
+    image: url("../assets/personality-background.svg");
+    repeat: no-repeat;
+    size: 100%;
+  }
 }
 
 .personality__text {
@@ -7,7 +12,7 @@
 }
 
 .personality__title {
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 .balloons {
@@ -16,7 +21,7 @@
   height: 360px;
 
   @media screen and (min-width: 768px) {
-    top: -150px;
+    top: -110px;
     height: 830px;
     margin-top: -235px;
    }
@@ -25,8 +30,12 @@
 .pop {
   visibility: hidden;
 
-  .st2 {
+  .style2 {
     visibility: visible;
-    fill: $yellow;
+  }
+
+  .style5 {
+    stroke: #F8EE56;
+    visibility: visible;
   }
 }
