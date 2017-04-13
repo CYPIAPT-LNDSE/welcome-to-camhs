@@ -1,8 +1,15 @@
 .checkmark {
+  position: relative;
+  bottom: -10px;
   height: 80px;
-  background: {
-    image: url('../assets/checkmark.svg');
-    repeat: no-repeat;
-    position: center;
+
+  path {
+    opacity: 0;
   }
+
+  // background: {
+  //   image: url('../assets/checkmark.svg');
+  //   repeat: no-repeat;
+  //   position: center;
+  // }
 }
