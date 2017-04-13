@@ -349,7 +349,7 @@
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
-    changeBackgroundPosition(element, value, -332);
+    changeBackgroundPosition(element, value, -331);
   }
 
   function changeBackgroundPosition(element, value, illustrationSize){
