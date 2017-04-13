@@ -1,5 +1,10 @@
 .friends {
   @extend %main-content;
+  background: {
+    image: url("../assets/friends-background.svg");
+    repeat: no-repeat;
+    size: 100%;
+  }
 }
 
 .friends__text {
@@ -8,7 +13,7 @@
 }
 
 .friends__title {
-  margin-top: 0px;
+  margin-top: 25px;
 }
 
 .friends__subtitle {
