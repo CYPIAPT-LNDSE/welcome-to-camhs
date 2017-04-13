@@ -137,7 +137,7 @@
 
       clearTimeout(timeout);
       var timeout = setTimeout(function () {
-        location.href = '/introduction';
+        window.location.href = 'introduction';
       }, 1500);
 
     });
