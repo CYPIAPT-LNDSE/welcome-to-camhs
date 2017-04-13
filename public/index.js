@@ -104,7 +104,10 @@
       var checkmark = node.getElementsByClassName('checkmark')[0];
       if ( !checkmark ) {
         addCheckmark(node);
-        location.href = '/introduction';
+        clearTimeout(timeout);
+        var timeout = setTimeout(function () {
+          location.href = '/introduction';
+        }, 500);
       } else {
         node.removeChild(checkmark);
       }
