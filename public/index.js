@@ -417,7 +417,7 @@
       httpPostRequest(payload, function(responseText){
         var response = JSON.parse(responseText);
         if (response.status === 'Email sent'){
-          addElement(response.status, 'checkmark');
+          addElement(response.status);
           sessionStorage.clear();
           form.classList.add('hidden');
           loading.classList.add('hidden');
@@ -429,17 +429,15 @@
       });
     }
 
-    function addElement(htmlContent, className) {
-      var newDiv = document.createElement("div");
+    function addElement(htmlContent) {
       var newP = document.createElement("p");
       var newContent = document.createTextNode(htmlContent);
       var container = document.getElementsByClassName("finish__prompt-container")[0];
       while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
       }
-      newDiv.className = className;
       newP.appendChild(newContent);
-      container.appendChild(newDiv);
+      animateCheckmark();
       container.appendChild(newP);
     }
 
