@@ -4,16 +4,23 @@
       <h1 class="finish__header">You are finished!</h1>
       <img class="finish__lion" src=""/ alt="Avatar">
 
+      <div class="finish__prompt-container">
+        <p class="finish__prompt">Where should we send <br> your answers?</p>
+      </div>
+
+      <div class="loading hidden">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      </div>
+
       <form class="finish__email-form">
-        <span class="finish__prompt-container">
-          <p class="finish__prompt">Where should we send <br> your answers?</p>
-        </span>
-        <input class="finish__email-input" type="text"
+        <label class="input__label" for="finish-input">Email address</label>
+        <input id="finish-input" class="finish__email-input" type="text"
         value="" placeholder="Enter your email address here...">
         <br>
         <input class="send-email-button" type="button" value="Send">
       </form>
 
+      <a class="home-button hidden" href="{{ welcome }}">Start again</a>
     </div>
   </div>
   {{> buttons }}
