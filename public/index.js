@@ -191,7 +191,8 @@
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
-      setSessionStorageOnClick(node, 'pop', 'personality', personality)
+      setSessionStorageOnClick(node, 'pop', 'personality', personality);
+      addHaloClickEvent(node);
     });
 
     [
