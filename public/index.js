@@ -1,16 +1,19 @@
-(function ($) {
+(function (document, $) {
   "use strict";
 
-  addAnswersToSessionStorage();
-  updateAvatar('introduction', 'sleeping-lion');
-  updateAvatar('finish', 'finish__lion');
+  document.addEventListener('DOMContentLoaded', function () {
+    addAnswersToSessionStorage();
+    updateAvatar('introduction', 'sleeping-lion');
+    updateAvatar('finish', 'finish__lion');
+
+    $('.carousel').carousel({
+      indicators: true,
+      shift: 100
+    });
+  });
+
   var rangeValue = document.getElementsByClassName('range-value')[0];
   var verticalArrow = document.getElementsByClassName('vertical-arrow')[0];
-
-  $('.carousel').carousel({
-    indicators: true,
-    shift: 100
-  });
 
   anime({
     targets: '#strange',
@@ -128,22 +131,27 @@
     'monkey'
   ].forEach(function (avatar) {
     var node = document.getElementsByClassName(avatar)[0];
+    var timeout;
     if (!node ) return;
     node.addEventListener('click', function () {
-      var checkmark = node.getElementsByClassName('checkmark')[0];
-      if ( !checkmark ) {
-        addCheckmark(node);
-        location.href = '/introduction';
-      } else {
-        node.removeChild(checkmark);
-      }
+      animateCheckmark();
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        window.location.href = 'introduction';
+      }, 1500);
     });
   });
 
-  function addCheckmark (node) {
-    var checkmark = document.createElement('DIV');
-    checkmark.classList.add('checkmark');
-    node.appendChild(checkmark);
+  function animateCheckmark () {
+    anime({
+      targets: '#checkmark path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      opacity: {
+        value: 1,
+        duration: 100
+      }
+    });
   }
 
   function updateAvatar (selector, avatarSelector) {
@@ -159,7 +167,7 @@
   ].forEach(function(button){
     var node = document.getElementsByClassName(button)[0];
     if (node){
-      node.addEventListener('click', function(){
+      node.addEventListener('click', function() {
         var loading = document.getElementsByClassName('loading')[0];
         loading.classList.remove('hidden');
         sendMail();
@@ -393,58 +401,59 @@
 
   function sendMail(){
     var emailRecipient = document.getElementsByClassName("finish__email-input")[0];
+    var loading = document.getElementsByClassName('loading')[0];
     if (!emailValidator(emailRecipient.value)){
       emailRecipient.value = '';
       emailRecipient.placeholder = 'Please enter a valid email address.';
+      loading.classList.add('hidden');
       return;
     }
     var emailAddress = emailRecipient.value;
     var payload = JSON.stringify({emailAddress:emailAddress,
       sessionStorage:sessionStorage});
-    var form = document.getElementsByClassName('finish__email-form')[0];
-    var homeBtn = document.getElementsByClassName('home-button')[0];
-    var loading = document.getElementsByClassName('loading')[0];
-    var prevButton = document.getElementsByClassName('button--prev')[0];
+      var form = document.getElementsByClassName('finish__email-form')[0];
+      var homeBtn = document.getElementsByClassName('home-button')[0];
+      var prevButton = document.getElementsByClassName('button--prev')[0];
 
-    httpPostRequest(payload, function(responseText){
-      var response = JSON.parse(responseText);
-      if (response.status === 'Email sent'){
-        addElement(response.status, 'checkmark');
-        sessionStorage.clear();
-        form.classList.add('hidden');
-        loading.classList.add('hidden');
-        homeBtn.classList.remove('hidden');
-        prevButton.classList.add('hidden');
-      } else {
-        addElement(response.status, 'cross');
-      }
-    });
-  }
-
-  function addElement(htmlContent, className) {
-    var newDiv = document.createElement("div");
-    var newP = document.createElement("p");
-    var newContent = document.createTextNode(htmlContent);
-    var container = document.getElementsByClassName("finish__prompt-container")[0];
-    while (container.hasChildNodes()) {
-      container.removeChild(container.lastChild);
+      httpPostRequest(payload, function(responseText){
+        var response = JSON.parse(responseText);
+        if (response.status === 'Email sent'){
+          addElement(response.status);
+          sessionStorage.clear();
+          form.classList.add('hidden');
+          loading.classList.add('hidden');
+          homeBtn.classList.remove('hidden');
+          prevButton.classList.add('hidden');
+        } else {
+          addElement(response.status, 'cross');
+        }
+      });
     }
-    newDiv.className = className;
-    newP.appendChild(newContent);
-    container.appendChild(newDiv);
-    container.appendChild(newP);
-  }
 
-  function httpPostRequest(payload, cb){
-    var http = new XMLHttpRequest();
-    http.open("POST", '/finished', true);
-    http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function() {
-      if (http.readyState === 4) {
-        cb(http.responseText);
+    function addElement(htmlContent) {
+      var checkmark = document.getElementById('checkmark');
+      var newP = document.createElement("p");
+      var newContent = document.createTextNode(htmlContent);
+      var container = document.getElementsByClassName("finish__prompt-container")[0];
+      while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
       }
-    };
-    http.send(payload);
-  }
+      checkmark.classList.remove('hidden');
+      newP.appendChild(newContent);
+      animateCheckmark();
+      container.appendChild(newP);
+    }
 
-})(jQuery);
+    function httpPostRequest(payload, cb){
+      var http = new XMLHttpRequest();
+      http.open("POST", '/finished', true);
+      http.setRequestHeader("Content-type", "application/json");
+      http.onreadystatechange = function() {
+        if (http.readyState === 4) {
+          cb(http.responseText);
+        }
+      };
+      http.send(payload);
+    }
+
+  })(document, jQuery);
