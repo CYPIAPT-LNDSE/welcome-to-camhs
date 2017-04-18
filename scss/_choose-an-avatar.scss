@@ -6,8 +6,7 @@
   @extend %main-text;
   margin: 0;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      margin: 40px 0;
    }
 }
@@ -20,8 +19,7 @@
   height: $medium-image * 2;
   perspective: 200px;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
      margin-bottom: 100px;
    }
 
@@ -29,8 +27,7 @@
     width: $medium-image;
     top: -200px;
 
-    @media screen and (min-width: 768px)
-     {
+    @media screen and (min-width: 768px) {
        width: $medium-image + 100;
      }
   }
@@ -38,8 +35,7 @@
   .indicators {
     bottom: 90px;
 
-    @media screen and (min-width: 768px)
-     {
+    @media screen and (min-width: 768px) {
        bottom: -15px;
      }
   }

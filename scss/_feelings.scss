@@ -17,14 +17,18 @@
   margin: 5px $small-margin;
   width: $small-image / 2;
 
-  @media screen and (min-width: 768px)
-   {
-     width: $small-image;
-   }
+  @media screen and (min-width: 768px) {
+    width: $small-image;
+  }
+}
+
+.feelings__illustration {
+  margin: -50px auto 50px auto;
+  width: 82%;
 }
 
 .haloVisible {
   .st6 {
-    stroke: $dark-yellow;
+    stroke: $yellow;
   }
 }

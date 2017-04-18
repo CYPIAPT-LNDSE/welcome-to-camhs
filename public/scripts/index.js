@@ -37,6 +37,8 @@
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
       setSessionStorageOnClick(node, 'pop', 'personality');
+      addHaloClickEvent(node);
+
     });
 
     [
@@ -194,7 +196,7 @@
   function sleepingLion(){
     var value = document.getElementsByClassName("sleep__range")[0].value;
     var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
-    changeBackgroundPosition(element, value, -332);
+    changeBackgroundPosition(element, value, -331);
   }
 
   function changeBackgroundPosition(element, value, illustrationSize){
@@ -225,5 +227,4 @@
     var element = document.getElementsByClassName("emoji-sprite")[0];
     changeBackgroundPosition(element, value, -180);
   }
-
 })();

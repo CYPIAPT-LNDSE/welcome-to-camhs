@@ -1,41 +1,38 @@
 .welcome {
   @extend %main-content;
 
-  .button {
-    width: 100%;
+  & + .buttons {
 
-    @media screen and (min-width: 768px)
-     {
-       width: 40%;
-     }
+    .button {
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        width: 40%;
+      }
+    }
   }
 }
 
 .welcome__text {
   @extend %main-text;
+  margin-bottom: 0px;
+}
+
+.welcome__lion {
+  margin: $small-margin auto;
+  width: $medium-image + 100;
 }
 
 .welcome__title {
   font: {
     family: $cursive-font;
-    size: 3rem;
+    size: 2.5rem;
   }
-  margin: 0 auto;
+  margin: 20px auto;
   letter-spacing: 0.35rem;
   line-height: 4.5rem;
 
-  @media screen and (min-width: 768px)
-   {
-     font-size: 4rem;
-   }
- }
-
-.welcome__image {
-  margin: $small-margin auto;
-  height: $medium-image;
-
-  @media screen and (min-width: 768px)
-   {
-     height: $medium-image + 100px;
-   }
+  @media screen and (min-width: 768px){
+    font-size: 4rem;
+  }
 }

@@ -19,7 +19,7 @@
   background: {
     image: url("../assets/lion-sleeping-sprite.svg");
     repeat: no-repeat;
-    position: -996px;
+    position: -993px;
     size: 2000px;
   }
   height: 320px;
@@ -38,25 +38,6 @@
   .value,
   .thumb {
     display: none;
-  }
-}
-
-.slider__labels {
-  width: 80%;
-  margin: auto;
-
-  .slider__label {
-    top: 40px;
-  }
-
-  .slider__label--good {
-    right: 0;
-    float: right;
-  }
-
-  .slider__label--bad {
-    left: 0;
-    float: left;
   }
 }
 

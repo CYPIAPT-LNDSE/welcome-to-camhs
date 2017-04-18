@@ -1,5 +1,6 @@
 .introduction {
   @extend %main-content;
+  margin-top: 35px;
 
   .buttons {
     margin-top: 60px;
@@ -18,12 +19,11 @@
   @extend %text-input;
 }
 
-.sleeping-lion{
+.sleeping-lion {
   width: $small-image;
   margin: 0 auto 20px auto;
 
-  @media screen and (min-width: 768px)
-   {
+  @media screen and (min-width: 768px) {
     width: $medium-image;
    }
 }
