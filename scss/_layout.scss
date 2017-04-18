@@ -17,6 +17,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: column;
+  display: -webkit-box-flex;
+  -webkit-box-direction: column;
   color: $white;
 }
 
@@ -204,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .haloVisible {
-  .st6 {
+  .st200 {
     stroke: $yellow;
     stroke-width: 4;
   }
