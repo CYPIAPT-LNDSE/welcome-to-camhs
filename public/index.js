@@ -131,15 +131,14 @@
     'monkey'
   ].forEach(function (avatar) {
     var node = document.getElementsByClassName(avatar)[0];
+    var timeout;
     if (!node ) return;
     node.addEventListener('click', function () {
       animateCheckmark();
-
       clearTimeout(timeout);
-      var timeout = setTimeout(function () {
+      timeout = setTimeout(function () {
         window.location.href = 'introduction';
       }, 1500);
-
     });
   });
 
