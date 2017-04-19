@@ -1,5 +1,7 @@
-(function () {
-  "use strict";
+(function (app) {
+  'use strict';
+
+  app.updateAvatar('finish', 'finish__lion');
 
   [
     "send-email-button"
@@ -66,4 +68,4 @@
     container.appendChild(newP);
   }
 
-})();
+})(window.app);

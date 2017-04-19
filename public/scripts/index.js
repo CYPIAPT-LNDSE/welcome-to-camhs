@@ -1,9 +1,9 @@
-(function () {
-  "use strict";
+window.app = (function () {
+  'use strict';
 
   addAnswersToSessionStorage();
   updateAvatar('introduction', 'sleeping-lion');
-  updateAvatar('finish', 'finish__lion');
+  // updateAvatar('finish', 'finish__lion');
   var rangeValue = document.getElementsByClassName('range-value')[0];
   var verticalArrow = document.getElementsByClassName('vertical-arrow')[0];
 
@@ -26,13 +26,13 @@
     });
 
     [
-      "strange",
-      "happy",
-      "angry",
-      "fun",
-      "boring",
-      "kind",
-      "sad"
+      'strange',
+      'happy',
+      'angry',
+      'fun',
+      'boring',
+      'kind',
+      'sad'
     ].forEach(function(emotion){
       var node = document.getElementById(emotion);
       toggleClass(node, 'pop');
@@ -42,12 +42,12 @@
     });
 
     [
-      "sad-emoji",
-      "happy-emoji",
-      "indifferent-emoji",
-      "nervous-emoji",
-      "shocked-emoji",
-      "scared-emoji"
+      'sad-emoji',
+      'happy-emoji',
+      'indifferent-emoji',
+      'nervous-emoji',
+      'shocked-emoji',
+      'scared-emoji'
     ].forEach(function(emoji){
       var node = document.getElementsByClassName(emoji)[0];
       addHaloClickEvent(node);
@@ -55,26 +55,26 @@
     });
 
     [
-      "name",
-      "age"
+      'name',
+      'age'
     ].forEach(function(inputField){
       var node = document.getElementsByClassName(inputField)[0];
       addKeyupEvent(inputField, node);
     });
 
     [
-      "football",
-      "tennis",
-      "music",
-      "dance",
-      "drawing",
-      "photography",
-      "cooking",
-      "gardening",
-      "puzzles",
-      "camping",
-      "fishing",
-      "walking"
+      'football',
+      'tennis',
+      'music',
+      'dance',
+      'drawing',
+      'photography',
+      'cooking',
+      'gardening',
+      'puzzles',
+      'camping',
+      'fishing',
+      'walking'
     ].forEach(function(hobby){
       var node = document.getElementById(hobby);
       addHaloClickEvent(node);
@@ -82,14 +82,14 @@
     });
 
     [
-      "home__range",
-      "school__range",
-      "friends__range",
-      "sleep__range"
+      'home__range',
+      'school__range',
+      'friends__range',
+      'sleep__range'
     ].forEach(function(range){
       var node = document.getElementsByClassName(range)[0];
       addOnInputToElement(node, function(key, value){
-        if (range === "sleep__range") {
+        if (range === 'sleep__range') {
           sleepingLion();
         } else {
           emojiSprite();
@@ -99,7 +99,7 @@
     });
 
     [
-      "eating__range"
+      'eating__range'
     ].forEach(function(range) {
       var node = document.getElementsByClassName(range)[0];
       addOnInputToElement(node, function(key, value) {
@@ -108,12 +108,12 @@
     });
 
     [
-      "home__like",
-      "home__dislike",
-      "friends__like",
-      "friends__dislike",
-      "school__like",
-      "school__dislike"
+      'home__like',
+      'home__dislike',
+      'friends__like',
+      'friends__dislike',
+      'school__like',
+      'school__dislike'
     ].forEach(function(textarea){
       var node = document.getElementsByClassName(textarea)[0];
       addKeyupEvent(textarea, node);
@@ -121,21 +121,21 @@
 
     function addKeyupEvent(key, element){
       if(!element){ return; }
-      element.addEventListener("keyup", function(){
+      element.addEventListener('keyup', function(){
         addSingleValueToStorage(key, element.value);
       });
     }
 
     function addClickEventSingle(key, element, value){
       if(!element){ return; }
-      element.addEventListener("click", function(){
+      element.addEventListener('click', function(){
         addSingleValueToStorage(key, value);
       });
     }
 
     function addHaloClickEvent(element){
       if (!element){ return; }
-      element.addEventListener("click", function(){
+      element.addEventListener('click', function(){
         addHalo(element);
       });
     }
@@ -152,7 +152,7 @@
 
     function addClickEventArray(key, element, value, array){
       if(!element){ return; }
-      element.addEventListener("click", function(){
+      element.addEventListener('click', function(){
         addValueToArray(key, value, array);
       });
     }
@@ -188,19 +188,19 @@
   // Adds a class to node
   function toggleClass(node, className){
     if (!node){ return; }
-    node.addEventListener("click", function(){
+    node.addEventListener('click', function(){
       node.classList.toggle(className);
     });
   }
 
   function sleepingLion(){
-    var value = document.getElementsByClassName("sleep__range")[0].value;
-    var element = document.getElementsByClassName("sleep__sleeping-lion")[0];
+    var value = document.getElementsByClassName('sleep__range')[0].value;
+    var element = document.getElementsByClassName('sleep__sleeping-lion')[0];
     changeBackgroundPosition(element, value, -331);
   }
 
   function changeBackgroundPosition(element, value, illustrationSize){
-    element.style.backgroundPosition = parseInt(value) * illustrationSize + "px";
+    element.style.backgroundPosition = parseInt(value) * illustrationSize + 'px';
   }
 
   function addOnInputToElement(element, func){
@@ -223,8 +223,13 @@
   }
 
   function emojiSprite(){
-    var value = document.getElementsByClassName("range")[0].value -1;
-    var element = document.getElementsByClassName("emoji-sprite")[0];
+    var value = document.getElementsByClassName('range')[0].value -1;
+    var element = document.getElementsByClassName('emoji-sprite')[0];
     changeBackgroundPosition(element, value, -180);
   }
+
+  return {
+    updateAvatar: updateAvatar
+  };
+
 })();
