@@ -2,20 +2,9 @@ window.app = (function () {
   'use strict';
 
   addAnswersToSessionStorage();
-  updateAvatar('introduction', 'sleeping-lion');
-  // updateAvatar('finish', 'finish__lion');
-  var rangeValue = document.getElementsByClassName('range-value')[0];
-  var verticalArrow = document.getElementsByClassName('vertical-arrow')[0];
-
-  function updateAvatar (selector, avatarSelector) {
-    var page = document.getElementsByClassName(selector)[0];
-    if (!page) { return; }
-    var avatarImg = page.getElementsByClassName(avatarSelector)[0];
-    var avatar = sessionStorage.getItem('avatar');
-    avatarImg.src = 'assets/' + avatar + '.svg';
-  }
 
   function addAnswersToSessionStorage(){
+
     [
       'lion',
       'bear',
@@ -38,7 +27,6 @@ window.app = (function () {
       toggleClass(node, 'pop');
       setSessionStorageOnClick(node, 'pop', 'personality');
       addHaloClickEvent(node);
-
     });
 
     [
@@ -90,9 +78,11 @@ window.app = (function () {
       var node = document.getElementsByClassName(range)[0];
       addOnInputToElement(node, function(key, value){
         if (range === 'sleep__range') {
-          sleepingLion();
+          moveSprite ('sleep__range', 'sleep__sleeping-lion', -331, 0);
+          // sleepingLion();
         } else {
-          emojiSprite();
+          moveSprite ('range', 'emoji-sprite', -180, 1);
+          // emojiSprite();
         }
         addSingleValueToStorage(key, value);
       });
@@ -119,73 +109,73 @@ window.app = (function () {
       addKeyupEvent(textarea, node);
     });
 
-    function addKeyupEvent(key, element){
-      if(!element){ return; }
-      element.addEventListener('keyup', function(){
-        addSingleValueToStorage(key, element.value);
-      });
-    }
-
-    function addClickEventSingle(key, element, value){
-      if(!element){ return; }
-      element.addEventListener('click', function(){
-        addSingleValueToStorage(key, value);
-      });
-    }
-
-    function addHaloClickEvent(element){
-      if (!element){ return; }
-      element.addEventListener('click', function(){
-        addHalo(element);
-      });
-    }
-
-    function addHalo(element){
-      if (window.location.pathname === '/feelings'){
-        var prev = sessionStorage.getItem('feelings') + '-emoji';
-        if (prev === 'null-emoji'){ prev = 'happy-emoji'; }
-        var emoji = document.getElementsByClassName(prev)[0];
-        emoji.classList.remove('haloVisible');
-      }
-      element.classList.toggle('haloVisible');
-    }
-
-    function addClickEventArray(key, element, value, array){
-      if(!element){ return; }
-      element.addEventListener('click', function(){
-        addValueToArray(key, value, array);
-      });
-    }
-
-    function addValueToArray(key, value, array){
-      array.push(value);
-      addArrayToStorage(key, array);
-    }
-
-    function addSingleValueToStorage(key, value){
-      sessionStorage.setItem(key, value);
-    }
-
-    function addArrayToStorage(key, array){
-      sessionStorage.setItem(key, JSON.stringify(array));
-    }
-
-    function setSessionStorageOnClick(node, className, key) {
-      if (!node) { return; }
-      node.addEventListener('click', function () {
-        var baseArray = JSON.parse(sessionStorage.getItem(key)) || [];
-        if (node.className.baseVal === className) {
-          baseArray.push(node.id);
-        } else {
-          var index = baseArray.indexOf(node.id);
-          baseArray.splice(index, 1);
-        }
-        addArrayToStorage(key, baseArray);
-      });
-    }
   }
 
-  // Adds a class to node
+  function addKeyupEvent(key, element){
+    if(!element){ return; }
+    element.addEventListener('keyup', function(){
+      addSingleValueToStorage(key, element.value);
+    });
+  }
+
+  function addClickEventSingle(key, element, value){
+    if(!element){ return; }
+    element.addEventListener('click', function(){
+      addSingleValueToStorage(key, value);
+    });
+  }
+
+  function addHaloClickEvent(element){
+    if (!element){ return; }
+    element.addEventListener('click', function(){
+      addHalo(element);
+    });
+  }
+
+  function addHalo(element){
+    if (window.location.pathname === '/feelings'){
+      var prev = sessionStorage.getItem('feelings') + '-emoji';
+      if (prev === 'null-emoji'){ prev = 'happy-emoji'; }
+      var emoji = document.getElementsByClassName(prev)[0];
+      emoji.classList.remove('haloVisible');
+    }
+    element.classList.toggle('haloVisible');
+  }
+
+  function addClickEventArray(key, element, value, array){
+    if(!element){ return; }
+    element.addEventListener('click', function(){
+      addValueToArray(key, value, array);
+    });
+  }
+
+  function addValueToArray(key, value, array){
+    array.push(value);
+    addArrayToStorage(key, array);
+  }
+
+  function addSingleValueToStorage(key, value){
+    sessionStorage.setItem(key, value);
+  }
+
+  function addArrayToStorage(key, array){
+    sessionStorage.setItem(key, JSON.stringify(array));
+  }
+
+  function setSessionStorageOnClick(node, className, key) {
+    if (!node) { return; }
+    node.addEventListener('click', function () {
+      var baseArray = JSON.parse(sessionStorage.getItem(key)) || [];
+      if (node.className.baseVal === className) {
+        baseArray.push(node.id);
+      } else {
+        var index = baseArray.indexOf(node.id);
+        baseArray.splice(index, 1);
+      }
+      addArrayToStorage(key, baseArray);
+    });
+  }
+
   function toggleClass(node, className){
     if (!node){ return; }
     node.addEventListener('click', function(){
@@ -193,17 +183,10 @@ window.app = (function () {
     });
   }
 
-  function sleepingLion(){
-    var value = document.getElementsByClassName('sleep__range')[0].value;
-    var element = document.getElementsByClassName('sleep__sleeping-lion')[0];
-    changeBackgroundPosition(element, value, -331);
-  }
-
-  function changeBackgroundPosition(element, value, illustrationSize){
-    element.style.backgroundPosition = parseInt(value) * illustrationSize + 'px';
-  }
-
   function addOnInputToElement(element, func){
+    var rangeValue = document.getElementsByClassName('range-value')[0];
+    var verticalArrow = document.getElementsByClassName('vertical-arrow')[0];
+
     if (!element){ return; }
     element.addEventListener('input', function(){
       if (rangeValue){
@@ -222,13 +205,51 @@ window.app = (function () {
     element.classList.add(className);
   }
 
-  function emojiSprite(){
-    var value = document.getElementsByClassName('range')[0].value -1;
-    var element = document.getElementsByClassName('emoji-sprite')[0];
-    changeBackgroundPosition(element, value, -180);
+  // function sleepingLion(){
+  //   var value = document.getElementsByClassName('sleep__range')[0].value;
+  //   var element = document.getElementsByClassName('sleep__sleeping-lion')[0];
+  //   changeBackgroundPosition(element, value, -331);
+  // }
+  //
+  // function emojiSprite(){
+  //   var value = document.getElementsByClassName('range')[0].value - 1;
+  //   var element = document.getElementsByClassName('emoji-sprite')[0];
+  //   changeBackgroundPosition(element, value, -180);
+  // }
+
+  function moveSprite (rangeClass, spriteClass, backgroundPosition, number) {
+    var value = document.getElementsByClassName(rangeClass)[0].value - number;
+    var element = document.getElementsByClassName(spriteClass)[0];
+    changeBackgroundPosition(element, value, backgroundPosition);
+  }
+
+  function changeBackgroundPosition(element, value, illustrationSize){
+    element.style.backgroundPosition = parseInt(value) * illustrationSize + 'px';
+  }
+
+  function animateCheckmark () {
+    anime({
+      targets: '#checkmark path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      opacity: {
+        value: 1,
+        duration: 100
+      }
+    });
+  }
+
+  function updateAvatar (selector, avatarSelector) {
+    var page = document.getElementsByClassName(selector)[0];
+    if (!page) { return; }
+    var avatarImg = page.getElementsByClassName(avatarSelector)[0];
+    var avatar = sessionStorage.getItem('avatar');
+    avatarImg.src = 'assets/' + avatar + '.svg';
   }
 
   return {
+    animateCheckmark: animateCheckmark,
+    addOnInputToElement: addOnInputToElement,
     updateAvatar: updateAvatar
   };
 
