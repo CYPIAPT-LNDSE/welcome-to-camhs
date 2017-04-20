@@ -53,7 +53,7 @@
         } else {
           addElement(response.status, 'cross');
           emailRecipient.value = '';
-          emailRecipient.placeholder = 'Please enter a valid email address.';
+          emailRecipient.placeholder = 'Enter your email address here...';
           loading.classList.add('hidden');
         }
       });
