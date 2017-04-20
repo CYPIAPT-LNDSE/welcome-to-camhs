@@ -15,6 +15,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: column;
+  display: -webkit-box-flex;
+  -webkit-box-direction: column;
   color: white; }
 
 .welcome__text, .introduction__text, .eating__text, .hobbies__text, .finish__text, .feelings__text, .avatar__text, .personality__text, .friends__text, .sleep__text, .school__text, .home__text, .info__text {
@@ -157,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 .hide {
   opacity: 0; }
 
-.haloVisible .st6 {
+.haloVisible .st200 {
   stroke: #fcf74c;
   stroke-width: 4; }
 
@@ -413,8 +415,21 @@ span.value {
       .carousel .indicators {
         bottom: -15px; } }
 
+.personality {
+  background-image: url("../assets/personality-background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
 .personality__title {
-  margin-top: 0px; }
+  margin-top: 20px; }
+
+.pop {
+  visibility: hidden; }
+  .pop .style2 {
+    visibility: visible; }
+  .pop .style5 {
+    stroke: #F8EE56;
+    visibility: visible; }
 
 .balloons {
   position: relative;
@@ -422,15 +437,9 @@ span.value {
   height: 360px; }
   @media screen and (min-width: 768px) {
     .balloons {
-      top: -150px;
+      top: -110px;
       height: 830px;
       margin-top: -235px; } }
-
-.pop {
-  visibility: hidden; }
-  .pop .st2 {
-    visibility: visible;
-    fill: #fcf74c; }
 
 .friends {
   background-image: url("../assets/friends-background.svg");
@@ -514,10 +523,11 @@ span.value {
   margin-bottom: 40px; }
 
 .checkmark {
-  height: 80px;
-  background-image: url("../assets/checkmark.svg");
-  background-repeat: no-repeat;
-  background-position: center; }
+  position: relative;
+  bottom: -10px;
+  height: 80px; }
+  .checkmark path {
+    opacity: 0; }
 
 .cross {
   height: 80px;

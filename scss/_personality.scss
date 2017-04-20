@@ -7,24 +7,12 @@
   }
 }
 
-.personality__text {
-  @extend %main-text;
-}
-
 .personality__title {
   margin-top: 20px;
 }
 
-.balloons {
-  position: relative;
-  top: -190px;
-  height: 360px;
-
-  @media screen and (min-width: 768px) {
-    top: -110px;
-    height: 830px;
-    margin-top: -235px;
-   }
+.personality__text {
+  @extend %main-text;
 }
 
 .pop {
@@ -38,4 +26,16 @@
     stroke: #F8EE56;
     visibility: visible;
   }
+}
+
+.balloons {
+  position: relative;
+  top: -190px;
+  height: 360px;
+
+  @media screen and (min-width: 768px) {
+    top: -110px;
+    height: 830px;
+    margin-top: -235px;
+   }
 }
