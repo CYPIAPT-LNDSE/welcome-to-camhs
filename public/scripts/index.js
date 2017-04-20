@@ -79,10 +79,8 @@ window.app = (function () {
       addOnInputToElement(node, function(key, value){
         if (range === 'sleep__range') {
           moveSprite ('sleep__range', 'sleep__sleeping-lion', -331, 0);
-          // sleepingLion();
         } else {
           moveSprite ('range', 'emoji-sprite', -180, 1);
-          // emojiSprite();
         }
         addSingleValueToStorage(key, value);
       });
@@ -204,18 +202,6 @@ window.app = (function () {
   function hideElement(element, className){
     element.classList.add(className);
   }
-
-  // function sleepingLion(){
-  //   var value = document.getElementsByClassName('sleep__range')[0].value;
-  //   var element = document.getElementsByClassName('sleep__sleeping-lion')[0];
-  //   changeBackgroundPosition(element, value, -331);
-  // }
-  //
-  // function emojiSprite(){
-  //   var value = document.getElementsByClassName('range')[0].value - 1;
-  //   var element = document.getElementsByClassName('emoji-sprite')[0];
-  //   changeBackgroundPosition(element, value, -180);
-  // }
 
   function moveSprite (rangeClass, spriteClass, backgroundPosition, number) {
     var value = document.getElementsByClassName(rangeClass)[0].value - number;

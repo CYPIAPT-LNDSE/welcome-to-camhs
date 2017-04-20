@@ -1,10 +1,10 @@
-(function (app) {
+(function () {
   'use strict';
 
   app.updateAvatar('finish', 'finish__lion');
 
   [
-    "send-email-button"
+    'send-email-button'
   ].forEach(function(button){
     var node = document.getElementsByClassName(button)[0];
     if (node){
@@ -55,15 +55,16 @@
           emailRecipient.value = '';
           emailRecipient.placeholder = 'Enter your email address here...';
           loading.classList.add('hidden');
+          return;
         }
       });
     }
 
     function addElement(htmlContent, element) {
       var el = document.getElementById(element);
-      var newP = document.createElement("p");
+      var newP = document.createElement('p');
       var newContent = document.createTextNode(htmlContent);
-      var container = document.getElementsByClassName("finish__prompt-container")[0];
+      var container = document.getElementsByClassName('finish__prompt-container')[0];
       while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
       }
@@ -75,8 +76,8 @@
 
     function httpPostRequest(payload, cb){
       var http = new XMLHttpRequest();
-      http.open("POST", '/finished', true);
-      http.setRequestHeader("Content-type", "application/json");
+      http.open('POST', '/finished', true);
+      http.setRequestHeader('Content-type', 'application/json');
       http.onreadystatechange = function() {
         if (http.readyState === 4) {
           cb(http.responseText);
@@ -85,4 +86,4 @@
       http.send(payload);
     }
 
-})(window.app);
+})();
