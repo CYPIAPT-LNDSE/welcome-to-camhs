@@ -44,7 +44,7 @@
       httpPostRequest(payload, function(responseText){
         var response = JSON.parse(responseText);
         if (response.status === 'Email sent'){
-          addElement(response.status);
+          addElement(response.status, 'checkmark');
           sessionStorage.clear();
           form.classList.add('hidden');
           loading.classList.add('hidden');
@@ -52,19 +52,22 @@
           prevButton.classList.add('hidden');
         } else {
           addElement(response.status, 'cross');
+          emailRecipient.value = '';
+          emailRecipient.placeholder = 'Please enter a valid email address.';
+          loading.classList.add('hidden');
         }
       });
     }
 
-    function addElement(htmlContent) {
-      var checkmark = document.getElementById('checkmark');
+    function addElement(htmlContent, element) {
+      var el = document.getElementById(element);
       var newP = document.createElement("p");
       var newContent = document.createTextNode(htmlContent);
       var container = document.getElementsByClassName("finish__prompt-container")[0];
       while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
       }
-      checkmark.classList.remove('hidden');
+      el.classList.remove('hidden');
       newP.appendChild(newContent);
       app.animateCheckmark();
       container.appendChild(newP);
