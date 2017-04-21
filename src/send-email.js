@@ -23,7 +23,7 @@ function sendMail(emailAddress, emailContent, cb){
   const emailBody = template(emailContent);
 
   const mailOptions = {
-    from: '"CAMHS 😀" <welcome.to.cahms@hotmail.co.uk>',
+    from: '"CAMHS 😀" <welcome.to.cahms@gmail.com>',
     subject: 'Getting to know you Questionnaire',
     text: 'Questionnaire',
     html: emailBody,
