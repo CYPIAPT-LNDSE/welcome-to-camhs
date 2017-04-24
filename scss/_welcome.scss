@@ -20,7 +20,11 @@
 
 .welcome__lion {
   margin: $small-margin auto;
-  width: $medium-image + 100;
+  width: $small-image;
+
+  @media screen and (min-width: 768px){
+    width: $medium-image + 100;
+  }
 }
 
 .welcome__title {

@@ -30,6 +30,7 @@ module.exports = [
     path: '/introduction',
     handler: (request, reply) => {
       const data =  {
+        isIntroduction: true,
         prev: '/avatar',
         next: '/feelings'
       };
@@ -52,6 +53,7 @@ module.exports = [
     path: '/personality',
     handler: (request, reply) => {
       const data =  {
+        isPersonality: true,
         prev: '/feelings',
         next: '/hobbies'
       };
@@ -107,6 +109,7 @@ module.exports = [
     path: '/eating',
     handler: (request, reply) => {
       const data =  {
+        isEating: true,
         prev: '/school',
         next: '/home'
       };
@@ -159,7 +162,8 @@ module.exports = [
       const { emailAddress, sessionStorage } = request.payload;
       sendMail(emailAddress, sessionStorage, function(err, info){
         if (err){
-          console.log(err);
+          console.log(err, 'Check that the welcome.to.cahms@gmail.com ' +
+            'email account has not been suspended/deactivated');
           reply({status: 'Email not sent'});
         }
         else {
