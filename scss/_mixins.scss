@@ -16,10 +16,3 @@
   -o-transition: $property $duration $timing $delay;
   transition: $property $duration $timing $delay;
 }
-
-@mixin animation ($name, $duration, $timing: ease-in-out, $delay: 0s, $direction: infinite) {
-  -webkit-animation: $name $duration $timing $delay $direction;
-  -moz-animation: $name $duration $timing $delay $direction;
-  -o-animation: $name $duration $timing $delay $direction;
-  animation: $name $duration $timing $delay $direction;
-}

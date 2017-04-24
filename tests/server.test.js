@@ -17,10 +17,10 @@ test('Check the index route', t => {
   });
 });
 
-test('Check /index.js', t => {
+test('Check /scripts/index.js', t => {
   const options = {
     method: 'GET',
-    url: '/index.js'
+    url: '/scripts/index.js'
   };
   server.inject(options, response => {
     t.equal(response.statusCode, 200, 'You received a 200 status code');

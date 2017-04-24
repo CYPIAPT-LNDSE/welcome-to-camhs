@@ -1,0 +1,21 @@
+{{#if isWelcome }}
+  <script src="/public/anime.min.js"></script>
+  <script src="/scripts/welcome.js"></script>
+{{else if isAvatar }}
+  <script src="/public/jquery.min.js"></script>
+  <script src="/public/materialize/js/materialize.min.js"></script>
+  <script src="/public/anime.min.js"></script>
+  <script src="/scripts/avatar.js"></script>
+{{else if isIntroduction }}
+  <script src="/scripts/introduction.js"></script>
+{{else if isPersonality }}
+  <script src="/public/anime.min.js"></script>
+  <script src="/scripts/personality.js"></script>
+{{else if isEating }}
+  <script src="/public/anime.min.js"></script>
+  <script src="/scripts/eating.js"></script>
+{{else if isEnd }}
+  <script src="/public/anime.min.js"></script>
+  <script src="https://use.fontawesome.com/b47cf7f5d9.js"></script>
+  <script src="/scripts/finish.js"></script>
+{{/if}}
