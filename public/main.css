@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Henny+Penny|Montserrat+Alternates");
 body {
   padding: 0;
   font-family: "Montserrat Alternates", sans-serif;
@@ -174,7 +175,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .welcome__lion {
   margin: 25px auto;
-  width: 400px; }
+  width: 200px; }
+  @media screen and (min-width: 768px) {
+    .welcome__lion {
+      width: 400px; } }
 
 .welcome__title {
   font-family: "Henny Penny", cursive;
@@ -530,10 +534,7 @@ span.value {
     opacity: 0; }
 
 .cross {
-  height: 80px;
-  background-image: url("../assets/cross.svg");
-  background-repeat: no-repeat;
-  background-position: center; }
+  height: 80px; }
 
 .home {
   background-image: url("./assets/home-illustration.svg");
