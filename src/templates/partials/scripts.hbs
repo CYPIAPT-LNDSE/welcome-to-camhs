@@ -1,6 +1,14 @@
-<script src="/scripts/avatar.js"></script>
-<script src="/scripts/eating.js"></script>
-<script src="/scripts/finish.js"></script>
-<script src="/scripts/introduction.js"></script>
-<script src="/scripts/personality.js"></script>
-<script src="/scripts/welcome.js"></script>
+{{#if isAvatar}}
+  <script src="/scripts/avatar.js"></script>
+{{else if isWelcome }}
+  <script src="/scripts/welcome.js"></script>
+{{else if isEnd }}
+  <script src="https://use.fontawesome.com/b47cf7f5d9.js"></script>
+  <script src="/scripts/finish.js"></script>
+{{else if isEating }}
+  <script src="/scripts/eating.js"></script>
+{{else if isPersonality }}
+  <script src="/scripts/personality.js"></script>
+{{else if isIntroduction }}
+  <script src="/scripts/introduction.js"></script>
+{{/if}}
