@@ -162,7 +162,8 @@ module.exports = [
       const { emailAddress, sessionStorage } = request.payload;
       sendMail(emailAddress, sessionStorage, function(err, info){
         if (err){
-          console.log(err);
+          console.log(err, 'Check that the welcome.to.cahms@gmail.com ' +
+            'email account has not been suspended/deactivated');
           reply({status: 'Email not sent'});
         }
         else {
