@@ -22,7 +22,7 @@ module.exports = [
         prev: '/',
         next: '/introduction'
       };
-      reply.view('choose-an-avatar', data);
+      reply.view('avatar', data);
     }
   },
   {
