@@ -1,6 +1,8 @@
 <div class="buttons">
   {{#if isWelcome }}
     <a class="button button--next" href="{{ next }}">Next</a>
+  {{else if isAvatar }}
+    <a class="button choose-avatar">Choose avatar</a>
   {{else if isEnd }}
     <a class="button button--prev" href="{{ prev }}">Prev</a>
     <a href="{{ next }}">

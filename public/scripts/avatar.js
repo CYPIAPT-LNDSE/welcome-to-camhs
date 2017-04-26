@@ -6,21 +6,21 @@
     shift: 100
   });
 
-  [
-    'lion',
-    'bear',
-    'monkey'
-  ].forEach(function (avatar) {
-    var node = document.getElementsByClassName(avatar)[0];
+  var chooseAvatarBtn = document.getElementsByClassName('choose-avatar')[0];
+
+  chooseAvatarBtn.addEventListener('click', function () {
     var timeout;
-    if (!node ) return;
-    node.addEventListener('click', function () {
-      app.animateCheckmark();
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
-        window.location.href = 'introduction';
-      }, 1500);
-    });
+    var activeAvatar = document.querySelectorAll('.carousel .carousel-item.active')[0];
+    var avatarClasses = activeAvatar.className;
+    var avatar = avatarClasses.replace(/(bear|monkey|lion)|[^]/g, '$1');
+
+    app.animateCheckmark();
+    sessionStorage.setItem('avatar', avatar);
+
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      window.location.href = 'introduction';
+    }, 1500);
   });
 
 })(jQuery);

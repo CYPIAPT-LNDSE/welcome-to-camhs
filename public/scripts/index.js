@@ -6,15 +6,6 @@ window.app = (function () {
   function addAnswersToSessionStorage(){
 
     [
-      'lion',
-      'bear',
-      'monkey'
-    ].forEach(function (avatar) {
-      var node = document.getElementsByClassName(avatar)[0];
-      addClickEventSingle('avatar', node, avatar);
-    });
-
-    [
       'strange',
       'happy',
       'angry',
