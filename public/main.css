@@ -392,6 +392,16 @@ span.value {
 .haloVisible .st6 {
   stroke: #fcf74c; }
 
+.avatar + .buttons {
+  text-align: center;
+  background-color: rgba(57, 138, 187, 0.8);
+  padding: 10px 0; }
+  @media screen and (min-width: 768px) {
+    .avatar + .buttons {
+      width: 40%; } }
+  .avatar + .buttons .button {
+    background-color: transparent; }
+
 .avatar__text {
   margin: 0; }
   @media screen and (min-width: 768px) {
@@ -529,7 +539,10 @@ span.value {
 .checkmark {
   position: relative;
   bottom: -10px;
-  height: 80px; }
+  height: 80px;
+  max-width: 768px;
+  width: 100%;
+  margin: auto; }
   .checkmark path {
     opacity: 0; }
 
